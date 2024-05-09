@@ -35,7 +35,7 @@ export default function FooterMenu({ menu }: { menu: Menu[] }) {
   if (!menu.length) return null;
 
   return (
-    <nav>
+    <nav className="flex w-2/5 justify-end ">
       <ul>
         {menu.map((item: Menu) => {
           return <FooterMenuItem key={item.title} item={item} />;
