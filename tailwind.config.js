@@ -5,34 +5,38 @@ module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   plugins: [require('daisyui')],
   theme: {
-    //   colors: {
-    //     'custom-light-green': '#82a38a',
-    //     'custom-dark-green': '#043028',
-    // },
     extend: {
-      fontFamily: {
-        sans: ['var(--font-geist-sans)']
-      },
-      keyframes: {
-        fadeIn: {
-          from: { opacity: 0 },
-          to: { opacity: 1 }
-        },
-        marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' }
-        },
-        blink: {
-          '0%': { opacity: 0.2 },
-          '20%': { opacity: 1 },
-          '100% ': { opacity: 0.2 }
-        }
-      },
-      animation: {
-        fadeIn: 'fadeIn .3s ease-in-out',
-        carousel: 'marquee 60s linear infinite',
-        blink: 'blink 1.4s both infinite'
+      colors: {
+        // Define your custom colors here
+        darkGreen: '#043028', // Example color
+        lightGreen: '#82a38a'
       }
+    }
+  },
+  extend: {
+    fontFamily: {
+      cabin: 'Cabin',
+      sans: 'sans-serif'
+    },
+    keyframes: {
+      fadeIn: {
+        from: { opacity: 0 },
+        to: { opacity: 1 }
+      },
+      marquee: {
+        '0%': { transform: 'translateX(0%)' },
+        '100%': { transform: 'translateX(-100%)' }
+      },
+      blink: {
+        '0%': { opacity: 0.2 },
+        '20%': { opacity: 1 },
+        '100% ': { opacity: 0.2 }
+      }
+    },
+    animation: {
+      fadeIn: 'fadeIn .3s ease-in-out',
+      carousel: 'marquee 60s linear infinite',
+      blink: 'blink 1.4s both infinite'
     }
   },
   future: {
