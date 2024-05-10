@@ -24,7 +24,7 @@ export default async function Navbar() {
           </Suspense>
         </div>
         <div className="flex w-full items-center">
-          <div className="flex w-full justify-between pl-16 md:w-3/5">
+          <div className="flex w-full justify-between pl-16 md:w-1/5">
             <Link
               href="/"
               className="mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6"
