@@ -2,7 +2,6 @@ import Cart from 'components/cart';
 import OpenCart from 'components/cart/open-cart';
 import LogoSquare from 'components/logo-square';
 import { getMenu } from 'lib/shopify';
-import { Menu } from 'lib/shopify/types';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import MobileMenu from './mobile-menu';
@@ -22,7 +21,6 @@ export default async function Navbar() {
         <div className="block flex-none md:hidden">
           <Suspense fallback={null}>
             <MobileMenu menu={menu} />
-
           </Suspense>
         </div>
         <div className="flex w-full items-center">
@@ -33,7 +31,35 @@ export default async function Navbar() {
             >
               <LogoSquare />
             </Link>
-            {menu.length ? (
+
+            <ul className="hidden gap-6 text-sm md:flex md:items-center">
+              <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
+                {' '}
+                Shop{' '}
+              </li>
+              <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
+                {' '}
+                Use & Care{' '}
+              </li>
+              <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
+                {' '}
+                About{' '}
+              </li>
+              <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
+                {' '}
+                Custom & Wholesale{' '}
+              </li>
+              <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
+                {' '}
+                Blog{' '}
+              </li>
+              <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
+                {' '}
+                Contact{' '}
+              </li>
+            </ul>
+
+            {/* {menu.length ? (
               <ul className="hidden gap-6 text-sm md:flex md:items-center">
                 {menu.map((item: Menu) => (
                   <li key={item.title}>
@@ -46,14 +72,14 @@ export default async function Navbar() {
                   </li>
                 ))}
               </ul>
-            ) : null}
+            ) : null} */}
           </div>
           <div className="hidden justify-end md:flex md:w-1/3">
             <Suspense fallback={<SearchSkeleton />}>
               <Search />
             </Suspense>
           </div>
-          <div className="flex justify-end">
+          <div className="m-2 flex justify-end">
             <Suspense fallback={<OpenCart />}>
               <Cart />
             </Suspense>
