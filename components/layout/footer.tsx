@@ -31,6 +31,21 @@ export default async function Footer() {
             Join our email list and get 10% off your first order.  Then, get special access to news
             and deals exclusive to our subscribers
           </p>
+          <label className="input input-bordered flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              className="h-4 w-4 opacity-70"
+            >
+              <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+              <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+            </svg>
+            <input type="text" className="grow" placeholder="Email" />
+          </label>
+          <button className="inline-block cursor-pointer rounded-md bg-green-600 px-4 py-3 text-center text-sm font-semibold uppercase text-white transition duration-200 ease-in-out hover:bg-gray-900">
+            Button
+          </button>
         </div>
         <Suspense
           fallback={
@@ -54,7 +69,7 @@ export default async function Footer() {
             {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} All rights reserved.
           </p>
           <hr className="mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block" />
-          <p>Designed in California</p>
+          <p>Designed by DORRA Studios</p>
           <p className="md:ml-auto">
             <a href="https://vercel.com" className="text-black dark:text-white">
               Crafted by ▲ Vercel
