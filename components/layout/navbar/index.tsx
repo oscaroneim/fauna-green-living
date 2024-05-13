@@ -10,7 +10,6 @@ const { SITE_NAME } = process.env;
 
 export default async function Navbar() {
   const menu = await getMenu('next-js-frontend-header-menu');
-  console.log(menu);
   return (
     <>
       <div className="flex w-screen justify-center bg-[#043028] text-white">
@@ -43,34 +42,7 @@ export default async function Navbar() {
                 <Search />
               </Suspense>
             </div>
-
-            <ul className="hidden gap-6 pr-6 text-[20px] text-sm md:flex md:items-center">
-              <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
-                {' '}
-                Shop{' '}
-              </li>
-              <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
-                {' '}
-                Use & Care{' '}
-              </li>
-              <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
-                {' '}
-                About{' '}
-              </li>
-              <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
-                {' '}
-                Custom & Wholesale{' '}
-              </li>
-              <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
-                {' '}
-                Blog{' '}
-              </li>
-              <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
-                {' '}
-                Contact{' '}
-              </li>
-            </ul>
-            {/* {menu.length ? (
+            {menu.length ? (
               <ul className="hidden gap-6 text-sm md:flex md:items-center">
                 {menu.map((item: menu) => (
                   <li key={item.title}>
@@ -83,7 +55,7 @@ export default async function Navbar() {
                   </li>
                 ))}
               </ul>
-            ) : null} */}
+            ) : null}
           </div>
         </div>
       </nav>
