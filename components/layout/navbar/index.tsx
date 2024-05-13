@@ -31,18 +31,6 @@ export default async function Navbar() {
             >
               <LogoSquare />
             </Link>
-          </div>
-          <div className="flex w-full flex-row-reverse items-center pr-12">
-            <div className="m-2 flex justify-end">
-              <Suspense fallback={<OpenCart />}>
-                <Cart />
-              </Suspense>
-            </div>
-            <div className="md:2/3 hidden justify-end md:flex">
-              <Suspense fallback={<SearchSkeleton />}>
-                <Search />
-              </Suspense>
-            </div>
             {menu.length ? (
               <ul className="hidden gap-6 text-sm md:flex md:items-center">
                 {menu.map((item: Menu) => (
@@ -57,6 +45,18 @@ export default async function Navbar() {
                 ))}
               </ul>
             ) : null}
+          </div>
+          <div className="flex w-full flex-row-reverse items-center pr-12">
+            <div className="m-2 flex justify-end">
+              <Suspense fallback={<OpenCart />}>
+                <Cart />
+              </Suspense>
+            </div>
+            <div className="md:2/3 hidden justify-end md:flex">
+              <Suspense fallback={<SearchSkeleton />}>
+                <Search />
+              </Suspense>
+            </div>
           </div>
         </div>
       </nav>
