@@ -9,10 +9,10 @@ const { COMPANY_NAME, SITE_NAME } = process.env;
 
 export default async function Footer() {
   const currentYear = new Date().getFullYear();
-  const copyrightDate = 2023 + (currentYear > 2023 ? `-${currentYear}` : '');
+  // const copyrightDate = 2023 + (currentYear > 2023 ? `-${currentYear}` : '');
   const skeleton = 'w-full h-6 animate-pulse rounded bg-neutral-200 dark:bg-neutral-700';
   const menu = await getMenu('next-js-frontend-footer-menu');
-  const copyrightName = COMPANY_NAME || SITE_NAME || '';
+  // const copyrightName = COMPANY_NAME || SITE_NAME || '';
 
   return (
     <footer className="text-sm text-neutral-500 dark:text-neutral-400">
@@ -24,11 +24,11 @@ export default async function Footer() {
         </div>
         <div className="flex-col">
           <div>
-            <h3 className="font-cabin text-darkGreen text-xl">
+            <h3 className="text-darkGreen font-cabin text-xl">
               Join us in fighting against single use plastic
             </h3>
             <br />
-            <p className="font-cabin text-darkGreen mb-4 w-1/2">
+            <p className="text-darkGreen mb-4 w-1/2 font-cabin">
               Join our email list and get 10% off your first order.  Then, get special access to
               news and deals exclusive to our subscribers
             </p>
