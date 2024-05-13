@@ -44,46 +44,20 @@ export default async function Navbar() {
             </div>
 
             <div className="pr-6">
-              <ul className="hidden gap-4 pr-6 text-[20px] text-sm md:flex md:items-center lg:gap-10">
-                <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
-                  {' '}
-                  Shop{' '}
-                </li>
-                <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
-                  {' '}
-                  Use & Care{' '}
-                </li>
-                <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
-                  {' '}
-                  About{' '}
-                </li>
-                <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
-                  {' '}
-                  Custom & Wholesale{' '}
-                </li>
-                <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
-                  {' '}
-                  Blog{' '}
-                </li>
-                <li className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">
-                  {' '}
-                  Contact{' '}
-                </li>
-              </ul>
-              {/* {menu.length ? (
-              <ul className="hidden gap-6 pr-6 text-[20px] text-sm md:flex md:items-center">
-                {menu.map((item: menu) => (
-                  <li key={item.title}>
-                    <Link
-                      href={item.path}
-                      className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300"
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            ) : null} */}
+              {menu.length ? (
+                <ul className="hidden gap-6 pr-6 text-[20px] text-sm md:flex md:items-center">
+                  {menu.map((item: menu) => (
+                    <li key={item.title}>
+                      <Link
+                        href={item.path}
+                        className="text-black underline-offset-4 hover:text-[#043028] hover:underline dark:text-neutral-400 dark:hover:text-neutral-300"
+                      >
+                        {item.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </div>
           </div>
         </div>
