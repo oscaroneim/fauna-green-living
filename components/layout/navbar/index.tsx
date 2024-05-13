@@ -46,7 +46,7 @@ export default async function Navbar() {
             <div className="pr-6">
               {menu.length ? (
                 <ul className="hidden gap-6 pr-6 text-[20px] text-sm md:flex md:items-center">
-                  {menu.map((item: menu) => (
+                  {menu.map((item) => (
                     <li key={item.title}>
                       <Link
                         href={item.path}
