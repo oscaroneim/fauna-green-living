@@ -78,7 +78,7 @@ export function AddToCart({
       (option) => option.value === searchParams.get(option.name.toLowerCase())
     )
   );
-  const router = useRouter();
+
   const selectedVariantId = variant?.id || defaultVariantId;
   const actionWithVariant = formAction.bind(null, selectedVariantId);
 
@@ -103,7 +103,7 @@ export function AddToCart({
         onClick={handleBuyNow}
         disabled={!availableForSale}
         className={clsx(
-          'bg-customDarkGreen relative mt-3 flex w-full items-center justify-center rounded-xl p-4 tracking-wide text-white ',
+          'relative mt-3 flex w-full items-center justify-center rounded-xl bg-customDarkGreen p-4 tracking-wide text-white ',
           {
             'cursor-not-allowed opacity-60': !availableForSale,
             'hover:opacity-90': availableForSale
