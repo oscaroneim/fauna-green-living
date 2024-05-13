@@ -5,8 +5,10 @@ module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['var(--font-geist-sans)']
+      colors: {
+        //added custom colors
+        customGreen: '#82A38A',
+        customDarkGreen: '#043028'
       },
       keyframes: {
         fadeIn: {
