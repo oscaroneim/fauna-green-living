@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Test */
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -12,6 +14,10 @@
   img[loading='lazy'] {
     clip-path: inset(0.6px);
   }
+}
+
+body {
+  font-family: 'Cabin', sans-serif;
 }
 
 a,
