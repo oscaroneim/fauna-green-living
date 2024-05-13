@@ -33,11 +33,13 @@ export const metadata = {
 
 export default async function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={GeistSans.variable}>
-      <body className="bg-neutral-50 text-black selection:bg-teal-300 ">
-        <Navbar />
-        <main>{children}</main>
-      </body>
-    </html>
+    <>
+      <html lang="en" className={GeistSans.variable}>
+        <body className="bg-white text-black selection:bg-teal-300 ">
+          <Navbar />
+          <main>{children}</main>
+        </body>
+      </html>
+    </>
   );
 }
