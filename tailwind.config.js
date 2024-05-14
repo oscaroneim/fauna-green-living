@@ -5,6 +5,11 @@ module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      colors: {
+        customLightGreen: '#C4D4C8',
+        customGreen: '#82A38A',
+        customDarkGreen: '#043028'
+      },
       fontFamily: {
         sans: ['var(--font-geist-sans)']
       },

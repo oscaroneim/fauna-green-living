@@ -1,8 +1,8 @@
-import Link from 'next/link';
-
 import FooterMenu from 'components/layout/footer-menu';
 import LogoSquare from 'components/logo-square';
 import { getMenu } from 'lib/shopify';
+import Image from 'next/image';
+import Link from 'next/link';
 import { Suspense } from 'react';
 
 const { COMPANY_NAME, SITE_NAME } = process.env;
@@ -22,15 +22,69 @@ export default async function Footer() {
             <LogoSquare size="m" />
           </Link>
         </div>
-        <div>
-          <h3 className="text-xl font-extrabold text-black">
-            Join us in fighting against single use plastic
-          </h3>
-          <br />
-          <p>
-            Join our email list and get 10% off your first order.  Then, get special access to news
-            and deals exclusive to our subscribers
-          </p>
+        <div className="flex-col">
+          <div>
+            <h3 className="font-cabin text-darkGreen text-xl">
+              Join us in fighting against single use plastic
+            </h3>
+            <br />
+            <p className="font-cabin text-darkGreen mb-4 w-1/2">
+              Join our email list and get 10% off your first order.  Then, get special access to
+              news and deals exclusive to our subscribers
+            </p>
+            <input
+              className="peer-rounded-[1px] mb-4 w-1/2 border border-transparent border-t-transparent bg-[#D9D9D9] px-3 py-2.5 font-sans text-sm  font-normal text-[#043028] outline outline-0 transition-all placeholder-shown:border-transparent placeholder-shown:border-transparent focus:border-[#D9D9D9] focus:border-transparent focus:border-t-transparent focus:outline-0 disabled:border-0"
+              placeholder="Enter your email here*"
+            />
+            <br />
+            <button className=" inline-block w-1/2 cursor-pointer rounded-md bg-[#82a38a] px-4 py-3 text-center text-sm font-semibold text-white transition duration-200 ease-in-out hover:bg-[#57755e]">
+              Sign Up
+            </button>
+          </div>
+          <div className="pt-5">
+            <ul className="flex space-x-3 pl-2">
+              <li>
+                <a href="https://www.instagram.com/">
+                  <Image
+                    src="/Socialmedia-Images/instagram.png"
+                    alt="Instagram Icon"
+                    width={20}
+                    height={20}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/">
+                  <Image
+                    src="/Socialmedia-Images/tiktok.png"
+                    alt="Tiktok Icon"
+                    width={20}
+                    height={20}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/">
+                  <Image
+                    src="/Socialmedia-Images/facebook.png"
+                    alt="Facebook Icon"
+                    width={20}
+                    height={20}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="https://www.LinkedIn.com/">
+                  <Image
+                    src="/Socialmedia-Images/linkedin.png"
+                    alt="LinkedIn Icon"
+                    width={20}
+                    height={20}
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <Suspense
           fallback={
@@ -46,21 +100,6 @@ export default async function Footer() {
         >
           <FooterMenu menu={menu} />
         </Suspense>
-      </div>
-      <div className="border-t border-neutral-200 py-6 text-sm dark:border-neutral-700">
-        <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-1 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">
-          <p>
-            &copy; {copyrightDate} {copyrightName}
-            {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} All rights reserved.
-          </p>
-          <hr className="mx-4 hidden h-4 w-[1px] border-l border-neutral-400 md:inline-block" />
-          <p>Designed in California</p>
-          <p className="md:ml-auto">
-            <a href="https://vercel.com" className="text-black dark:text-white">
-              Crafted by ▲ Vercel
-            </a>
-          </p>
-        </div>
       </div>
     </footer>
   );
