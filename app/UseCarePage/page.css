@@ -1,23 +1,50 @@
+.page-title {
+  font-size: 3em;
+  font-weight: 750;
+  text-align: left;
+  color: #043028;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.page-text {
+  font-size: 1.5em;
+  font-weight: 375;
+  text-align: left;
+  color: #828282;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
 .flip-card {
   background-color: transparent;
-  width: 190px;
-  height: 254px;
+  width: 400px;
+  height: 250px;
   perspective: 1000px;
+  margin: 0.75rem;
   font-family: sans-serif;
 }
 
 .title {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 900;
-  text-align: center;
+  text-align: left;
   margin: 0;
 }
 
 .flip-card-inner {
   position: relative;
+  display: flex;
   width: 100%;
   height: 100%;
-  text-align: center;
+  text-align: left;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -32,34 +59,102 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 1rem;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border: 1px solid coral;
   border-radius: 1rem;
 }
 
-.flip-card-front {
-  background: linear-gradient(
-    120deg,
-    bisque 60%,
-    rgb(255, 231, 222) 88%,
-    rgb(255, 211, 195) 40%,
-    rgba(255, 127, 80, 0.603) 48%
-  );
-  color: coral;
+.cards .flip-card.first .flip-card-front,
+.cards .flip-card.first .first {
+  background-image: url('public/LogoImages/useCareImages/Image (1).png');
+  background-size: cover;
+  background-position: center;
+  color: white;
 }
 
-.flip-card-back {
-  background: linear-gradient(
-    120deg,
-    rgb(255, 174, 145) 30%,
-    coral 88%,
-    bisque 40%,
-    rgb(255, 185, 160) 78%
-  );
+.cards .flip-card.second .flip-card-front,
+.cards .flip-card.second .second {
+  background-image: url('public/LogoImages/useCareImages/Image (2).png');
+  background-size: cover;
+  background-position: center;
   color: white;
-  transform: rotateY(180deg);
+}
+
+.cards .flip-card.third .flip-card-front,
+.cards .flip-card.third .third {
+  background-image: url('public/LogoImages/useCareImages/Image (3).png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.cards .flip-card.fourth .flip-card-front,
+.cards .flip-card.fourth .fourth {
+  background-image: url('public/LogoImages/useCareImages/Image (4).png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.cards .flip-card.fifth .flip-card-front,
+.cards .flip-card.fifth .fifth {
+  background-image: url('public/LogoImages/useCareImages/Image (5).png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.cards .flip-card.sixth .flip-card-front,
+.cards .flip-card.sixth .sixth {
+  background-image: url('public/LogoImages/useCareImages/Image (6).png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.cards .flip-card.first .flip-card-back,
+.cards .flip-card.first .first-back {
+  background-color: white;
+  color: #043028;
+  transform: rotateY(180deg); /* Add the rotation */
+}
+
+.cards .flip-card.second .flip-card-back,
+.cards .flip-card.second .second-back {
+  background-color: white;
+  color: #043028;
+  transform: rotateY(180deg); /* Add the rotation */
+}
+
+.cards .flip-card.third .flip-card-back,
+.cards .flip-card.third .third-back {
+  background-color: white;
+  color: #043028;
+  transform: rotateY(180deg); /* Add the rotation */
+}
+
+.cards .flip-card.fourth .flip-card-back,
+.cards .flip-card.fourth .fourth-back {
+  background-color: white;
+  color: #043028;
+  transform: rotateY(180deg); /* Add the rotation */
+}
+
+.cards .flip-card.fifth .flip-card-back,
+.cards .flip-card.fifth .fifth-back {
+  background-color: white;
+  color: #043028;
+  transform: rotateY(180deg); /* Add the rotation */
+}
+
+.cards .flip-card.sixth .flip-card-back,
+.cards .flip-card.sixth .sixth-back {
+  background-color: white;
+  color: #043028;
+  transform: rotateY(180deg); /* Add the rotation */
 }
