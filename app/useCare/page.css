@@ -121,40 +121,40 @@
 .cards .flip-card.first .first-back {
   background-color: white;
   color: #043028;
-  transform: rotateY(180deg); /* Add the rotation */
+  transform: rotateY(180deg);
 }
 
 .cards .flip-card.second .flip-card-back,
 .cards .flip-card.second .second-back {
   background-color: white;
   color: #043028;
-  transform: rotateY(180deg); /* Add the rotation */
+  transform: rotateY(180deg);
 }
 
 .cards .flip-card.third .flip-card-back,
 .cards .flip-card.third .third-back {
   background-color: white;
   color: #043028;
-  transform: rotateY(180deg); /* Add the rotation */
+  transform: rotateY(180deg);
 }
 
 .cards .flip-card.fourth .flip-card-back,
 .cards .flip-card.fourth .fourth-back {
   background-color: white;
   color: #043028;
-  transform: rotateY(180deg); /* Add the rotation */
+  transform: rotateY(180deg);
 }
 
 .cards .flip-card.fifth .flip-card-back,
 .cards .flip-card.fifth .fifth-back {
   background-color: white;
   color: #043028;
-  transform: rotateY(180deg); /* Add the rotation */
+  transform: rotateY(180deg);
 }
 
 .cards .flip-card.sixth .flip-card-back,
 .cards .flip-card.sixth .sixth-back {
   background-color: white;
   color: #043028;
-  transform: rotateY(180deg); /* Add the rotation */
+  transform: rotateY(180deg);
 }
