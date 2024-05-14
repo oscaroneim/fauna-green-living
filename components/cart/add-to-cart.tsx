@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import { addItem } from 'components/cart/actions';
 import LoadingDots from 'components/loading-dots';
 import { ProductVariant } from 'lib/shopify/types';
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useFormState, useFormStatus } from 'react-dom';
 
 function SubmitButton({
@@ -17,7 +17,7 @@ function SubmitButton({
 }) {
   const { pending } = useFormStatus();
   const buttonClasses =
-    'relative flex w-full items-center justify-center rounded-full bg-blue-600 p-4 tracking-wide text-white';
+    'relative flex w-full items-center justify-center rounded-xl bg-customGreen p-4 tracking-wide text-white';
   const disabledClasses = 'cursor-not-allowed opacity-60 hover:opacity-60';
 
   if (!availableForSale) {
@@ -78,12 +78,47 @@ export function AddToCart({
       (option) => option.value === searchParams.get(option.name.toLowerCase())
     )
   );
+
   const selectedVariantId = variant?.id || defaultVariantId;
   const actionWithVariant = formAction.bind(null, selectedVariantId);
+
+  function BuyNowButton({
+    selectedVariantId,
+    availableForSale
+  }: {
+    selectedVariantId: string | undefined;
+    availableForSale: boolean;
+  }) {
+    const router = useRouter();
+
+    const handleBuyNow = async () => {
+      if (!selectedVariantId || !availableForSale) return;
+
+      // Redirect to the checkout page with the selected variant ID
+      await router.push(`/checkout?variantId=${selectedVariantId}`);
+    };
+
+    return (
+      <button
+        onClick={handleBuyNow}
+        disabled={!availableForSale}
+        className={clsx(
+          'bg-customDarkGreen relative mt-3 flex w-full items-center justify-center rounded-xl p-4 tracking-wide text-white ',
+          {
+            'cursor-not-allowed opacity-60': !availableForSale,
+            'hover:opacity-90': availableForSale
+          }
+        )}
+      >
+        Buy Now
+      </button>
+    );
+  }
 
   return (
     <form action={actionWithVariant}>
       <SubmitButton availableForSale={availableForSale} selectedVariantId={selectedVariantId} />
+      <BuyNowButton availableForSale={availableForSale} selectedVariantId={selectedVariantId} />
       <p aria-live="polite" className="sr-only" role="status">
         {message}
       </p>

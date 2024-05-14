@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+// import { useMediaQuery } from '@react-hook/media-query'; Currently causing a hydration error
 import { GridTileImage } from 'components/grid/tile';
 import { createUrl } from 'lib/utils';
 import Image from 'next/image';
@@ -22,13 +23,16 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
   const previousImageIndex = imageIndex === 0 ? images.length - 1 : imageIndex - 1;
   previousSearchParams.set('image', previousImageIndex.toString());
   const previousUrl = createUrl(pathname, previousSearchParams);
+  // const isLargeScreen = useMediaQuery('(min-width: 768px)'); Currently causing a hydration error
 
   const buttonClassName =
-    'h-full px-6 transition-all ease-in-out hover:scale-110 hover:text-black dark:hover:text-white flex items-center justify-center';
+    'h-full px-6 transition-all ease-in-out hover:scale-110 hover:text-black dark:hover:text-white flex items-center justify-end';
 
   return (
     <>
-      <div className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden">
+      {/*<----------------------------This section controls the main image (Product page) ----------------------------------------> */}
+
+      <div className="w-90 relative h-[368px] rounded-xl md:h-[625px] md:w-[613px]">
         {images[imageIndex] && (
           <Image
             className="h-full w-full object-contain"
@@ -39,6 +43,8 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
             priority={true}
           />
         )}
+
+        {/*<----------------------------This section controls the image navigation arrows----------------------------------------> */}
 
         {images.length > 1 ? (
           <div className="absolute bottom-[15%] flex w-full justify-center">
@@ -51,7 +57,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
               >
                 <ArrowLeftIcon className="h-5" />
               </Link>
-              <div className="mx-1 h-6 w-px bg-neutral-500"></div>
+              <div className="mx-1 h-6 w-px bg-black"></div>
               <Link
                 aria-label="Next product image"
                 href={nextUrl}
@@ -65,8 +71,12 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
         ) : null}
       </div>
 
+      {/*<----------------------------This section controls the thumbnail images ----------------------------------------> */}
+
       {images.length > 1 ? (
-        <ul className="my-12 flex items-center justify-center gap-2 overflow-auto py-1 lg:mb-0">
+        <ul
+          className={`mb-4 flex items-center justify-center gap-2 overflow-auto py-1 lg:mb-0`} //${isLargeScreen ? 'show' : 'hidden'} Currently causing a hydration error (Needed to render content at smaller screen sizes)
+        >
           {images.map((image, index) => {
             const isActive = index === imageIndex;
             const imageSearchParams = new URLSearchParams(searchParams.toString());
