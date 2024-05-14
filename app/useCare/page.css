@@ -71,7 +71,7 @@
 
 .cards .flip-card.first .flip-card-front,
 .cards .flip-card.first .first {
-  background-image: url('public/LogoImages/useCareImages/Image (1).png');
+  background-image: url('public/LogoImages/useCareImages/Image1.png');
   background-size: cover;
   background-position: center;
   color: white;
@@ -79,7 +79,7 @@
 
 .cards .flip-card.second .flip-card-front,
 .cards .flip-card.second .second {
-  background-image: url('public/LogoImages/useCareImages/Image (2).png');
+  background-image: url('public/LogoImages/useCareImages/Image2.png');
   background-size: cover;
   background-position: center;
   color: white;
@@ -87,7 +87,7 @@
 
 .cards .flip-card.third .flip-card-front,
 .cards .flip-card.third .third {
-  background-image: url('public/LogoImages/useCareImages/Image (3).png');
+  background-image: url('public/LogoImages/useCareImages/Image3.png');
   background-size: cover;
   background-position: center;
   color: white;
@@ -95,7 +95,7 @@
 
 .cards .flip-card.fourth .flip-card-front,
 .cards .flip-card.fourth .fourth {
-  background-image: url('public/LogoImages/useCareImages/Image (4).png');
+  background-image: url('public/LogoImages/useCareImages/Image4.png');
   background-size: cover;
   background-position: center;
   color: white;
@@ -103,7 +103,7 @@
 
 .cards .flip-card.fifth .flip-card-front,
 .cards .flip-card.fifth .fifth {
-  background-image: url('public/LogoImages/useCareImages/Image (5).png');
+  background-image: url('public/LogoImages/useCareImages/Image5.png');
   background-size: cover;
   background-position: center;
   color: white;
@@ -111,7 +111,7 @@
 
 .cards .flip-card.sixth .flip-card-front,
 .cards .flip-card.sixth .sixth {
-  background-image: url('public/LogoImages/useCareImages/Image (6).png');
+  background-image: url('public/LogoImages/useCareImages/Image6.png');
   background-size: cover;
   background-position: center;
   color: white;
