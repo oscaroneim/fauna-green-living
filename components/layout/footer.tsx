@@ -17,9 +17,14 @@ export default async function Footer() {
   return (
     <footer className="text-sm text-neutral-500 dark:text-neutral-400">
       <div className="mx-auto flex w-full flex-col gap-6 border-neutral-200 py-12 text-sm md:flex-row">
-        <div className="flex-col items-center p-4 md:w-1/2 md:pl-12">
+        <div className="flex-col items-center p-4 md:w-2/5 md:pl-12">
           <div className="flex flex-col ">
             <div className="text-center md:text-left">
+              <div className="flex h-full justify-center pb-4 md:w-4/5">
+                <Link className="flex items-center gap-2 text-black dark:text-white" href="/">
+                  <LogoSquare size="m" />
+                </Link>
+              </div>
               <h3 className="font-cabin text-3xl text-customDarkGreen">
                 Join us in fighting against single use plastic
               </h3>
