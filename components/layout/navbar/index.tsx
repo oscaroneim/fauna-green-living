@@ -23,7 +23,7 @@ export default async function Navbar() {
           </Suspense>
         </div>
         <div className="flex w-full items-center">
-          <div className="3xl:pl-44 flex w-full justify-between md:w-1/5 xl:pl-0 2xl:pl-32">
+          <div className="3xl:pl-24 flex w-full justify-between pl-0 md:w-1/5 xl:pl-6 2xl:pl-12">
             <Link
               href="/"
               className="mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6"
@@ -31,7 +31,7 @@ export default async function Navbar() {
               <LogoSquare />
             </Link>
           </div>
-          <div className="flex w-full flex-row-reverse items-center pr-12">
+          <div className="flex flex-row-reverse items-center md:w-full md:pr-12">
             <div className="m-2 flex justify-end">
               <Suspense fallback={<OpenCart />}>
                 <Cart />
@@ -43,7 +43,7 @@ export default async function Navbar() {
               </Suspense>
             </div>
 
-            <div className="pr-6">
+            <div className="lg:pr-6">
               {menu.length ? (
                 <ul className="hidden gap-6 pr-6 text-[20px] text-sm md:flex md:items-center">
                   {menu.map((item) => (

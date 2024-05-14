@@ -1,9 +1,10 @@
+import '@fontsource/cabin';
 import Navbar from 'components/layout/navbar';
+import MaxWidthWrapper from 'components/max-width-wrapper';
 import { GeistSans } from 'geist/font/sans';
 import { ensureStartsWith } from 'lib/utils';
 import { ReactNode } from 'react';
 import './globals.css';
-import '@fontsource/cabin';
 
 const { TWITTER_CREATOR, TWITTER_SITE, SITE_NAME } = process.env;
 const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL
@@ -38,7 +39,9 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
       <html lang="en" className={GeistSans.variable}>
         <body className="bg-white text-black selection:bg-teal-300 ">
           <Navbar />
-          <main>{children}</main>
+          <main>
+            <MaxWidthWrapper className="space-y-6">{children}</MaxWidthWrapper>
+          </main>
         </body>
       </html>
     </>
