@@ -1,5 +1,5 @@
 import { Instagram } from 'components/instagram';
-import Footer from 'components/layout/footer';
+
 import { Linkedin } from 'components/linkedin';
 import { Tiktok } from 'components/tiktok';
 import Image from 'next/image';
@@ -22,13 +22,18 @@ export default async function HomePage() {
           alt="Picture of person walking"
         />
       </div>
-      <h1 className="flex justify-center text-[48px] text-[#043028]">Stay in the know!</h1>
-      <Linkedin />
-      <h1 className="flex justify-center text-[48px] text-[#043028]">Instgram</h1>
-      <Instagram />
-      <h1 className="flex justify-center text-[48px] text-[#043028]">Tiktok</h1>
-      <Tiktok />
-      <Footer />
+      <div>
+        <h1 className="flex justify-center text-[48px] text-[#043028]">Stay in the know!</h1>
+        <Linkedin />
+      </div>
+      <div>
+        <h1 className="flex justify-center text-[48px] text-[#043028]">Instagram</h1>
+        <Instagram />
+      </div>
+      <div>
+        <h1 className="flex justify-center text-[48px] text-[#043028]">Tiktok</h1>
+        <Tiktok />
+      </div>
     </>
   );
 }

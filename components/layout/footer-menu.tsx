@@ -19,9 +19,9 @@ const FooterMenuItem = ({ item }: { item: Menu }) => {
       <Link
         href={item.path}
         className={clsx(
-          'block p-2 text-lg underline-offset-4 hover:text-black hover:underline md:inline-block md:text-sm dark:hover:text-neutral-300',
+          'block p-2 text-center text-lg underline-offset-4 hover:text-black hover:underline md:inline-block md:text-sm',
           {
-            'text-black dark:text-neutral-300': active
+            'text-black': active
           }
         )}
       >
@@ -35,7 +35,7 @@ export default function FooterMenu({ menu }: { menu: Menu[] }) {
   if (!menu.length) return null;
 
   return (
-    <nav className="flex w-2/5 justify-end ">
+    <nav className="font-cabin flex w-full justify-center text-black md:w-2/5 md:justify-end">
       <ul>
         {menu.map((item: Menu) => {
           return <FooterMenuItem key={item.title} item={item} />;

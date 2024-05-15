@@ -1,5 +1,5 @@
+import { Reviews } from 'components/reviews';
 import Image from 'next/image';
-import './Wholesale.css';
 export default async function Wholesale() {
   return (
     <>
@@ -37,22 +37,7 @@ export default async function Wholesale() {
             </div>
           </div>
         </div>
-        <div className="flex space-x-12 p-8">
-          <div className="card">
-            <div className="bg">
-              <span>“A quote from a customer.”</span>
-            </div>
-            <div className="blob"></div>
-          </div>
-          <div className="card">
-            <div className="bg">“A quote from a customer.”</div>
-            <div className="blob"></div>
-          </div>
-          <div className="card">
-            <div className="bg">“A quote from a customer.”</div>
-            <div className="blob"></div>
-          </div>
-        </div>
+        <Reviews />
       </div>
     </>
   );

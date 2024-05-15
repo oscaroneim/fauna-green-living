@@ -26,7 +26,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
   // const isLargeScreen = useMediaQuery('(min-width: 768px)'); Currently causing a hydration error
 
   const buttonClassName =
-    'h-full px-6 transition-all ease-in-out hover:scale-110 hover:text-black dark:hover:text-white flex items-center justify-end';
+    'h-full px-6 transition-all ease-in-out hover:scale-110 hover:text-black flex items-center justify-end';
 
   return (
     <>
@@ -35,7 +35,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
       <div className="w-90 relative h-[368px] rounded-xl md:h-[625px] md:w-[613px]">
         {images[imageIndex] && (
           <Image
-            className="h-full w-full object-contain"
+            className="h-full w-full rounded-xl object-fill"
             fill
             sizes="(min-width: 1024px) 66vw, 100vw"
             alt={images[imageIndex]?.altText as string}
@@ -47,24 +47,24 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
         {/*<----------------------------This section controls the image navigation arrows----------------------------------------> */}
 
         {images.length > 1 ? (
-          <div className="absolute bottom-[15%] flex w-full justify-center">
-            <div className="mx-auto flex h-11 items-center rounded-full border border-white bg-neutral-50/80 text-neutral-500 backdrop-blur dark:border-black dark:bg-neutral-900/80">
+          <div className="absolute bottom-2 flex w-full justify-center">
+            <div className="mx-auto flex h-8 items-center rounded-full bg-customDarkGreen text-neutral-500 backdrop-blur">
               <Link
                 aria-label="Previous product image"
                 href={previousUrl}
                 className={buttonClassName}
                 scroll={false}
               >
-                <ArrowLeftIcon className="h-5" />
+                <ArrowLeftIcon className="h-5 text-white" />
               </Link>
-              <div className="mx-1 h-6 w-px bg-black"></div>
+              <div className="mx-1 h-6 w-px bg-white"></div>
               <Link
                 aria-label="Next product image"
                 href={nextUrl}
                 className={buttonClassName}
                 scroll={false}
               >
-                <ArrowRightIcon className="h-5" />
+                <ArrowRightIcon className="h-5 text-white" />
               </Link>
             </div>
           </div>
@@ -75,7 +75,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
 
       {images.length > 1 ? (
         <ul
-          className={`mb-4 flex items-center justify-center gap-2 overflow-auto py-1 lg:mb-0`} //${isLargeScreen ? 'show' : 'hidden'} Currently causing a hydration error (Needed to render content at smaller screen sizes)
+          className={`mb-4 flex items-center justify-center gap-2 overflow-auto py-1 lg:mt-2`} //${isLargeScreen ? 'show' : 'hidden'} Currently causing a hydration error (Needed to render content at smaller screen sizes)
         >
           {images.map((image, index) => {
             const isActive = index === imageIndex;

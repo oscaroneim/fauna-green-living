@@ -80,7 +80,7 @@ export default async function ProductPage({ params }: { params: { handle: string
         }}
       />
       <div className="mx-auto max-w-screen-2xl px-4">
-        <div className="flex flex-col bg-white p-8 md:p-12 lg:flex-row lg:content-center lg:gap-8 dark:border-neutral-800 dark:bg-black">
+        <div className="flex flex-col bg-white p-8 md:p-12 lg:flex-row lg:content-center lg:gap-24">
           <div className="h-full w-full basis-full lg:basis-2/6">
             <Suspense
               fallback={
