@@ -7,7 +7,7 @@ export async function HeroCarousel() {
         <li id="carousel__slide1" tabIndex={0} className="carousel__slide">
           <div className="carousel__snapper">
             <div className="hero-text">
-              <h2>
+              <h2 className="hero-big-text">
                 Plastic Free
                 <br />
                 Zero Waste
@@ -15,7 +15,7 @@ export async function HeroCarousel() {
                 Locally Sourced
               </h2>
               <button className="shop_now_button">Shop Now</button>
-              <p>Find out more</p>
+              <p className="hero-small-text">Find out more</p>
             </div>
             <a href="#carousel__slide4" className="carousel__prev"></a>
             <a href="#carousel__slide2" className="carousel__next"></a>
@@ -24,7 +24,7 @@ export async function HeroCarousel() {
         <li id="carousel__slide2" tabIndex={0} className="carousel__slide">
           <div className="carousel__snapper">
             <div className="hero-text">
-              <h2>
+              <h2 className="hero-big-text">
                 Plastic Free
                 <br />
                 Zero Waste
@@ -32,7 +32,7 @@ export async function HeroCarousel() {
                 Locally Sourced
               </h2>
               <button className="shop_now_button">Shop Now</button>
-              <p>Find out more</p>
+              <p className="hero-small-text">Find out more</p>
             </div>
             <a href="#carousel__slide1" className="carousel__prev"></a>
             <a href="#carousel__slide3" className="carousel__next"></a>
@@ -41,7 +41,7 @@ export async function HeroCarousel() {
         <li id="carousel__slide3" tabIndex={0} className="carousel__slide">
           <div className="carousel__snapper">
             <div className="hero-text">
-              <h2>
+              <h2 className="hero-big-text">
                 Plastic Free
                 <br />
                 Zero Waste
@@ -49,7 +49,7 @@ export async function HeroCarousel() {
                 Locally Sourced
               </h2>
               <button className="shop_now_button">Shop Now</button>
-              <p>Find out more</p>
+              <p className="hero-small-text">Find out more</p>
             </div>
             <a href="#carousel__slide2" className="carousel__prev"></a>
             <a href="#carousel__slide4" className="carousel__next"></a>
@@ -58,7 +58,7 @@ export async function HeroCarousel() {
         <li id="carousel__slide4" tabIndex={0} className="carousel__slide">
           <div className="carousel__snapper">
             <div className="hero-text">
-              <h2>
+              <h2 className="hero-big-text">
                 Plastic Free
                 <br />
                 Zero Waste
@@ -66,7 +66,7 @@ export async function HeroCarousel() {
                 Locally Sourced
               </h2>
               <button className="shop_now_button">Shop Now</button>
-              <p>Find out more</p>
+              <p className="hero-small-text">Find out more</p>
             </div>
             <a href="#carousel__slide3" className="carousel__prev"></a>
             <a href="#carousel__slide1" className="carousel__next"></a>
