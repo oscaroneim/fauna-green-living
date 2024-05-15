@@ -2,7 +2,15 @@ import { getCollectionProducts } from 'lib/shopify';
 import Link from 'next/link';
 import { GridTileImage } from './grid/tile';
 
-export async function ShopCarousel({ title, subtitle, collectionName }) {
+export async function ShopCarousel({
+  title,
+  subtitle,
+  collectionName
+}: {
+  title: string;
+  subtitle: string;
+  collectionName: string;
+}) {
   // Collections that start with `hidden-*` are hidden from the search page.
   const products = await getCollectionProducts({ collection: `${collectionName}` });
 
