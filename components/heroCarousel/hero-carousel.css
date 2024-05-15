@@ -95,7 +95,7 @@ p {
 }
 
 .carousel__slide:nth-child(1) {
-  background-image: url('public/HeroImages/desktop-hero.png');
+  background-image: url('/HeroImages/desktop-hero.png');
   background-size: cover;
   background-position: center;
   object-fit: cover;
@@ -104,7 +104,7 @@ p {
 }
 
 .carousel__slide:nth-child(2) {
-  background-image: url('public/HeroImages/desktop-hero2.png');
+  background-image: url('/HeroImages/desktop-hero2.png');
   background-size: cover;
   background-position: center;
   object-fit: cover;
@@ -113,7 +113,7 @@ p {
 }
 
 .carousel__slide:nth-child(3) {
-  background-image: url('public/HeroImages/desktop-hero3.png');
+  background-image: url('/HeroImages/desktop-hero3.png');
   background-size: cover;
   background-position: center;
   object-fit: cover;
@@ -122,7 +122,7 @@ p {
 }
 
 .carousel__slide:nth-child(4) {
-  background-image: url('public/HeroImages/desktop-hero4.png');
+  background-image: url('/public/HeroImages/desktop-hero4.png');
   background-size: cover;
   background-position: center;
   object-fit: cover;
