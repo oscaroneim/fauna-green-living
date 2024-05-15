@@ -32,8 +32,7 @@ export async function Carousel() {
                 <p className="text-[20px]">{product.title}</p>
                 <p className="text-[16px] text-[#D6D6D6]">
                   &#163;
-                  {product.priceRange.maxVariantPrice.amount}{' '}
-                  {product.priceRange.maxVariantPrice.currencyCode}
+                  {product.priceRange.maxVariantPrice.amount} {''}
                 </p>
               </Link>
             </li>
