@@ -9,6 +9,8 @@
 
 @media (min-width: 750px) {
   .carousel {
+    display: flex;
+    justify-content: center;
     max-height: 600px;
   }
 }
@@ -30,13 +32,27 @@
   position: relative;
   flex: 0 0 100%;
   width: 100%;
-  background-color: #f99;
   counter-increment: item;
 }
 
-.carousel__slide:nth-child(even) {
-  background-color: #99f;
+.carousel__slide:nth-child(1) {
+  background-image: url('public/HeroImages/desktop-hero.png');
+  background-size: cover;
+  object-fit: cover;
+  color: white;
 }
+
+/* .carousel__slide:nth-child(2) {
+    background-image: url('');
+  }
+  
+.carousel__slide:nth-child(3) {
+    background-image: url(''); /
+  }
+  
+.carousel__slide:nth-child(4) {
+    background-image: url(''); 
+  } */
 
 .carousel__slide:before {
   content: counter(item);
