@@ -6,24 +6,71 @@ export async function HeroCarousel() {
       <ol className="carousel__viewport">
         <li id="carousel__slide1" tabIndex={0} className="carousel__slide">
           <div className="carousel__snapper">
+            <div className="hero-text">
+              <h2>
+                Plastic Free
+                <br />
+                Zero Waste
+                <br />
+                Locally Sourced
+              </h2>
+              <button className="shop_now_button">Shop Now</button>
+              <p>Find out more</p>
+            </div>
             <a href="#carousel__slide4" className="carousel__prev"></a>
             <a href="#carousel__slide2" className="carousel__next"></a>
           </div>
         </li>
         <li id="carousel__slide2" tabIndex={0} className="carousel__slide">
-          <div className="carousel__snapper"></div>
-          <a href="#carousel__slide1" className="carousel__prev"></a>
-          <a href="#carousel__slide3" className="carousel__next"></a>
+          <div className="carousel__snapper">
+            <div className="hero-text">
+              <h2>
+                Plastic Free
+                <br />
+                Zero Waste
+                <br />
+                Locally Sourced
+              </h2>
+              <button className="shop_now_button">Shop Now</button>
+              <p>Find out more</p>
+            </div>
+            <a href="#carousel__slide1" className="carousel__prev"></a>
+            <a href="#carousel__slide3" className="carousel__next"></a>
+          </div>
         </li>
         <li id="carousel__slide3" tabIndex={0} className="carousel__slide">
-          <div className="carousel__snapper"></div>
-          <a href="#carousel__slide2" className="carousel__prev"></a>
-          <a href="#carousel__slide4" className="carousel__next"></a>
+          <div className="carousel__snapper">
+            <div className="hero-text">
+              <h2>
+                Plastic Free
+                <br />
+                Zero Waste
+                <br />
+                Locally Sourced
+              </h2>
+              <button className="shop_now_button">Shop Now</button>
+              <p>Find out more</p>
+            </div>
+            <a href="#carousel__slide2" className="carousel__prev"></a>
+            <a href="#carousel__slide4" className="carousel__next"></a>
+          </div>
         </li>
         <li id="carousel__slide4" tabIndex={0} className="carousel__slide">
-          <div className="carousel__snapper"></div>
-          <a href="#carousel__slide3" className="carousel__prev"></a>
-          <a href="#carousel__slide1" className="carousel__next"></a>
+          <div className="carousel__snapper">
+            <div className="hero-text">
+              <h2>
+                Plastic Free
+                <br />
+                Zero Waste
+                <br />
+                Locally Sourced
+              </h2>
+              <button className="shop_now_button">Shop Now</button>
+              <p>Find out more</p>
+            </div>
+            <a href="#carousel__slide3" className="carousel__prev"></a>
+            <a href="#carousel__slide1" className="carousel__next"></a>
+          </div>
         </li>
       </ol>
       <aside className="carousel__navigation">

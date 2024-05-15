@@ -8,11 +8,69 @@
   border-radius: 25px;
 }
 
+.hero-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.shop_now_button {
+  background-color: #043028;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  order: 1;
+}
+
+p {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 250;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+  order: 2;
+}
+
 @media (min-width: 750px) {
   .carousel {
     display: flex;
     justify-content: center;
     max-height: 600px;
+  }
+  .hero-text {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 45px;
+  }
+  h2 {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .shop_now_button {
+    order: 2;
+    width: 310px;
+    height: 62px;
+    font-size: 1rem;
+  }
+  p {
+    order: 1;
   }
 }
 
