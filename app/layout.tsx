@@ -1,5 +1,6 @@
 import '@fontsource/cabin';
 import Navbar from 'components/layout/navbar';
+import { OfferBanner } from 'components/layout/navbar/offer';
 import MaxWidthWrapper from 'components/max-width-wrapper';
 import { GeistSans } from 'geist/font/sans';
 import { ensureStartsWith } from 'lib/utils';
@@ -38,9 +39,12 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     <>
       <html lang="en" className={GeistSans.variable}>
         <body className="bg-white text-black selection:bg-teal-300 ">
-          <Navbar />
+          <OfferBanner />
           <main>
-            <MaxWidthWrapper className="space-y-6">{children}</MaxWidthWrapper>
+            <MaxWidthWrapper className="space-y-6">
+              <Navbar />
+              {children}
+            </MaxWidthWrapper>
           </main>
         </body>
       </html>

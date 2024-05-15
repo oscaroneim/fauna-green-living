@@ -25,11 +25,11 @@ export default async function Footer() {
                   <LogoSquare size="m" />
                 </Link>
               </div>
-              <h3 className="text-customDarkGreen font-cabin text-3xl">
+              <h3 className="font-cabin text-3xl text-customDarkGreen">
                 Join us in fighting against single use plastic
               </h3>
               <br />
-              <p className="text-customDarkGreen mb-4 font-cabin ">
+              <p className="font-cabin mb-4 text-customDarkGreen ">
                 Join our email list and get 10% off your first order. Then, get special access to
                 news and deals exclusive to our subscribers
               </p>

@@ -48,7 +48,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
 
         {images.length > 1 ? (
           <div className="absolute bottom-2 flex w-full justify-center">
-            <div className="bg-customDarkGreen mx-auto flex h-8 items-center rounded-full text-neutral-500 backdrop-blur dark:border-black dark:bg-neutral-900/80">
+            <div className="mx-auto flex h-8 items-center rounded-full bg-customDarkGreen text-neutral-500 backdrop-blur dark:border-black dark:bg-neutral-900/80">
               <Link
                 aria-label="Previous product image"
                 href={previousUrl}

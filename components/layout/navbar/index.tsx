@@ -12,10 +12,6 @@ export default async function Navbar() {
   console.log(menu);
   return (
     <>
-      <div className="flex w-screen justify-center bg-[#043028] text-white">
-        <p>Offer text</p>
-      </div>
-
       <nav className="relative flex items-center justify-between p-4 lg:px-6">
         <div className="block flex-none md:hidden">
           <Suspense fallback={null}>
@@ -23,7 +19,7 @@ export default async function Navbar() {
           </Suspense>
         </div>
         <div className="flex w-full items-center">
-          <div className="3xl:pl-24 flex w-full justify-between pl-0 md:w-1/5 xl:pl-6 2xl:pl-12">
+          <div className=" flex w-full justify-between pl-0 md:w-1/5 ">
             <Link
               href="/"
               className="mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6"
@@ -31,7 +27,7 @@ export default async function Navbar() {
               <LogoSquare />
             </Link>
           </div>
-          <div className="flex flex-row-reverse items-center md:w-full md:pr-12">
+          <div className="flex flex-row-reverse items-center md:w-full">
             <div className="m-2 flex justify-end">
               <Suspense fallback={<OpenCart />}>
                 <Cart />

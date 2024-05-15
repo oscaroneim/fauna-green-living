@@ -1,5 +1,8 @@
-import Image from 'next/image';
-import hero from 'public/hero.png';
+import PlasticWasteStats from 'components/about/plastic-waste-stats';
+import { ThreeItemGrid } from 'components/grid/three-items';
+import Footer from 'components/layout/footer';
+import { Carousel } from 'components/product-carousel';
+import { Reviews } from 'components/reviews';
 
 export const metadata = {
   description: 'High-performance ecommerce store built with Next.js, Vercel, and Shopify.',
@@ -11,26 +14,14 @@ export const metadata = {
 export default async function HomePage() {
   return (
     <>
-      <div className="max-w-screen-2xl lg:px-4">
-        <div className="flex bg-white sm:flex-col lg:flex-row lg:content-center dark:border-neutral-800 dark:bg-black">
-          <div className="relative w-full basis-full object-cover">
-            <Image
-              src={hero}
-              alt="Lady walking through a lush green forest"
-              width={1393}
-              height={645}
-              priority={true}
-            />
-            <div className="absolute flex h-10 w-auto pl-10">
-              <button className="bg-customDarkGreen left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform rounded-lg px-4 py-2 text-white">
-                Shop Now
-              </button>
-            </div>
-          </div>
-          {/* <Carousel />
-          <Footer /> */}
-        </div>
+      <ThreeItemGrid />
+      <div className="absolute left-0 right-0 h-[635px] bg-[#677B6A] px-2 md:px-0"></div>
+      <div className="relative h-[635px] w-full bg-[#677B6A] px-2 md:px-0">
+        <Carousel />
+        <Reviews />
       </div>
+      <PlasticWasteStats />
+      <Footer />
     </>
   );
 }
