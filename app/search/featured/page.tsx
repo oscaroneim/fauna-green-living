@@ -36,12 +36,12 @@ export default async function SearchPage({
       <ShopCarousel
         title={'Kitchen'}
         subtitle={'Essentials for your kitchen'}
-        collectionName={'Kitchen'}
+        collectionName={'hidden-kitchen'}
       />
       <ShopCarousel
         title={'Bathroom'}
         subtitle={'Elevate your bathroom'}
-        collectionName={'Bathroom'}
+        collectionName={'hidden-bathroom'}
       />
     </>
   );
