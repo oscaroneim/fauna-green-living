@@ -34,7 +34,7 @@ export default async function Footer() {
                 news and deals exclusive to our subscribers
               </p>
               <input
-                className="peer-rounded-[1px] mb-4 w-full max-w-md rounded-md border border-transparent border-t-transparent bg-[#D9D9D9] px-3 py-2.5 font-sans text-sm font-normal text-[#043028] outline outline-0 transition-all placeholder-shown:border-transparent placeholder-shown:border-transparent focus:border-[#D9D9D9] focus:border-transparent focus:border-t-transparent focus:outline-0 disabled:border-0"
+                className="peer-rounded-[1px] mb-4 w-full max-w-md rounded-md border border-transparent border-t-transparent bg-[#D9D9D9] px-3 py-2.5 font-sans text-sm font-normal text-[#043028] outline outline-0 transition-all placeholder-shown:border-transparent focus:border-[#D9D9D9] focus:border-transparent focus:border-t-transparent focus:outline-0 disabled:border-0"
                 placeholder="Enter your email here*"
               />
               <br />
