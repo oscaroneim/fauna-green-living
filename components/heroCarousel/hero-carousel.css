@@ -5,6 +5,7 @@
   max-height: 550px;
   filter: drop-shadow(0 0 10px #0003);
   perspective: 100px;
+  border-radius: 25px;
 }
 
 @media (min-width: 750px) {
@@ -38,21 +39,38 @@
 .carousel__slide:nth-child(1) {
   background-image: url('public/HeroImages/desktop-hero.png');
   background-size: cover;
+  background-position: center;
   object-fit: cover;
   color: white;
+  border-radius: 25px;
 }
 
-/* .carousel__slide:nth-child(2) {
-    background-image: url('');
-  }
-  
+.carousel__slide:nth-child(2) {
+  background-image: url('public/HeroImages/desktop-hero2.png');
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  color: white;
+  border-radius: 25px;
+}
+
 .carousel__slide:nth-child(3) {
-    background-image: url(''); /
-  }
-  
+  background-image: url('public/HeroImages/desktop-hero3.png');
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  color: white;
+  border-radius: 25px;
+}
+
 .carousel__slide:nth-child(4) {
-    background-image: url(''); 
-  } */
+  background-image: url('public/HeroImages/desktop-hero4.png');
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  color: white;
+  border-radius: 25px;
+}
 
 .carousel__slide:before {
   content: counter(item);
@@ -60,7 +78,7 @@
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -40%, 70px);
-  color: #fff;
+  color: transparent;
   font-size: 2em;
 }
 
