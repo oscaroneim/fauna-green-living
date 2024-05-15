@@ -78,14 +78,17 @@ export function AddToCart({
       (option) => option.value === searchParams.get(option.name.toLowerCase())
     )
   );
-const selectedVariantId = variant?.id || defaultVariantId;
+  const selectedVariantId = variant?.id || defaultVariantId;
   const actionWithVariant = formAction.bind(null, selectedVariantId);
-    
 
   return (
-    <form action={actionWithVariant}>
+    <form
+      action={() => {
+        actionWithVariant();
+      }}
+    >
       <SubmitButton availableForSale={availableForSale} selectedVariantId={selectedVariantId} />
-      
+
       <p aria-live="polite" className="sr-only" role="status">
         {message}
       </p>

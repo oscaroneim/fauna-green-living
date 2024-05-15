@@ -35,7 +35,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
       <div className="w-90 relative h-[368px] rounded-xl md:h-[625px] md:w-[613px]">
         {images[imageIndex] && (
           <Image
-            className="h-full w-full rounded-xl object-fill"
+            className="h-full w-full rounded-xl object-contain"
             fill
             sizes="(min-width: 1024px) 66vw, 100vw"
             alt={images[imageIndex]?.altText as string}
