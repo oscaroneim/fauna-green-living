@@ -190,7 +190,7 @@ p {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #333;
+  background-color: transparent;
   background-clip: content-box;
   border: 0.25rem solid transparent;
   border-radius: 50%;
