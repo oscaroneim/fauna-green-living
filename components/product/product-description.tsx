@@ -1,5 +1,4 @@
 import { AddToCart } from 'components/cart/add-to-cart';
-import { BuyNow } from 'components/cart/buy-now-button';
 import Price from 'components/price';
 import Prose from 'components/prose';
 import { getCart } from 'lib/shopify';
@@ -28,11 +27,11 @@ export async function ProductDescription({ product }: { product: Product }) {
         </div>
         <Suspense fallback={null}>
           <AddToCart variants={product.variants} availableForSale={product.availableForSale} />
-          <BuyNow
+          {/* <BuyNow
             variants={product.variants}
             availableForSale={product.availableForSale}
             cart={cart}
-          />
+          /> */}
         </Suspense>
       </div>
       <Suspense fallback={null}>
