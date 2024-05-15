@@ -64,9 +64,9 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
             leaveFrom="translate-x-0"
             leaveTo="translate-x-full"
           >
-            <Dialog.Panel className="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col border-l border-neutral-200 bg-white/80 p-6 text-black backdrop-blur-xl md:w-[390px] dark:border-neutral-700 dark:bg-black/80 dark:text-white">
+            <Dialog.Panel className="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col bg-white p-6 text-customGreen backdrop-blur-xl md:w-[390px] dark:border-neutral-700 dark:bg-black/80 dark:text-white">
               <div className="flex items-center justify-between">
-                <p className="text-lg font-semibold">My Cart</p>
+                <p className="text-2xl font-semibold">My Cart</p>
 
                 <button aria-label="Close cart" onClick={closeCart}>
                   <CloseCart />
@@ -135,11 +135,11 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
                             </Link>
                             <div className="flex h-16 flex-col justify-between">
                               <Price
-                                className="flex justify-end space-y-2 text-right text-sm"
+                                className="flex justify-end space-y-2 text-right text-sm text-black"
                                 amount={item.cost.totalAmount.amount}
                                 currencyCode={item.cost.totalAmount.currencyCode}
                               />
-                              <div className="ml-auto flex h-9 flex-row items-center rounded-full border border-neutral-200 dark:border-neutral-700">
+                              <div className="border-natural-500 ml-auto flex h-9 flex-row items-center rounded-full border text-customGreen dark:border-neutral-700">
                                 <EditItemQuantityButton item={item} type="minus" />
                                 <p className="w-6 text-center">
                                   <span className="w-full text-sm">{item.quantity}</span>
@@ -152,21 +152,21 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
                       );
                     })}
                   </ul>
-                  <div className="py-4 text-sm text-neutral-500 dark:text-neutral-400">
+                  <div className="py-4 text-sm text-black dark:text-neutral-400">
                     <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 dark:border-neutral-700">
-                      <p>Taxes</p>
+                      {/* <p>Taxes</p>
                       <Price
                         className="text-right text-base text-black dark:text-white"
                         amount={cart.cost.totalTaxAmount.amount}
                         currencyCode={cart.cost.totalTaxAmount.currencyCode}
-                      />
+                      /> */}
                     </div>
                     <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 pt-1 dark:border-neutral-700">
-                      <p>Shipping</p>
-                      <p className="text-right">Calculated at checkout</p>
+                      <p className="text-customGreen">Shipping</p>
+                      <p className="text-right ">Calculated at checkout</p>
                     </div>
                     <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 pt-1 dark:border-neutral-700">
-                      <p>Total</p>
+                      <p className="text-customGreen">Total</p>
                       <Price
                         className="text-right text-base text-black dark:text-white"
                         amount={cart.cost.totalAmount.amount}
@@ -176,7 +176,7 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
                   </div>
                   <a
                     href={cart.checkoutUrl}
-                    className="block w-full rounded-xl bg-customGreen p-3 text-center text-sm font-medium text-white opacity-90 hover:opacity-100"
+                    className="block w-full rounded-xl bg-customDarkGreen p-3 text-center text-sm font-medium text-white opacity-90 hover:opacity-100"
                   >
                     Proceed to Checkout
                   </a>
