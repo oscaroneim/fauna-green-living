@@ -10,18 +10,18 @@ const { COMPANY_NAME, SITE_NAME } = process.env;
 export default async function Footer() {
   const currentYear = new Date().getFullYear();
   // const copyrightDate = 2023 + (currentYear > 2023 ? `-${currentYear}` : '');
-  const skeleton = 'w-full h-6 animate-pulse rounded bg-neutral-200 dark:bg-neutral-700';
+  const skeleton = 'w-full h-6 animate-pulse rounded bg-neutral-200 ';
   const menu = await getMenu('next-js-frontend-footer-menu');
   // const copyrightName = COMPANY_NAME || SITE_NAME || '';
 
   return (
-    <footer className="text-sm text-neutral-500 dark:text-neutral-400">
+    <footer className="text-sm text-neutral-500">
       <div className="mx-auto flex w-full flex-col gap-6 border-neutral-200 py-12 text-sm md:flex-row">
         <div className="flex-col items-center p-4 md:w-2/5 md:pl-12">
           <div className="flex flex-col ">
             <div className="text-center md:text-left">
               <div className="flex h-full justify-center pb-4 md:w-4/5">
-                <Link className="flex items-center gap-2 text-black dark:text-white" href="/">
+                <Link className="flex items-center gap-2 text-black" href="/">
                   <LogoSquare size="m" />
                 </Link>
               </div>

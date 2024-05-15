@@ -26,7 +26,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
   // const isLargeScreen = useMediaQuery('(min-width: 768px)'); Currently causing a hydration error
 
   const buttonClassName =
-    'h-full px-6 transition-all ease-in-out hover:scale-110 hover:text-black dark:hover:text-white flex items-center justify-end';
+    'h-full px-6 transition-all ease-in-out hover:scale-110 hover:text-black flex items-center justify-end';
 
   return (
     <>
@@ -48,7 +48,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
 
         {images.length > 1 ? (
           <div className="absolute bottom-2 flex w-full justify-center">
-            <div className="mx-auto flex h-8 items-center rounded-full bg-customDarkGreen text-neutral-500 backdrop-blur dark:border-black dark:bg-neutral-900/80">
+            <div className="mx-auto flex h-8 items-center rounded-full bg-customDarkGreen text-neutral-500 backdrop-blur">
               <Link
                 aria-label="Previous product image"
                 href={previousUrl}
