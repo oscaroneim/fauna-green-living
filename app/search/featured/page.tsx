@@ -1,5 +1,4 @@
-import Grid from 'components/grid';
-import ProductGridItems from 'components/layout/product-grid-items';
+import { ShopCarousel } from 'components/shop-carousel';
 import { defaultSort, sorting } from 'lib/constants';
 import { getProducts } from 'lib/shopify';
 
@@ -29,12 +28,21 @@ export default async function SearchPage({
           <span className="font-bold">&quot;{searchValue}&quot;</span>
         </p>
       ) : null}
-
-      {products.length > 0 ? (
-        <Grid className="grid-cols-1 sm:grid-cols-5 lg:grid-cols-5">
-          <ProductGridItems products={products} />
-        </Grid>
-      ) : null}
+      <ShopCarousel
+        title={'Best Sellers'}
+        subtitle={'Frequently bought'}
+        collectionName={'hidden-homepage-carousel'}
+      />
+      <ShopCarousel
+        title={'Kitchen'}
+        subtitle={'Essentials for your kitchen'}
+        collectionName={'Kitchen'}
+      />
+      <ShopCarousel
+        title={'Bathroom'}
+        subtitle={'Elevate your bathroom'}
+        collectionName={'Bathroom'}
+      />
     </>
   );
 }
