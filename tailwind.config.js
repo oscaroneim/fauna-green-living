@@ -10,7 +10,8 @@ module.exports = {
         customGreen: '#82A38A',
         customDarkGreen: '#043028',
         customGrey: '#828282',
-        customLightGrey: '#E0E0E0'
+        customLightGrey: '#E0E0E0',
+        customRed: '#DC2626'
       },
       fontFamily: {
         sans: ['var(--font-geist-sans)']
