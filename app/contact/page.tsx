@@ -1,21 +1,23 @@
+import ContactForm from 'components/contact/contact-form';
 import MaxWidthWrapper from 'components/max-width-wrapper';
 import Image from 'next/image';
 import forest from 'public/contact-form.jpeg';
 import banner from 'public/forest-image.png';
-import Form from './form';
 
-export default async function ContactForm() {
+export default async function ContactPage() {
   return (
     <MaxWidthWrapper className="space-y-6">
-      <div className="bg-customLightGreen">
-        <h1 className="text-5xl text-customDarkGreen">Contact us</h1>
-        <h4 className="text-customGrey">Here To Bee Of Service</h4>
+      <div className="flex h-[673px] gap-x-32 bg-customLightGreen px-12 pb-12 pt-4">
+        <div className=" flex w-full flex-col gap-y-6">
+          <h1 className="text-6xl font-bold text-customDarkGreen">Contact us</h1>
+          <h4 className="text-2xl text-customGrey">Here To Bee Of Service</h4>
+          <ContactForm />
+        </div>
         <Image
-          className="  h-120 w-80 rounded-lg object-cover"
+          className="h-full w-[508px] rounded-lg object-cover "
           src={forest}
           alt="Picture of the man in forest"
         />
-        <Form></Form>
       </div>
 
       <div className="relative">
