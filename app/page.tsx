@@ -1,6 +1,5 @@
 import PlasticWasteStats from 'components/about/plastic-waste-stats';
 import { ThreeItemGrid } from 'components/grid/three-items';
-import Footer from 'components/layout/footer';
 import { Carousel } from 'components/product-carousel';
 import { Reviews } from 'components/reviews';
 
@@ -21,7 +20,6 @@ export default async function HomePage() {
         <Reviews />
       </div>
       <PlasticWasteStats />
-      <Footer />
     </>
   );
 }

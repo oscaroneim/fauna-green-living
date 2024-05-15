@@ -1,4 +1,5 @@
 import '@fontsource/cabin';
+import Footer from 'components/layout/footer';
 import Navbar from 'components/layout/navbar';
 import { OfferBanner } from 'components/layout/navbar/offer';
 import MaxWidthWrapper from 'components/max-width-wrapper';
@@ -44,6 +45,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
             <MaxWidthWrapper className="space-y-6">
               <Navbar />
               {children}
+              <Footer />
             </MaxWidthWrapper>
           </main>
         </body>
