@@ -79,7 +79,7 @@ export default async function ProductPage({ params }: { params: { handle: string
         }}
       />
       <div className="mx-auto max-w-screen-2xl px-4">
-        <div className="flex flex-col bg-white p-8 md:p-12 lg:flex-row lg:content-center lg:gap-24 ">
+        <div className="flex flex-col bg-white p-2 md:p-4 lg:flex-row lg:content-center lg:gap-24 ">
           <div className="h-full w-full basis-full sm:mb-2 sm:mt-2 lg:basis-2/6">
             {/*This section controls the thumbnail images below the main image */}
             <Suspense
