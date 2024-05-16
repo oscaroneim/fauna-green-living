@@ -19,7 +19,7 @@ function SubmitButton() {
       aria-label="Remove cart item"
       aria-disabled={pending}
       className={clsx(
-        'ease bg-customGreen flex h-[17px] w-[17px] items-center justify-center rounded-full transition-all duration-200',
+        'ease flex h-[17px] w-[17px] items-center justify-center rounded-full bg-customGreen transition-all duration-200',
         {
           'cursor-not-allowed px-0': pending
         }
@@ -28,7 +28,7 @@ function SubmitButton() {
       {pending ? (
         <LoadingDots className="bg-white" />
       ) : (
-        <XMarkIcon className="hover:text-accent-3 mx-[1px] h-4 w-4 text-white dark:text-black" />
+        <XMarkIcon className="hover:text-accent-3 mx-[1px] h-4 w-4 text-white" />
       )}
     </button>
   );

@@ -12,45 +12,41 @@ export default async function Navbar() {
   console.log(menu);
   return (
     <>
-      <div className="flex w-screen justify-center bg-[#043028] text-white">
-        <p>Offer text</p>
-      </div>
-
       <nav className="relative flex items-center justify-between p-4 lg:px-6">
-        <div className="block flex-none md:hidden">
+        <div className="block flex-none lg:hidden">
           <Suspense fallback={null}>
             <MobileMenu menu={menu} />
           </Suspense>
         </div>
         <div className="flex w-full items-center">
-          <div className="3xl:pl-44 flex w-full justify-between md:w-1/5 xl:pl-0 2xl:pl-32">
+          <div className=" flex w-full justify-between pl-0 lg:w-1/5 ">
             <Link
               href="/"
-              className="mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6"
+              className="mr-2 flex w-full items-center justify-center lg:mr-6 lg:w-auto"
             >
               <LogoSquare />
             </Link>
           </div>
-          <div className="flex w-full flex-row-reverse items-center pr-12">
+          <div className="flex flex-row-reverse items-center lg:w-full">
             <div className="m-2 flex justify-end">
               <Suspense fallback={<OpenCart />}>
                 <Cart />
               </Suspense>
             </div>
-            <div className="md:2/3 hidden justify-end md:flex">
+            <div className="lg:2/3 hidden justify-end lg:flex">
               <Suspense fallback={<SearchSkeleton />}>
                 <Search />
               </Suspense>
             </div>
 
-            <div className="pr-6">
+            <div className="lg:pr-6">
               {menu.length ? (
-                <ul className="hidden gap-6 pr-6 text-[20px] text-sm md:flex md:items-center">
+                <ul className="hidden gap-6 pr-6 text-[20px] text-sm lg:flex lg:items-center">
                   {menu.map((item) => (
                     <li key={item.title}>
                       <Link
                         href={item.path}
-                        className="text-black underline-offset-4 hover:text-[#043028] hover:underline dark:text-neutral-400 dark:hover:text-neutral-300"
+                        className="text-black underline-offset-4 hover:text-[#043028] hover:underline"
                       >
                         {item.title}
                       </Link>
