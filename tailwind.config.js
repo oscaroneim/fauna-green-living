@@ -5,6 +5,9 @@ module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'frequently-asked-trees': "url('public/forest-image.png')"
+      },
       colors: {
         customLightGreen: '#C4D4C8',
         customGreen: '#82A38A',

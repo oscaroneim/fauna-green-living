@@ -1,5 +1,5 @@
-import PlasticWasteStats from 'components/about/plastic-waste-stats';
 import MaxWidthWrapper from 'components/max-width-wrapper';
+import PlasticWasteStats from 'components/plastic-waste-stats';
 import Image from 'next/image';
 import dear from '../../public/LogoImages/dear.png';
 
