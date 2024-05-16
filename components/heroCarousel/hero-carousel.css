@@ -18,7 +18,7 @@
   align-items: center;
 }
 
-h2 {
+.hero-big-text {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
@@ -37,7 +37,7 @@ h2 {
   order: 1;
 }
 
-p {
+.hero-small-text {
   text-align: center;
   font-size: 0.9rem;
   font-weight: 250;
@@ -58,7 +58,7 @@ p {
     align-items: flex-start;
     padding: 45px;
   }
-  h2 {
+  .hero-big-text {
     text-align: left;
     font-size: 2rem;
     font-weight: 700;
@@ -69,7 +69,7 @@ p {
     height: 62px;
     font-size: 1rem;
   }
-  p {
+  .hero-small-text {
     order: 1;
   }
 }
@@ -190,7 +190,7 @@ p {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #333;
+  background-color: transparent;
   background-clip: content-box;
   border: 0.25rem solid transparent;
   border-radius: 50%;

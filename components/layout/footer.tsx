@@ -16,7 +16,7 @@ export default async function Footer() {
 
   return (
     <footer className="text-sm text-neutral-500">
-      <div className="mx-auto flex w-full flex-col gap-6 border-neutral-200 py-12 text-sm md:flex-row">
+      <div className="mx-auto flex w-full flex-col justify-between gap-6 border-neutral-200 py-12 text-sm md:flex-row">
         <div className="flex-col items-center p-4 md:w-2/5 md:pl-12">
           <div className="flex flex-col ">
             <div className="text-center md:text-left">
@@ -46,7 +46,7 @@ export default async function Footer() {
           <div className="pt-5 text-center md:text-left">
             <ul className="flex justify-center space-x-3 pl-2 md:justify-start">
               <li>
-                <a href="https://www.instagram.com/">
+                <a href="https://www.instagram.com/faunagreenliving/">
                   <Image
                     src="/Socialmedia-Images/instagram.png"
                     alt="Instagram Icon"
@@ -56,7 +56,7 @@ export default async function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://www.tiktok.com/">
+                <a href="https://www.tiktok.com/@faunagreenliving">
                   <Image
                     src="/Socialmedia-Images/tiktok.png"
                     alt="Tiktok Icon"
@@ -66,7 +66,7 @@ export default async function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://www.facebook.com/">
+                <a href="https://www.facebook.com/FaunaGreenLiving/">
                   <Image
                     src="/Socialmedia-Images/facebook.png"
                     alt="Facebook Icon"
@@ -76,7 +76,7 @@ export default async function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://www.LinkedIn.com/">
+                <a href="https://www.linkedin.com/in/kimberlyfollett">
                   <Image
                     src="/Socialmedia-Images/linkedin.png"
                     alt="LinkedIn Icon"
