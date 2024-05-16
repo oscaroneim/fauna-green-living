@@ -93,6 +93,7 @@ export default async function ProductPage({ params }: { params: { handle: string
                 }))}
               />
             </Suspense>
+            {/*This needs to be swapped out with Kim's video */}
             <div className="block h-auto w-auto object-contain">
               {' '}
               <iframe
