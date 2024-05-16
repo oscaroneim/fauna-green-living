@@ -7,7 +7,7 @@ import useContactForm from './useContactForm';
 
 export default function ContactForm() {
   const { errors, handleSubmit, success, isPending } = useContactForm();
-  const formRef = useRef(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const resetForm = () => {
     if (formRef.current) {
@@ -51,12 +51,12 @@ export default function ContactForm() {
           Your Message
         </label>
         <textarea
-          className=" grow resize-none rounded-lg border border-customLightGrey px-4 py-3 font-medium shadow-sm focus:outline-none"
+          className=" border-customLightGrey grow resize-none rounded-lg border px-4 py-3 font-medium shadow-sm focus:outline-none"
           id="yourMessage"
           name="yourMessage"
           placeholder="Enter your question or message"
         />
-        <div className="h-6 text-customRed">{errors?.yourMessage?._errors?.[0]}</div>
+        <div className="text-customRed h-6">{errors?.yourMessage?._errors?.[0]}</div>
       </div>
       <button className="flex h-12 items-center justify-center rounded-lg bg-customDarkGreen text-white">
         {isPending ? <Spinner /> : 'Submit'}
