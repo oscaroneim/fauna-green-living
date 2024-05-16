@@ -5,10 +5,16 @@ module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      backgroundImage: {
+        'frequently-asked-trees': "url('/forest-image.png')"
+      },
       colors: {
         customLightGreen: '#C4D4C8',
         customGreen: '#82A38A',
-        customDarkGreen: '#043028'
+        customDarkGreen: '#043028',
+        customGrey: '#828282',
+        customLightGrey: '#E0E0E0',
+        customRed: '#DC2626'
       },
       fontFamily: {
         sans: ['var(--font-geist-sans)']
