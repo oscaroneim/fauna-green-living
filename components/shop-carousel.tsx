@@ -1,6 +1,7 @@
 import { getCollectionProducts } from 'lib/shopify';
 import Link from 'next/link';
 import { GridTileImage } from './grid/tile';
+import Price from './price';
 
 export async function ShopCarousel({
   title,
@@ -39,11 +40,11 @@ export async function ShopCarousel({
                   className="object-cover object-center"
                 />
                 <p className="text-[20px]">{product.title}</p>
-                <p className="text-[16px] text-[#454545]">
-                  &#163;
-                  {product.priceRange.maxVariantPrice.amount}{' '}
-                  {product.priceRange.maxVariantPrice.currencyCode}
-                </p>
+                <Price
+                  className="text-[16px] font-normal text-[#454545]"
+                  amount={product.priceRange.maxVariantPrice.amount}
+                  currencyCode={'GBP'}
+                />
               </Link>
             </li>
           ))}
