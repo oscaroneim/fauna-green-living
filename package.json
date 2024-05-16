@@ -33,6 +33,7 @@
     "react-dom": "18.2.0",
     "react-google-forms-hooks": "^1.2.4",
     "react-intersection-observer": "^9.10.2",
+    "react-player": "^2.16.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
