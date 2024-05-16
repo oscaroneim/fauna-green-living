@@ -22,6 +22,7 @@
     "*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.3.3",
     "@fontsource/cabin": "^5.0.18",
     "@headlessui/react": "^1.7.19",
     "@heroicons/react": "^2.1.3",

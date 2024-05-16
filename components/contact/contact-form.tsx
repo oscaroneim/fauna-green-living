@@ -1,10 +1,11 @@
 'use client';
 
+import Spinner from 'components/spinner';
 import Input from './components/input';
 import useContactForm from './useContactForm';
 
 export default function ContactForm() {
-  const { errors, handleSubmit } = useContactForm();
+  const { errors, handleSubmit, success, isPending } = useContactForm();
   return (
     <form onSubmit={handleSubmit} className="flex grow flex-col gap-y-2 ">
       <div className="flex gap-x-4 gap-y-2 max-lg:flex-col ">
@@ -44,7 +45,14 @@ export default function ContactForm() {
         />
         <div className="h-6 text-customRed">{errors?.yourMessage?._errors?.[0]}</div>
       </div>
-      <button className="rounded-lg bg-customDarkGreen py-4 text-white">Submit</button>
+      <button className="flex h-12 items-center justify-center rounded-lg bg-customDarkGreen text-white">
+        {isPending ? <Spinner /> : 'Submit'}
+      </button>
+      {success && (
+        <div className="text-center font-semibold text-customDarkGreen">
+          Thank you for submitting your message!
+        </div>
+      )}
     </form>
   );
 }
