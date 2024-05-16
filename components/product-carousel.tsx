@@ -1,6 +1,7 @@
 import { getCollectionProducts } from 'lib/shopify';
 import Link from 'next/link';
 import { GridTileImage } from './grid/tile';
+import Price from './price';
 
 export async function Carousel() {
   // Collections that start with `hidden-*` are hidden from the search page.
@@ -15,7 +16,7 @@ export async function Carousel() {
     <div className="mx-none h-[410px] bg-[#677B6A] px-2 md:px-0">
       <p className="relative pb-4 pt-2 text-[34px] text-white lg:text-center">Best Sellers</p>
       <div className=" h-[340px] w-full overflow-x-auto pt-1">
-        <ul className="flex gap-4 md:justify-between md:px-6">
+        <ul className="flex gap-[32px] md:justify-between md:px-6">
           {carouselProducts.slice(0, 5).map((product, i) => (
             <li
               key={`${product.handle}${i}`}
@@ -29,11 +30,12 @@ export async function Carousel() {
                   sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
                   className="object-cover object-center"
                 />
-                <p className="text-[20px]">{product.title}</p>
-                <p className="text-[16px] text-[#D6D6D6]">
-                  &#163;
-                  {product.priceRange.maxVariantPrice.amount} {''}
-                </p>
+                <p className="text-[20px] font-medium">{product.title}</p>
+                <Price
+                  className="text-[16px] font-normal text-[#D6D6D6]"
+                  amount={product.priceRange.maxVariantPrice.amount}
+                  currencyCode={'GBP'}
+                />
               </Link>
             </li>
           ))}
