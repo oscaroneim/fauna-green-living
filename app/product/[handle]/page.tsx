@@ -101,10 +101,10 @@ export default async function ProductPage({ params }: { params: { handle: string
                 height="315"
                 src="https://www.youtube.com/embed/sTPWknd7oOQ?si=Y0Djt8r8oko7nc8F"
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
                 className="hidden sm:block"
               ></iframe>
             </div>
