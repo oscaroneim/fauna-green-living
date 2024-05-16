@@ -94,19 +94,22 @@ export default async function ProductPage({ params }: { params: { handle: string
               />
             </Suspense>
             {/*This needs to be swapped out with Kim's video */}
-            <div className="block h-auto w-auto object-contain">
-              {' '}
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/sTPWknd7oOQ?si=Y0Djt8r8oko7nc8F"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="hidden sm:block"
-              ></iframe>
+            <div className="relative h-auto w-full">
+              <div className="block h-auto w-auto overflow-hidden rounded-xl object-contain">
+                {' '}
+                <iframe
+                  width="100%"
+                  height="315"
+                  src={`https://www.youtube.com/embed/sTPWknd7oOQ?modestBranding=1&si=Y0Djt8r8oko7nc8F`}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="hidden sm:block"
+                  style={{ aspectRatio: '16/9' }}
+                ></iframe>
+              </div>
             </div>
           </div>
 
