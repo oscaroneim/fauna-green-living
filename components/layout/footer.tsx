@@ -46,7 +46,7 @@ export default async function Footer() {
           <div className="pt-5 text-center md:text-left">
             <ul className="flex justify-center space-x-3 pl-2 md:justify-start">
               <li>
-                <a href="https://www.instagram.com/">
+                <a href="https://www.instagram.com/faunagreenliving/">
                   <Image
                     src="/Socialmedia-Images/instagram.png"
                     alt="Instagram Icon"
@@ -56,7 +56,7 @@ export default async function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://www.tiktok.com/">
+                <a href="https://www.tiktok.com/@faunagreenliving">
                   <Image
                     src="/Socialmedia-Images/tiktok.png"
                     alt="Tiktok Icon"
@@ -66,7 +66,7 @@ export default async function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://www.facebook.com/">
+                <a href="https://www.facebook.com/FaunaGreenLiving/">
                   <Image
                     src="/Socialmedia-Images/facebook.png"
                     alt="Facebook Icon"
@@ -76,7 +76,7 @@ export default async function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://www.LinkedIn.com/">
+                <a href="https://www.linkedin.com/in/kimberlyfollett">
                   <Image
                     src="/Socialmedia-Images/linkedin.png"
                     alt="LinkedIn Icon"
