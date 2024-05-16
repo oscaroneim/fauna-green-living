@@ -42,7 +42,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <body className="bg-white text-black selection:bg-teal-300 ">
           <OfferBanner />
           <main>
-            <MaxWidthWrapper className="space-y-6">
+            <MaxWidthWrapper>
               <Navbar />
               {children}
               <Footer />
