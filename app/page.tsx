@@ -1,7 +1,7 @@
-import PlasticWasteStats from 'components/about/plastic-waste-stats';
 import { HeroCarousel } from 'components/heroCarousel/hero-carousel';
 import { Carousel } from 'components/product-carousel';
 import { Reviews } from 'components/reviews';
+import PlasticWasteStats from '../components/plastic-waste-stats';
 
 export const metadata = {
   description: 'High-performance ecommerce store built with Next.js, Vercel, and Shopify.',
