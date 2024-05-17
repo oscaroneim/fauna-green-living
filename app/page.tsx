@@ -1,6 +1,7 @@
 import { HeroCarousel } from 'components/heroCarousel/hero-carousel';
 import { Carousel } from 'components/product-carousel';
 import { Reviews } from 'components/reviews';
+import HeroVideo from '../components/Herovideo/page';
 import PlasticWasteStats from '../components/plastic-waste-stats';
 
 export const metadata = {
@@ -20,6 +21,7 @@ export default async function HomePage() {
         <Carousel />
         <Reviews />
       </div>
+      <HeroVideo />
     </>
   );
 }
