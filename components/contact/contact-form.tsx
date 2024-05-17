@@ -1,13 +1,26 @@
 'use client';
 
 import Spinner from 'components/spinner';
+import { useRef } from 'react';
 import Input from './components/input';
 import useContactForm from './useContactForm';
 
 export default function ContactForm() {
   const { errors, handleSubmit, success, isPending } = useContactForm();
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const resetForm = () => {
+    if (formRef.current) {
+      formRef.current.reset();
+    }
+  };
+
+  if (success) {
+    resetForm();
+  }
+
   return (
-    <form onSubmit={handleSubmit} className="flex grow flex-col gap-y-2 ">
+    <form ref={formRef} onSubmit={handleSubmit} className="flex grow flex-col gap-y-2 ">
       <div className="flex gap-x-4 gap-y-2 max-lg:flex-col ">
         <Input
           label="First Name"

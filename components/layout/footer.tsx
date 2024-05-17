@@ -103,6 +103,9 @@ export default async function Footer() {
           <FooterMenu menu={menu} />
         </Suspense>
       </div>
+      <div className="px-12">
+        <small>© 2024 Fauna Green Living. All Rights Reserved.</small>
+      </div>
     </footer>
   );
 }

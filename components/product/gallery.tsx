@@ -75,7 +75,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
 
       {images.length > 1 ? (
         <ul
-          className={`mb-4 mt-2 flex items-center justify-center gap-2 overflow-auto py-1`} //${isLargeScreen ? 'show' : 'hidden'} Currently causing a hydration error (Needed to render content at smaller screen sizes)
+          className={`my-6 flex items-center justify-center gap-2 overflow-auto py-1`} //${isLargeScreen ? 'show' : 'hidden'} Currently causing a hydration error (Needed to render content at smaller screen sizes)
         >
           {images.map((image, index) => {
             const isActive = index === imageIndex;
