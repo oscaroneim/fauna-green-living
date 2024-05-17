@@ -1,13 +1,13 @@
-import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-
 import { GridTileImage } from 'components/grid/tile';
+import Price from 'components/price';
 import { Gallery } from 'components/product/gallery';
 import { ProductDescription } from 'components/product/product-description';
 import { HIDDEN_PRODUCT_TAG } from 'lib/constants';
 import { getProduct, getProductRecommendations } from 'lib/shopify';
 import { Image } from 'lib/shopify/types';
+import type { Metadata } from 'next';
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 
 export async function generateMetadata({
@@ -105,7 +105,7 @@ export default async function ProductPage({ params }: { params: { handle: string
                   <iframe
                     width="100%"
                     height="315"
-                    src={`https://www.youtube.com/embed/sTPWknd7oOQ?rel=0?modestBranding=1&si=Y0Djt8r8oko7nc8F`}
+                    src={`https://www.youtube.com/embed/sTPWknd7oOQ?modestBranding=1&si=Y0Djt8r8oko7nc8F`}
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -146,14 +146,16 @@ async function RelatedProducts({ id }: { id: string }) {
             <Link className="relative h-full w-full" href={`/product/${product.handle}`}>
               <GridTileImage
                 alt={product.title}
-                label={{
-                  title: product.title,
-                  amount: product.priceRange.maxVariantPrice.amount,
-                  currencyCode: product.priceRange.maxVariantPrice.currencyCode
-                }}
                 src={product.featuredImage?.url}
                 fill
-                sizes="(min-width: 1024px) 20vw, (min-width: 768px) 25vw, (min-width: 640px) 33vw, (min-width: 475px) 50vw, 100vw"
+                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+                className="object-cover object-center"
+              />
+              <p className="text-[20px] font-medium">{product.title}</p>
+              <Price
+                className="text-[16px] font-normal text-black"
+                amount={product.priceRange.maxVariantPrice.amount}
+                currencyCode={'GBP'}
               />
             </Link>
           </li>
