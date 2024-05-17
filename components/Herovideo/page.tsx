@@ -4,7 +4,7 @@ import './Herovideo.css';
 const HeroVideo = () => {
   return (
     <div>
-      <div className="container md:pl-40">
+      <div className="container">
         <div className="videodiv">
           <video controls autoPlay muted style={{ width: '100%', height: 'auto' }}>
             <source src="videos/Fauna.mp4" type="video/mp4" />
@@ -14,6 +14,12 @@ const HeroVideo = () => {
 
         <div className="hello-all">
           <h2 className="titlehead">HOW IT WORKS</h2>
+          <div className="videodiv-mobile">
+            <video controls autoPlay muted style={{ width: '100%', height: 'auto' }}>
+              <source src="videos/Fauna.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
           <div className="caption-div">
             <h3 className="caption">Choose the appropriate size 📏</h3>
             <p className="caption-text">
