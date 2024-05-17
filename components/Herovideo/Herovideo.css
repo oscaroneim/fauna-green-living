@@ -1,0 +1,81 @@
+/* For screens larger than 1400px (adjust as needed) */
+@media screen and (min-width: 1400px) {
+  .container {
+    position: relative;
+    padding-bottom: 10px;
+    width: 100%;
+    padding-left: 150px;
+  }
+
+  .videodiv {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 730px;
+    height: 450px;
+  }
+
+  .videodiv-mobile {
+    display: none;
+  }
+
+  .hello-all {
+    position: absolute;
+    width: 600px;
+    height: 350px;
+    top: 35px;
+    left: 1200px;
+    transform: translate(-60%, 0%);
+    background-color: #043028;
+    padding: 10px;
+    z-index: 2; /* Higher z-index for the "Hello all" div */
+  }
+}
+
+/* For screens with a maximum width of 1400px (adjust as needed) */
+@media (max-width: 1400px) {
+  .container {
+    position: relative;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+  .videodiv {
+    display: none;
+  }
+
+  .videodiv-mobile {
+    padding: 20px;
+  }
+
+  .hello-all {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #043028;
+    padding: 10px;
+    z-index: 1;
+  }
+}
+
+.titlehead {
+  font-size: xx-large;
+  color: white;
+  text-align: center;
+  padding-bottom: 0px;
+  padding-top: 10px;
+}
+.caption {
+  font-size: large;
+  color: white;
+}
+
+.caption-text {
+  font-size: small;
+  color: white;
+}
+
+.caption-div {
+  text-align: center;
+  padding: 15px;
+}

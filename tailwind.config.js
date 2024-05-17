@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'frequently-asked-trees': "url('/forest-image.png')"
+        'frequently-asked-trees': "url('/trees.png')"
       },
       colors: {
         customLightGreen: '#C4D4C8',
