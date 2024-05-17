@@ -6,7 +6,7 @@ import forest from 'public/contact-form.jpeg';
 export default async function ContactPage() {
   return (
     <MaxWidthWrapper className="space-y-6">
-      <div className="flex gap-x-10 bg-customLightGreen p-4 pt-4 md:h-[750px] lg:h-[673px] xl:gap-x-32 xl:px-12 xl:pb-12">
+      <div className="flex gap-x-10 rounded-lg bg-customLightGreen p-4 pt-4 md:h-[750px] lg:h-[673px] xl:gap-x-32 xl:px-12 xl:pb-12 xl:pt-12">
         <div className=" flex w-full flex-col gap-y-6">
           <h1 className="text-6xl font-bold text-customDarkGreen">Contact us</h1>
           <h4 className="text-2xl text-customGrey">Here To Bee Of Service</h4>
