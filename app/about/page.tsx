@@ -1,6 +1,6 @@
-import PlasticWasteStats from 'components/about/plastic-waste-stats';
 import MaxWidthWrapper from 'components/max-width-wrapper';
 import Image from 'next/image';
+import PlasticWasteStats from '../../components/plastic-waste-stats';
 import dear from '../../public/LogoImages/dear.png';
 
 export default async function About() {

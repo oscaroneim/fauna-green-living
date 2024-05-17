@@ -69,6 +69,8 @@ export default async function ProductPage({ params }: { params: { handle: string
       lowPrice: product.priceRange.minVariantPrice.amount
     }
   };
+  //check to see if the product title includes the word wrap, if so render the how to video
+  const isWrapProduct = product.title.toLowerCase().includes('wrap');
 
   return (
     <>
@@ -79,8 +81,9 @@ export default async function ProductPage({ params }: { params: { handle: string
         }}
       />
       <div className="mx-auto max-w-screen-2xl px-4">
-        <div className="flex flex-col bg-white p-8 md:p-12 lg:flex-row lg:content-center lg:gap-24">
-          <div className="h-full w-full basis-full lg:basis-2/6">
+        <div className="flex flex-col bg-white p-2 md:p-4 lg:flex-row lg:content-center lg:gap-24 ">
+          <div className="h-full w-full basis-full sm:mb-2 sm:mt-2 lg:basis-2/6">
+            {/*This section controls the thumbnail images below the main image */}
             <Suspense
               fallback={
                 <div className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden" />
@@ -93,6 +96,27 @@ export default async function ProductPage({ params }: { params: { handle: string
                 }))}
               />
             </Suspense>
+            {/*This needs to be swapped out with Kim's video/ video only renders if isWrapProduct is true*/}
+            {isWrapProduct && (
+              <div className="relative h-auto w-full space-y-6">
+                <h2 className="hidden text-2xl font-bold sm:block">How to use our wraps</h2>
+                <div className="block h-auto w-auto overflow-hidden rounded-xl object-contain">
+                  {' '}
+                  <iframe
+                    width="100%"
+                    height="315"
+                    src={`https://www.youtube.com/embed/sTPWknd7oOQ?modestBranding=1&si=Y0Djt8r8oko7nc8F`}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="hidden sm:block"
+                    style={{ aspectRatio: '16/9' }}
+                  ></iframe>
+                </div>
+              </div>
+            )}
           </div>
 
           <div className="basis-full lg:basis-3/6">

@@ -32,10 +32,10 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
     <>
       {/*<----------------------------This section controls the main image (Product page) ----------------------------------------> */}
 
-      <div className="w-90 relative h-[368px] rounded-xl md:h-[625px] md:w-[613px]">
+      <div className="relative h-96 w-full rounded-xl sm:h-[330px] sm:w-[318px] md:h-[625px] md:w-[613px]">
         {images[imageIndex] && (
           <Image
-            className="h-full w-full rounded-xl object-contain"
+            className="rounded-xl object-contain"
             fill
             sizes="(min-width: 1024px) 66vw, 100vw"
             alt={images[imageIndex]?.altText as string}
@@ -47,7 +47,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
         {/*<----------------------------This section controls the image navigation arrows----------------------------------------> */}
 
         {images.length > 1 ? (
-          <div className="absolute bottom-2 flex w-full justify-center">
+          <div className="absolute bottom-6 hidden w-full justify-center sm:flex">
             <div className="mx-auto flex h-8 items-center rounded-full bg-customDarkGreen text-neutral-500 backdrop-blur">
               <Link
                 aria-label="Previous product image"
@@ -75,7 +75,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
 
       {images.length > 1 ? (
         <ul
-          className={`mb-4 flex items-center justify-center gap-2 overflow-auto py-1 lg:mt-2`} //${isLargeScreen ? 'show' : 'hidden'} Currently causing a hydration error (Needed to render content at smaller screen sizes)
+          className={`my-6 flex items-center justify-center gap-2 overflow-auto py-1`} //${isLargeScreen ? 'show' : 'hidden'} Currently causing a hydration error (Needed to render content at smaller screen sizes)
         >
           {images.map((image, index) => {
             const isActive = index === imageIndex;
@@ -84,7 +84,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
             imageSearchParams.set('image', index.toString());
 
             return (
-              <li key={image.src} className="h-20 w-20">
+              <li key={image.src} className="h-20 w-20 rounded-xl">
                 <Link
                   aria-label="Enlarge product image"
                   href={createUrl(pathname, imageSearchParams)}
