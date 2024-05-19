@@ -29,16 +29,23 @@ export default async function CategoryPage({
   params: { collection: string };
   searchParams?: { [key: string]: string | string[] | undefined };
 }) {
+  const collection = await getCollection(params.collection);
+
+  if (!collection) {
+    return notFound();
+  }
   const { sort } = searchParams as { [key: string]: string };
   const { sortKey, reverse } = sorting.find((item) => item.slug === sort) || defaultSort;
   const products = await getCollectionProducts({ collection: params.collection, sortKey, reverse });
 
   return (
     <section>
+      <p className="relative  text-[34px] text-black md:pl-[24px]"> {collection.title} </p>
+      <p className="relative  text-[16px] text-black md:pl-[24px]"> {collection.description}</p>
       {products.length === 0 ? (
         <p className="py-3 text-lg">{`No products found in this collection`}</p>
       ) : (
-        <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <Grid className="flex">
           <ProductGridItems products={products} />
         </Grid>
       )}
