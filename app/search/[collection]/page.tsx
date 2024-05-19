@@ -40,8 +40,14 @@ export default async function CategoryPage({
 
   return (
     <section>
-      <p className="relative  text-[34px] text-black md:pl-[24px]"> {collection.title} </p>
-      <p className="relative  text-[16px] text-black md:pl-[24px]"> {collection.description}</p>
+      <p className="relative  text-[34px] text-black max-md:text-center md:pl-[24px]">
+        {' '}
+        {collection.title}{' '}
+      </p>
+      <p className="relative  text-[16px] text-black max-md:text-center md:pl-[24px]">
+        {' '}
+        {collection.description}
+      </p>
       {products.length === 0 ? (
         <p className="py-3 text-lg">{`No products found in this collection`}</p>
       ) : (
