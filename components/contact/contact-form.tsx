@@ -2,6 +2,7 @@
 
 import Spinner from 'components/spinner';
 import { useRef } from 'react';
+import SelectInput from './ContactInput';
 import Input from './components/input';
 import useContactForm from './useContactForm';
 
@@ -44,6 +45,19 @@ export default function ContactForm() {
         id="emailAddress"
         placeholder="Enter email address"
         error={errors?.emailAddress?._errors?.[0]}
+      />
+
+      <SelectInput
+        label="Subject"
+        name="subject"
+        id="subject"
+        options={[
+          { value: 'wholesale', label: 'Wholesale' },
+          { value: 'wholesale', label: 'Wholesale' },
+          { value: 'custom', label: 'Custom' },
+          { value: 'general', label: 'General' }
+        ]}
+        error={errors?.subject?._errors?.[0]}
       />
 
       <div className="flex w-full grow flex-col gap-y-0.5">
