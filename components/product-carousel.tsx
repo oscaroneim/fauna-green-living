@@ -15,12 +15,12 @@ export async function Carousel() {
   return (
     <div className="mx-none h-[410px] bg-[#677B6A] px-2 md:px-0">
       <p className="relative pb-4 pt-2 text-[34px] text-white lg:text-center">Best Sellers</p>
-      <div className=" h-[340px] w-full overflow-x-auto pt-1">
+      <div className=" h-full w-full overflow-x-auto pt-1">
         <ul className="flex gap-[32px] md:justify-between md:px-6">
           {carouselProducts.slice(0, 5).map((product, i) => (
             <li
               key={`${product.handle}${i}`}
-              className="relative aspect-square h-[30vh] max-h-[232px] w-2/3 max-w-[232px] flex-none text-white md:w-1/3"
+              className="relative aspect-square h-[232px] text-white"
             >
               <Link href={`/product/${product.handle}`} className="relative h-full w-full">
                 <GridTileImage
