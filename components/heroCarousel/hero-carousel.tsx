@@ -1,4 +1,5 @@
 import './hero-carousel.css';
+import Link from 'next/link';
 
 export async function HeroCarousel() {
   return (
@@ -22,10 +23,10 @@ export async function HeroCarousel() {
                 Locally Sourced
               </h2>
               <button className="shop_now_button order-1 cursor-pointer rounded-md border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:order-2 md:h-[62px] md:w-[310px] md:text-base">
-                Shop Now
+                <Link href="/search">Shop Now</Link>
               </button>
               <p className="hero-small-text order-2 mb-4 mt-4 text-center text-sm font-light underline md:order-1">
-                Find out more
+                <Link href="/about">Find out more</Link>
               </p>
             </div>
             <a href="#carousel__slide4" className="carousel__prev"></a>
