@@ -20,6 +20,8 @@ const useContactForm = () => {
         setErrors(result.error.format());
         return;
       }
+
+      setErrors(undefined);
       try {
         await emailjs.send(
           process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,

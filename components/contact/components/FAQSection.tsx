@@ -70,7 +70,7 @@ const FAQSection: React.FC = () => {
         <div key={index} className="mb-4">
           {/* Clickable div to toggle the FAQ answer visibility */}
           <div
-            className="bg-200 hover:300 flex transform cursor-pointer items-center justify-between rounded-md bg-customGreen px-4 py-2 transition duration-300 ease-in-out hover:bg-customLightGreen"
+            className="flex transform cursor-pointer items-center justify-between rounded-md bg-customGreen px-4 py-2 transition duration-300 ease-in-out hover:bg-customLightGreen"
             onClick={() => toggleFAQ(index)}
           >
             <h3 className="font-medium">{faq.question}</h3>
@@ -79,7 +79,7 @@ const FAQSection: React.FC = () => {
           </div>
           {/* Conditionally render the FAQ answer if the current index matches the openIndex */}
           {openIndex === index && (
-            <div className="bg-100 rounded-md  bg-customGreen px-4 py-2">
+            <div className="rounded-md  bg-customGreen px-4 py-2">
               <p>{faq.answer}</p>
             </div>
           )}
