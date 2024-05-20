@@ -7,6 +7,7 @@ export const ContactSchema = z.object({
     .string()
     .min(1, 'Email address is required')
     .email('Email address should be valid'),
+  subject: z.enum(['wholesale', 'custom', 'general'], { message: 'Subject is required' }),
   yourMessage: z.string().min(1, 'Message is required')
 });
 export type ContactSchema = z.infer<typeof ContactSchema>;
