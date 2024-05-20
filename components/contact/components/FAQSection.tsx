@@ -1,12 +1,17 @@
+// Directive to ensure this component is treated as a client-side component
 'use client';
+
 import React, { useState } from 'react';
 
+// Defining the structure of an FAQ item using a TypeScript interface
 interface FAQ {
   question: string;
   answer: string;
 }
 
+// Functional component for the FAQ section
 const FAQSection: React.FC = () => {
+  // Array of FAQ objects with questions and answers
   const faqs: FAQ[] = [
     {
       question: 'HOW DO THEY WORK?',
@@ -49,25 +54,32 @@ const FAQSection: React.FC = () => {
     }
   ];
 
+  // useState hook to keep track of which FAQ item is currently open
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  // Function to toggle the visibility of an FAQ answer
   const toggleFAQ = (index: number) => {
+    // Set the openIndex to the clicked FAQ index if it's not already open, otherwise set to null
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
   return (
     <div>
+      {/* Map through the FAQs array to render each FAQ item */}
       {faqs.map((faq, index) => (
         <div key={index} className="mb-4">
+          {/* Clickable div to toggle the FAQ answer visibility */}
           <div
-            className="bg-200 hover:300 flex transform cursor-pointer items-center justify-between rounded-md bg-customGreen  px-4 py-2 transition duration-300 ease-in-out hover:bg-customLightGreen"
+            className="bg-200 hover:300 flex transform cursor-pointer items-center justify-between rounded-md bg-customGreen px-4 py-2 transition duration-300 ease-in-out hover:bg-customLightGreen"
             onClick={() => toggleFAQ(index)}
           >
             <h3 className="font-medium">{faq.question}</h3>
+            {/* Display either a plus or minus sign based on the openIndex state */}
             <span>{openIndex === index ? '-' : '+'}</span>
           </div>
+          {/* Conditionally render the FAQ answer if the current index matches the openIndex */}
           {openIndex === index && (
-            <div className="bg-100 rounded-md bg-customGreen  px-4 py-2">
+            <div className="bg-100 rounded-md  bg-customGreen px-4 py-2">
               <p>{faq.answer}</p>
             </div>
           )}
