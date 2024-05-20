@@ -1,5 +1,7 @@
 import { Reviews } from 'components/reviews';
 import Image from 'next/image';
+import Link from 'next/link';
+
 export default async function Wholesale() {
   return (
     <>
@@ -22,7 +24,7 @@ export default async function Wholesale() {
                 Get in touch so we can work out the perfect wrap for you.
               </p>
               <button className="rounded bg-[#043028] px-6 py-4 text-white hover:bg-[#043028]">
-                Enquire Now
+                <Link href="/contact">Enquire Now</Link>
               </button>
             </div>
           </div>
