@@ -3,10 +3,10 @@ import { Instagram } from 'components/instagram';
 import { Linkedin } from 'components/linkedin';
 import { Tiktok } from 'components/tiktok';
 import Image from 'next/image';
-import Blogimg from '../../public/LogoImages/blogimg.jpg';
-import Instagrambanner from '../../public/Socialmedia-images/instagram_blog.png';
-import Linkedinbanner from '../../public/Socialmedia-images/linkedin_blog.png';
-import Tiktokbanner from '../../public/Socialmedia-images/tiktok_blog.png';
+import Blogimg from 'public/LogoImages/blogimg.jpg';
+import Instagrambanner from 'public/Socialmedia-Images/instagram_blog.png';
+import Linkedinbanner from 'public/Socialmedia-images/linkedin_blog.png';
+import Tiktokbanner from 'public/Socialmedia-images/tiktok_blog.png';
 
 export const metadata = {
   description: 'High-performance ecommerce store built with Next.js, Vercel, and Shopify.',
