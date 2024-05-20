@@ -48,7 +48,7 @@ export default async function Footer() {
               <li>
                 <a href="https://www.instagram.com/faunagreenliving/">
                   <Image
-                    src="/Socialmedia-Images/instagram.png"
+                    src="/Socialmedia/instagram.png"
                     alt="Instagram Icon"
                     width={20}
                     height={20}
@@ -57,18 +57,13 @@ export default async function Footer() {
               </li>
               <li>
                 <a href="https://www.tiktok.com/@faunagreenliving">
-                  <Image
-                    src="/Socialmedia-Images/tiktok.png"
-                    alt="Tiktok Icon"
-                    width={20}
-                    height={20}
-                  />
+                  <Image src="/Socialmedia/tiktok.png" alt="Tiktok Icon" width={20} height={20} />
                 </a>
               </li>
               <li>
                 <a href="https://www.facebook.com/FaunaGreenLiving/">
                   <Image
-                    src="/Socialmedia-Images/facebook.png"
+                    src="/Socialmedia/facebook.png"
                     alt="Facebook Icon"
                     width={20}
                     height={20}
@@ -78,7 +73,7 @@ export default async function Footer() {
               <li>
                 <a href="https://www.linkedin.com/in/kimberlyfollett">
                   <Image
-                    src="/Socialmedia-Images/linkedin.png"
+                    src="/Socialmedia/linkedin.png"
                     alt="LinkedIn Icon"
                     width={20}
                     height={20}
