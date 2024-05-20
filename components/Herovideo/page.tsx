@@ -3,7 +3,7 @@ import './Herovideo.css';
 
 const HeroVideo = () => {
   return (
-    <div>
+    <div className="flex items-center justify-center ">
       <div className="container">
         <div className="videodiv">
           <video controls autoPlay muted style={{ width: '100%', height: 'auto' }}>

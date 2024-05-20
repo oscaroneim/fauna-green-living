@@ -1,10 +1,12 @@
 import { Reviews } from 'components/reviews';
 import Image from 'next/image';
+import Link from 'next/link';
+
 export default async function Wholesale() {
   return (
     <>
       <div className="flex-col">
-        <div className="flex flex-col p-12 md:flex-row">
+        <div className="flex flex-col md:flex-row">
           <div className="md:order-1 md:w-1/2">
             <div className="h-full bg-[#82a38a] p-9">
               <h2 className="pb-5 text-4xl font-bold text-[#043028]">Custom & Wholesale Orders</h2>
@@ -22,7 +24,7 @@ export default async function Wholesale() {
                 Get in touch so we can work out the perfect wrap for you.
               </p>
               <button className="rounded bg-[#043028] px-6 py-4 text-white hover:bg-[#043028]">
-                Enquire Now
+                <Link href="/contact">Enquire Now</Link>
               </button>
             </div>
           </div>
