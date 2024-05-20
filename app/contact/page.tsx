@@ -1,3 +1,4 @@
+import FAQSection from 'components/contact/components/FAQSection';
 import ContactForm from 'components/contact/contact-form';
 import MaxWidthWrapper from 'components/max-width-wrapper';
 import Image from 'next/image';
@@ -22,8 +23,8 @@ export default async function ContactPage() {
       <div className="rounded-lg bg-frequently-asked-trees bg-cover bg-center bg-no-repeat px-4 py-6 text-center text-4xl font-bold text-white ">
         Frequently asked questions
       </div>
-      <div className="h-[410px] rounded-lg bg-customDarkGreen text-white">
-        <h1>Need To Fill</h1>
+      <div className="rounded-lg bg-customDarkGreen px-2 py-8 text-white">
+        <FAQSection />
       </div>
     </MaxWidthWrapper>
   );
