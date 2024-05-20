@@ -1,6 +1,6 @@
 import { getCollectionProducts } from 'lib/shopify';
 import Link from 'next/link';
-import { GridTileImage } from './grid/tile';
+import { GridTileImage } from './grid/tile-shop';
 import Price from './price';
 
 export async function ShopCarousel({
@@ -21,15 +21,15 @@ export async function ShopCarousel({
   const carouselProducts = [...products];
 
   return (
-    <div className="mx-none h-[410px] px-2 md:px-0">
-      <p className="relative  pl-[24px] text-[34px] text-black">{title}</p>
-      <p className="relative  pl-[24px] text-[16px] text-black">{subtitle}</p>
-      <div className=" h-[340px] w-full overflow-x-auto pt-1">
-        <ul className="flex gap-4 md:justify-between md:px-6">
+    <div className="mx-none mb-4 border-b px-2 pb-2 md:px-0">
+      <p className="relative  text-[34px] text-black md:pl-[24px]">{title}</p>
+      <p className="relative  text-[16px] text-black md:pl-[24px]">{subtitle}</p>
+      <div className="flex w-full overflow-x-auto pt-1 md:flex-wrap md:overflow-x-visible md:pl-[24px]">
+        <ul className="flex w-full gap-2 md:flex-wrap">
           {carouselProducts.map((product, i) => (
             <li
               key={`${product.handle}${i}`}
-              className="relative aspect-square h-[30vh] max-h-[232px] w-2/3 max-w-[232px] flex-none text-black md:w-1/3"
+              className="relative aspect-square w-[210px] text-black"
             >
               <Link href={`/product/${product.handle}`} className="relative h-full w-full">
                 <GridTileImage
