@@ -4,13 +4,13 @@
     position: relative;
     padding-bottom: 10px;
     width: 100%;
-    padding-left: 150px;
   }
 
   .videodiv {
     position: relative;
     top: 0;
     left: 0;
+    transform: translate(3%, 0%);
     width: 730px;
     height: 450px;
   }
@@ -25,7 +25,7 @@
     height: 350px;
     top: 35px;
     left: 1200px;
-    transform: translate(-60%, 0%);
+    transform: translate(-80%, 0%);
     background-color: #043028;
     padding: 10px;
     z-index: 2; /* Higher z-index for the "Hello all" div */
