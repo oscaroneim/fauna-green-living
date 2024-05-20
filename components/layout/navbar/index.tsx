@@ -9,7 +9,6 @@ import Search, { SearchSkeleton } from './search';
 
 export default async function Navbar() {
   const menu = await getMenu('next-js-frontend-header-menu');
-  console.log(menu);
   return (
     <>
       <nav className="relative flex items-center justify-between p-4 lg:px-6">
