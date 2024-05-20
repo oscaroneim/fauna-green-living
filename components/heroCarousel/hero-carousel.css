@@ -1,97 +1,6 @@
 .carousel {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  max-height: 550px;
   filter: drop-shadow(0 0 10px #0003);
   perspective: 100px;
-  border-radius: 25px;
-}
-
-.hero-text {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-big-text {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.shop_now_button {
-  background-color: #043028;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 700;
-  order: 1;
-}
-
-.hero-small-text {
-  text-align: center;
-  font-size: 0.9rem;
-  font-weight: 250;
-  margin-bottom: 1rem;
-  text-decoration: underline;
-  order: 2;
-}
-
-@media (min-width: 750px) {
-  .carousel {
-    display: flex;
-    justify-content: center;
-    max-height: 600px;
-  }
-  .hero-text {
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 45px;
-  }
-  .hero-big-text {
-    text-align: left;
-    font-size: 2rem;
-    font-weight: 700;
-  }
-  .shop_now_button {
-    order: 2;
-    width: 310px;
-    height: 62px;
-    font-size: 1rem;
-  }
-  .hero-small-text {
-    order: 1;
-  }
-}
-
-.carousel__viewport {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  overflow-x: scroll;
-  counter-reset: item;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-}
-
-.carousel__slide {
-  position: relative;
-  flex: 0 0 100%;
-  width: 100%;
-  counter-increment: item;
 }
 
 .carousel__slide:nth-child(1) {
@@ -181,19 +90,6 @@
   text-align: center;
 }
 
-.carousel__navigation-list,
-.carousel__navigation-item {
-  display: inline-block;
-}
-
 .carousel__navigation-button {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: transparent;
-  background-clip: content-box;
-  border: 0.25rem solid transparent;
-  border-radius: 50%;
   font-size: 0;
-  transition: transform 0.1s;
 }
