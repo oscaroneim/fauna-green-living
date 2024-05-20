@@ -6,7 +6,7 @@ export default async function Wholesale() {
   return (
     <>
       <div className="flex-col">
-        <div className="flex flex-col p-12 md:flex-row">
+        <div className="flex flex-col md:flex-row">
           <div className="md:order-1 md:w-1/2">
             <div className="h-full bg-[#82a38a] p-9">
               <h2 className="pb-5 text-4xl font-bold text-[#043028]">Custom & Wholesale Orders</h2>
