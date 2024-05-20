@@ -45,8 +45,8 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
             <MaxWidthWrapper className="space-y-6">
               <Navbar />
               {children}
-              <Footer />
             </MaxWidthWrapper>
+            <Footer />
           </main>
         </body>
       </html>
