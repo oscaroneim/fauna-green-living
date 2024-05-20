@@ -2,8 +2,8 @@
 
 import Spinner from 'components/spinner';
 import { useEffect, useRef } from 'react';
-import SelectInput from './ContactInput';
 import Input from './components/input';
+import SelectInput from './ContactInput';
 import useContactForm from './useContactForm';
 
 export default function ContactForm() {
@@ -56,9 +56,9 @@ export default function ContactForm() {
         id="subject"
         options={[
           { value: '', label: 'Select one of the options' },
-          { value: 'wholesale', label: 'Wholesale' },
-          { value: 'custom', label: 'Custom' },
-          { value: 'general', label: 'General' }
+          { value: 'wholesale', label: 'Wholesale enquiry' },
+          { value: 'custom', label: 'Custom wraps enquiry' },
+          { value: 'general', label: 'General enquiry' }
         ]}
         error={errors?.subject?._errors?.[0]}
       />

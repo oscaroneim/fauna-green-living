@@ -81,7 +81,7 @@ export default async function ProductPage({ params }: { params: { handle: string
         }}
       />
       <div className="mx-auto max-w-screen-2xl px-4">
-        <div className="flex flex-col bg-white p-2 md:p-4 lg:flex-row lg:content-center lg:gap-24 ">
+        <div className="flex flex-col bg-white p-2 md:p-4 lg:flex-row lg:content-center lg:gap-12 ">
           <div className="h-full w-full basis-full sm:mb-2 sm:mt-2 lg:basis-2/6">
             {/*This section controls the thumbnail images below the main image */}
             <Suspense
@@ -141,7 +141,7 @@ async function RelatedProducts({ id }: { id: string }) {
         {relatedProducts.map((product) => (
           <li
             key={product.handle}
-            className="aspect-square w-full flex-none min-[475px]:w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5"
+            className="flex aspect-square w-full min-[475px]:w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5"
           >
             <Link className="relative h-full w-full" href={`/product/${product.handle}`}>
               <GridTileImage

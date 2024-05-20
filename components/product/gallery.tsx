@@ -32,7 +32,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
     <>
       {/*<----------------------------This section controls the main image (Product page) ----------------------------------------> */}
 
-      <div className="relative h-96 w-full rounded-xl sm:h-[330px] sm:w-[318px] md:h-[625px] md:w-[613px]">
+      <div className="relative mx-auto h-96 w-full rounded-xl sm:h-[330px] sm:w-[318px] md:h-[625px] md:w-[613px]">
         {images[imageIndex] && (
           <Image
             className="rounded-xl object-contain"
