@@ -1,23 +1,26 @@
 'use client';
 
 import Spinner from 'components/spinner';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import Input from './components/input';
+import SelectInput from './ContactInput';
 import useContactForm from './useContactForm';
 
 export default function ContactForm() {
   const { errors, handleSubmit, success, isPending } = useContactForm();
   const formRef = useRef<HTMLFormElement>(null);
 
+  useEffect(() => {
+    if (success) {
+      resetForm();
+    }
+  }, [success]);
+
   const resetForm = () => {
     if (formRef.current) {
       formRef.current.reset();
     }
   };
-
-  if (success) {
-    resetForm();
-  }
 
   return (
     <form ref={formRef} onSubmit={handleSubmit} className="flex grow flex-col gap-y-2 ">
@@ -44,6 +47,20 @@ export default function ContactForm() {
         id="emailAddress"
         placeholder="Enter email address"
         error={errors?.emailAddress?._errors?.[0]}
+      />
+
+      <SelectInput
+        defaultValue={''}
+        label="Subject"
+        name="subject"
+        id="subject"
+        options={[
+          { value: '', label: 'Select one of the options' },
+          { value: 'wholesale', label: 'Wholesale enquiry' },
+          { value: 'custom', label: 'Custom wraps enquiry' },
+          { value: 'general', label: 'General enquiry' }
+        ]}
+        error={errors?.subject?._errors?.[0]}
       />
 
       <div className="flex w-full grow flex-col gap-y-0.5">
