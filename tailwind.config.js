@@ -8,6 +8,9 @@ module.exports = {
       backgroundImage: {
         'frequently-asked-trees': "url('/trees.png')"
       },
+      backgroundImage: {
+        'bamboo-image': "url('/bamboo.jpeg')"
+      },
       boxShadow: {
         top: '0 -4px 10px -1px rgba(196, 212, 200, 1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06)'
       },
