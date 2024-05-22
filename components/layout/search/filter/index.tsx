@@ -20,7 +20,7 @@ export default function FilterList({ list, title }: { list: ListItem[]; title?: 
   return (
     <>
       <nav>
-        {title ? <h3 className="text-black-700 hidden text-xs md:block">Discover</h3> : null}
+        {title ? <h3 className="text-black-700 hidden text-xs md:block">Browse by:</h3> : null}
         <ul className="hidden md:block">
           <Suspense fallback={null}>
             <div className="pl-2">
