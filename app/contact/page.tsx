@@ -21,7 +21,7 @@ export default async function ContactPage() {
         />
       </div>
 
-      <div className="rounded-lg bg-frequently-asked-trees bg-cover bg-center bg-no-repeat px-4 py-6 text-center text-4xl font-bold text-white ">
+      <div className="bg-frequently-asked-trees rounded-lg bg-cover bg-center bg-no-repeat px-4 py-6 text-center text-4xl font-bold text-white ">
         Frequently asked questions
       </div>
       <div className="rounded-lg bg-customDarkGreen px-2 py-8 text-white">
