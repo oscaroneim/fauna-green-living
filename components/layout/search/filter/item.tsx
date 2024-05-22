@@ -21,7 +21,7 @@ function PathFilterItem({ item }: { item: PathFilterItem }) {
       <DynamicTag
         href={createUrl(item.path, newParams)}
         className={clsx(
-          'w-full text-sm underline-offset-4 md:rounded-md md:px-1 md:hover:bg-customGreen',
+          'w-full text-sm underline-offset-4 md:rounded-md md:p-1 md:hover:bg-customGreen',
           {
             'bg-customGreen': active
           }
@@ -53,7 +53,7 @@ function SortFilterItem({ item }: { item: SortFilterItem }) {
         prefetch={!active ? false : undefined}
         href={href}
         className={clsx(
-          'w-full text-sm underline-offset-4 md:rounded-md md:px-1 md:hover:bg-customGreen',
+          'w-full text-sm md:rounded-md md:p-1 md:hover:bg-customGreen',
           {
             'bg-customGreen': active
           }
