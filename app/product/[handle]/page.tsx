@@ -105,7 +105,7 @@ export default async function ProductPage({ params }: { params: { handle: string
                   <iframe
                     width="100%"
                     height="315"
-                    src={`https://www.youtube.com/embed/sTPWknd7oOQ?modestBranding=1&si=Y0Djt8r8oko7nc8F`}
+                    src="https://www.youtube.com/embed/FTVPbk8i9YU?si=2J_xYeqTXhIRzZaA&amp;controls=0"
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
