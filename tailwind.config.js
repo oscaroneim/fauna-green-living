@@ -56,6 +56,17 @@ module.exports = {
     hoverOnlyWhenSupported: true
   },
   plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.no-scrollbar::-webkit-scrollbar': {
+          display: 'none'
+        },
+        '.no-scrollbar': {
+          '-ms-overflow-style': 'none' /* Internet Explorer 10+ */,
+          'scrollbar-width': 'none' /* Firefox */
+        }
+      });
+    },
     require('@tailwindcss/container-queries'),
     require('@tailwindcss/typography'),
     plugin(({ matchUtilities, theme }) => {
