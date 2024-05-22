@@ -100,7 +100,7 @@ export default async function ProductPage({ params }: { params: { handle: string
             {isWrapProduct && (
               <div className="relative h-auto w-full space-y-6">
                 <h2 className="hidden text-2xl font-bold sm:block">How to use our wraps</h2>
-                <div className="block h-auto w-auto overflow-hidden rounded-xl object-contain">
+                <div className="block h-auto w-auto overflow-hidden rounded-lg object-contain">
                   {' '}
                   <iframe
                     width="100%"
