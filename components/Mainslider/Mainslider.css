@@ -1,0 +1,8 @@
+.imagespan {
+  width: 120%;
+  height: 100%;
+}
+
+.carouselDiv {
+  display: flex;
+}
