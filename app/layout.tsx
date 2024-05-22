@@ -6,6 +6,7 @@ import MaxWidthWrapper from 'components/max-width-wrapper';
 import { GeistSans } from 'geist/font/sans';
 import { ensureStartsWith } from 'lib/utils';
 import { ReactNode } from 'react';
+
 import './globals.css';
 
 const { TWITTER_CREATOR, TWITTER_SITE, SITE_NAME } = process.env;
@@ -39,7 +40,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
   return (
     <>
       <html lang="en" className={GeistSans.variable}>
-        <body className="bg-white text-black selection:bg-teal-300 ">
+        <body className=" bg-white text-black selection:bg-teal-300 ">
           <OfferBanner />
           <main>
             <MaxWidthWrapper className="space-y-6">

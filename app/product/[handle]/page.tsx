@@ -80,7 +80,7 @@ export default async function ProductPage({ params }: { params: { handle: string
           __html: JSON.stringify(productJsonLd)
         }}
       />
-      <div className="mx-auto max-w-screen-2xl px-4">
+      <div className="mx-auto h-auto max-w-screen-2xl px-4">
         <div className="flex flex-col bg-white p-2 md:p-4 lg:flex-row lg:content-center lg:gap-12 ">
           <div className="h-full w-full basis-full sm:mb-2 sm:mt-2 lg:basis-2/6">
             {/*This section controls the thumbnail images below the main image */}
@@ -123,7 +123,9 @@ export default async function ProductPage({ params }: { params: { handle: string
             <ProductDescription product={product} />
           </div>
         </div>
-        <RelatedProducts id={product.id} />
+        <div className="h-full">
+          <RelatedProducts id={product.id} />
+        </div>
       </div>
     </>
   );
@@ -137,11 +139,11 @@ async function RelatedProducts({ id }: { id: string }) {
   return (
     <div className="py-8">
       <h2 className="mb-4 text-2xl font-bold">Related Products</h2>
-      <ul className="flex w-full gap-4 overflow-x-auto overflow-y-hidden pt-1">
+      <ul className="flex w-full gap-4 overflow-x-auto pt-1">
         {relatedProducts.map((product) => (
           <li
             key={product.handle}
-            className="flex aspect-square w-full min-[475px]:w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5"
+            className="aspect-square w-full flex-none min-[475px]:w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5"
           >
             <Link className="relative h-full w-full" href={`/product/${product.handle}`}>
               <GridTileImage
