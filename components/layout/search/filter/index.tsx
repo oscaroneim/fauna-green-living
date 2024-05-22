@@ -21,14 +21,14 @@ export default function FilterList({ list, title }: { list: ListItem[]; title?: 
     <>
       <nav>
         {title ? <h3 className="text-black-700 hidden text-xs md:block">Browse by:</h3> : null}
-        <ul className="hidden md:block">
+        <ul className="md:block">
           <Suspense fallback={null}>
             <div className="pl-2">
               <FilterItemList list={list} />
             </div>
           </Suspense>
         </ul>
-        <ul className="md:hidden">
+        <ul className="sm:hidden">
           <Suspense fallback={null}>
             <FilterItemDropdown list={list} />
           </Suspense>
