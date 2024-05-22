@@ -1,10 +1,10 @@
-import './hero-carousel.css';
 import Link from 'next/link';
+import './hero-carousel.css';
 
 export async function HeroCarousel() {
   return (
     <section
-      className="carousel relative h-[100vh] max-h-[550px] w-[100%] rounded md:flex md:max-h-[600px] md:justify-center"
+      className="carousel relative h-[100vh] max-h-[550px] w-[100%] rounded-lg md:flex md:max-h-[600px] md:justify-center"
       aria-label="Gallery"
     >
       <ol className="carousel__viewport absolute bottom-0 left-0 right-0 top-0 flex snap-x snap-mandatory overflow-x-scroll scroll-smooth ">
@@ -22,7 +22,7 @@ export async function HeroCarousel() {
                 <br />
                 Locally Sourced
               </h2>
-              <button className="shop_now_button order-1 cursor-pointer rounded-md border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:order-2 md:h-[62px] md:w-[310px] md:text-base">
+              <button className="shop_now_button order-1 cursor-pointer rounded-lg border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:order-2 md:h-[62px] md:w-[310px] md:text-base">
                 <Link href="/search">Shop Now</Link>
               </button>
               <p className="hero-small-text order-2 mb-4 mt-4 text-center text-sm font-light underline md:order-1">
@@ -47,7 +47,7 @@ export async function HeroCarousel() {
                 <br />
                 Locally Sourced
               </h2>
-              <button className="shop_now_button order-1 cursor-pointer rounded-md border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:order-2 md:h-[62px] md:w-[310px] md:text-base">
+              <button className="shop_now_button order-1 cursor-pointer rounded-lg border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:order-2 md:h-[62px] md:w-[310px] md:text-base">
                 Shop Now
               </button>
               <p className="hero-small-text order-2 mb-4 mt-4 text-center text-sm font-light underline md:order-1">
@@ -72,7 +72,7 @@ export async function HeroCarousel() {
                 <br />
                 Locally Sourced
               </h2>
-              <button className="shop_now_button order-1 cursor-pointer rounded-md border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:order-2 md:h-[62px] md:w-[310px] md:text-base">
+              <button className="shop_now_button order-1 cursor-pointer rounded-lg border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:order-2 md:h-[62px] md:w-[310px] md:text-base">
                 Shop Now
               </button>
               <p className="hero-small-text order-2 mb-4 mt-4 text-center text-sm font-light underline md:order-1">
@@ -97,7 +97,7 @@ export async function HeroCarousel() {
                 <br />
                 Locally Sourced
               </h2>
-              <button className="shop_now_button order-1 cursor-pointer rounded-md border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:order-2 md:h-[62px] md:w-[310px] md:text-base">
+              <button className="shop_now_button order-1 cursor-pointer rounded-lg border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:order-2 md:h-[62px] md:w-[310px] md:text-base">
                 Shop Now
               </button>
               <p className="hero-small-text order-2 mb-4 mt-4 text-center text-sm font-light underline md:order-1">
