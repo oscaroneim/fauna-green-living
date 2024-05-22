@@ -1,38 +1,36 @@
-import MaxWidthWrapper from 'components/max-width-wrapper';
 import Image from 'next/image';
 import kim from 'public/Kim headshot.jpg';
+import bamboo from 'public/bamboo-2.jpeg';
 import PlasticWasteStats from '../../components/plastic-waste-stats';
 import dear from '../../public/LogoImages/dear.png';
 
 export default async function About() {
   return (
-    <MaxWidthWrapper className="space-y-6">
-      <div className="flex w-full gap-6 max-md:flex-col md:h-96 lg:h-[550px] xl:h-[664px]">
+    <>
+      <div className="flex w-full gap-6 max-md:flex-col md:h-[520px] ">
         <div className="space-y-4  rounded-lg bg-customGreen p-10 text-center text-white md:hidden">
-          <h2 className="text-5xl font-bold md:text-3xl lg:text-4xl xl:text-5xl">OUR MISSION</h2>
-          <p className="text-4xl md:text-lg xl:text-3xl 2xl:text-4xl">
-            Make Our Planet Clean Again
-          </p>
+          <h2 className="text-5xl font-bold ">OUR MISSION</h2>
+          <p className="text-xl">Make Our Planet Clean Again</p>
         </div>
-        <Image className="rounded-lg object-cover" src={dear} alt="Picture of the dear" />
-        <div className="flex flex-col gap-y-6 md:h-full md:grow md:basis-[450px] 2xl:basis-[586px]">
-          <div className="space-y-1 rounded-lg bg-customGreen p-10 text-center text-white max-md:hidden md:h-full md:p-3 lg:space-y-4 lg:p-10">
-            <h2 className="text-5xl font-bold md:text-3xl lg:text-4xl xl:text-5xl">OUR MISSION</h2>
-            <p className="text-4xl md:text-lg xl:text-3xl 2xl:text-4xl">
-              Make your home beautiful and sustainable
-            </p>
+        <div className="flex">
+          <Image className="rounded-lg object-cover" src={dear} alt="Picture of the deer" />
+        </div>
+        <div className="flex shrink-0 flex-col gap-y-6 md:basis-[500px] ">
+          <div className="space-y-4 rounded-lg bg-customGreen p-10 text-center text-white max-md:hidden  ">
+            <h2 className="text-5xl  font-bold ">OUR MISSION</h2>
+            <p className="text-xl">Make your home beautiful and sustainable</p>
           </div>
-          <div className="space-y-4 rounded-lg bg-customDarkGreen p-10 text-center text-white md:h-full md:space-y-1 md:p-3 lg:space-y-4 lg:p-10">
-            <h2 className="text-5xl font-bold md:text-3xl lg:text-4xl xl:text-5xl">OUR VISION</h2>
-            <p className="text-4xl md:text-lg xl:text-3xl 2xl:text-4xl">
+          <div className="grow space-y-4 rounded-lg bg-customDarkGreen p-10 text-center text-white ">
+            <h2 className="text-5xl font-bold ">OUR VISION</h2>
+            <p className="text-xl ">
               At Fauna Green Living, we envisage ourselves helping each and every individual do what
               they can to bring sustainability and responsibility back into our purchasing habits.
-              We are here to provide sustainable ways to make your home beautiful.
+              We are here to provide sustainable ways to make your home beautiful
             </p>
           </div>
         </div>
       </div>
-      <div className="space-y-8 rounded-lg bg-customGreen p-16 text-center text-white">
+      <div className="space-y-8 rounded-lg bg-customGreen p-10 text-center text-white">
         <h2 className="text-5xl font-medium">How do we do it?</h2>
         <div className="flex gap-x-8 gap-y-10 text-xl max-md:flex-col ">
           <p className="md:basis-1/3 ">All of our products are handmade in Cambridgeshire, UK</p>
@@ -45,29 +43,57 @@ export default async function About() {
         </div>
       </div>
 
-      <div className="flex w-full gap-6 max-md:flex-col md:h-96 lg:h-[550px] xl:h-[664px]">
-        <div className="flex flex-col gap-y-6 max-md:order-2 md:h-full md:grow md:basis-[450px] 2xl:basis-[586px]">
-          <div className="space-y-1 rounded-lg bg-customDarkGreen p-10 text-center text-white md:h-full md:p-3 lg:space-y-4 lg:p-10">
-            <h2 className="text-5xl font-bold md:text-3xl lg:text-4xl xl:text-5xl">Our Story</h2>
-          </div>
-          <div className="space-y-1 rounded-lg bg-customGreen p-10 text-center text-white md:h-full md:p-3 lg:space-y-4 lg:p-10">
-            <p className="text-4xl md:text-lg xl:text-3xl 2xl:text-4xl">
-              Hi, I'm Kim, founder of Fauna Green Living. We opened our doors in August of 2022
-              because we wanted to make your homes, your lives, and our planet a better place. We
-              all want our homes to be our place of rest, relaxation, and sanctuary, and we all want
-              our planet to be clean, healthy, and free of plastic pollution. We're here to bridge
-              that gap - we're committed to making your home a more beautiful place, and committed
-              to not using single use plastic. Let's do this together.
-            </p>
-          </div>
+      <div className="flex w-full items-center justify-between gap-10 rounded-lg bg-customDarkGreen p-10 text-white max-md:flex-col  md:h-[664px] md:flex-row ">
+        <div className=" flex flex-col gap-y-10 text-center md:w-1/2">
+          <h2 className="text-5xl font-bold ">Our Story</h2>
+          <p className="text-xl">
+            We opened our doors in August of 2022 because we wanted to make your homes, your lives,
+            and our planet a better place. <br />
+            We all want our homes to be our place of rest, relaxation, and sanctuary, and we all
+            want our planet to be clean, healthy, and free of plastic pollution. <br />
+            We're here to bridge that gap - we're committed to making your home a more beautiful
+            place, and committed to not using single use plastic. Let's do this together.
+          </p>
         </div>
-        <Image className="rounded-lg object-cover max-md:order-1" src={kim} alt="Picture of Kim" />
+        <div className="text-center">
+          <Image
+            className=" h-[500px] w-[500px] rounded-lg border-4 object-cover "
+            src={kim}
+            alt="Picture of Kim"
+          />
+          <br></br>
+          <h1 className="text-bold text-4xl">Hi, i'm Kim!</h1>
+          <small>Founder of Fauna green Living</small>
+        </div>
       </div>
 
       <PlasticWasteStats />
-      <div className="rounded-lg bg-bamboo-image bg-cover bg-center bg-no-repeat px-6 py-8 text-center text-4xl font-bold text-white ">
-        Why Bamboo?
+      <div className="flex items-center justify-between gap-6 gap-x-28 rounded-lg bg-customGreen p-10 text-white  max-md:flex-col">
+        <div className="flex">
+          <Image
+            className="h-[450px] w-full rounded-lg object-cover"
+            src={bamboo}
+            alt="Picture of bamboos"
+          />
+        </div>
+        <div className=" flex flex-col gap-y-6 max-md:text-center md:w-[500px] ">
+          <h1 className="text-5xl font-bold ">Why Bamboo?</h1>
+
+          <ul className="text-xl italic">
+            <li>- Naturally anti-microbial</li>
+            <br></br>
+            <li>- Pesticides free</li>
+            <br></br>
+            <li>- 60% more absorbent than cotton</li>
+            <br></br>
+            <li>- Dries 40% faster than cotton</li>
+            <br></br>
+            <li>- Uses 1/200th of water than cotton</li>
+            <br></br>
+            <li>- Does not require the use of pesticides</li>
+          </ul>
+        </div>
       </div>
-    </MaxWidthWrapper>
+    </>
   );
 }
