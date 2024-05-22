@@ -38,15 +38,14 @@ export default function PlasticWasteStats() {
   }, [inView]);
 
   return (
-    <div className="space-y-8 rounded-lg bg-customGreen p-16 text-center text-black">
-      <h2 className="text-5xl font-medium text-white">Turning the Tide.</h2>
-
-      <div className="flex gap-x-8 gap-y-10 text-xl max-md:flex-col">
-        <div className="flex-1 rounded-lg bg-white p-10 py-12">
+    <div className="space-y-8 rounded-lg bg-customGreen p-6 text-center text-black">
+      <h2 className="text-4xl font-medium text-white">Turning the Tide.</h2>
+      <div className="flex gap-x-8 gap-y-8 text-xl max-md:flex-col">
+        <div className="flex-1 rounded-lg bg-white p-10 py-10">
           <h3 className="md:basis-1/3">
             <p ref={ref} className="text-4xl">
               {stats.sqmPlastic}
-              <hr className="mx-auto my-4 h-px w-20 border-0 bg-gray-200 dark:bg-gray-700" />
+              <hr className="mx-auto my-4 h-px w-16 border-0 bg-gray-200 dark:bg-gray-700" />
             </p>{' '}
             sqm plastic reduced from landfill and ocean
           </h3>
