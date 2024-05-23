@@ -123,7 +123,7 @@ export default async function ProductPage({ params }: { params: { handle: string
             <ProductDescription product={product} />
           </div>
         </div>
-        <div className="h-full">
+        <div className="flex h-auto sm:overflow-y-hidden">
           <RelatedProducts id={product.id} />
         </div>
       </div>
