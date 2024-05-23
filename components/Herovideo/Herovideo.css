@@ -2,7 +2,7 @@
 @media screen and (min-width: 1400px) {
   .container {
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     width: 100%;
   }
 
@@ -12,7 +12,7 @@
     left: 0;
     transform: translate(3%, 0%);
     width: 730px;
-    height: 450px;
+    height: 400px;
   }
 
   .videodiv-mobile {
