@@ -24,7 +24,7 @@ export async function ShopCarousel({
     <div className="mx-none mb-4 border-b px-2 pb-2 md:px-0">
       <p className="relative  text-[34px] text-black max-md:text-center md:pl-[24px]">{title}</p>
       <p className="relative  text-[16px] text-black max-md:text-center md:pl-[24px]">{subtitle}</p>
-      <ul className="flex flex-wrap gap-6 max-[500px]:justify-center md:gap-2 md:pl-[24px]">
+      <ul className="mt-4 flex flex-wrap gap-6 max-[500px]:justify-center md:gap-2 md:pl-[24px]">
         {carouselProducts.map((product, i) => (
           <li
             key={`${product.handle}${i}`}
