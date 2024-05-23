@@ -20,7 +20,7 @@ export default async function Footer() {
       <div className="mx-auto flex w-full flex-col justify-between gap-6 border-neutral-200 py-12 text-sm md:flex-row">
         <div className="flex-col items-center p-4 md:w-2/5 md:pl-12">
           <div className="flex flex-col ">
-            <div className="text-center md:text-left">
+            <div className=" bg-black text-center md:text-left">
               <div className="flex h-full justify-center pb-4 md:w-4/5">
                 <Link className="flex items-center gap-2 text-black" href="/">
                   <LogoSquare size="m" />
@@ -46,21 +46,21 @@ export default async function Footer() {
               <SignupForm />
             </div>
           </div>
-          <div className="pt-5 text-center md:text-left">
+          <div className=" pt-5 text-center md:text-left">
             <ul className="flex justify-center space-x-3 pl-2 md:justify-start">
               <li>
                 <a href="https://www.instagram.com/faunagreenliving/">
                   <Image
                     src="/Socialmedia/instagram.png"
                     alt="Instagram Icon"
-                    width={20}
-                    height={20}
+                    width={40}
+                    height={40}
                   />
                 </a>
               </li>
               <li>
                 <a href="https://www.tiktok.com/@faunagreenliving">
-                  <Image src="/Socialmedia/tiktok.png" alt="Tiktok Icon" width={20} height={20} />
+                  <Image src="/Socialmedia/tiktok.png" alt="Tiktok Icon" width={40} height={40} />
                 </a>
               </li>
               <li>
@@ -68,8 +68,8 @@ export default async function Footer() {
                   <Image
                     src="/Socialmedia/facebook.png"
                     alt="Facebook Icon"
-                    width={20}
-                    height={20}
+                    width={40}
+                    height={40}
                   />
                 </a>
               </li>
@@ -78,8 +78,8 @@ export default async function Footer() {
                   <Image
                     src="/Socialmedia/linkedin.png"
                     alt="LinkedIn Icon"
-                    width={20}
-                    height={20}
+                    width={40}
+                    height={40}
                   />
                 </a>
               </li>
