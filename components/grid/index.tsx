@@ -2,12 +2,11 @@ import clsx from 'clsx';
 
 function Grid(props: React.ComponentProps<'ul'>) {
   return (
-    <ul
-      {...props}
-      className={clsx('flex-wrap gap-2 pl-[24px] max-[500px]:justify-center', props.className)}
-    >
-      {props.children}
-    </ul>
+    <div className="w-full max-md:flex max-md:overflow-x-auto">
+      <ul {...props} className={clsx('flex gap-2 pl-[24px] md:flex-wrap', props.className)}>
+        {props.children}
+      </ul>
+    </div>
   );
 }
 
