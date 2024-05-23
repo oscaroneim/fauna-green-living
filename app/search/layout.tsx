@@ -7,7 +7,7 @@ import Banner from 'public/ShopBanner/banner.jpeg';
 export default async function SearchLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <div className="relative h-60 w-full sm:h-40">
+      <div className="relative h-60 w-full">
         <Image src={Banner} alt="Sandwich in beeswax wrap" fill style={{ objectFit: 'cover' }} />
       </div>
       <div className="mx-auto flex max-w-screen-2xl  flex-col justify-between gap-0 px-4 pb-4 text-black md:flex-row">
