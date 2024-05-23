@@ -20,12 +20,9 @@ function PathFilterItem({ item }: { item: PathFilterItem }) {
     <li className="mt-2 flex h-auto w-auto text-black" key={item.title}>
       <DynamicTag
         href={createUrl(item.path, newParams)}
-        className={clsx(
-          'w-full text-sm underline-offset-4 md:rounded-md md:p-1 md:hover:bg-customGreen',
-          {
-            'bg-customGreen': active
-          }
-        )}
+        className={clsx('w-full rounded-md p-1 text-sm hover:bg-customGreen', {
+          ' bg-customGreen': active
+        })}
       >
         {item.title}
       </DynamicTag>
@@ -52,7 +49,7 @@ function SortFilterItem({ item }: { item: SortFilterItem }) {
       <DynamicTag
         prefetch={!active ? false : undefined}
         href={href}
-        className={clsx('w-full text-sm md:rounded-md md:p-1 md:hover:bg-customGreen', {
+        className={clsx('w-full rounded-md p-1 text-sm hover:bg-customGreen', {
           'bg-customGreen': active
         })}
       >
