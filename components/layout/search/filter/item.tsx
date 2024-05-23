@@ -52,12 +52,9 @@ function SortFilterItem({ item }: { item: SortFilterItem }) {
       <DynamicTag
         prefetch={!active ? false : undefined}
         href={href}
-        className={clsx(
-          'w-full text-sm md:rounded-md md:p-1 md:hover:bg-customGreen',
-          {
-            'bg-customGreen': active
-          }
-        )}
+        className={clsx('w-full text-sm md:rounded-md md:p-1 md:hover:bg-customGreen', {
+          'bg-customGreen': active
+        })}
       >
         {item.title}
       </DynamicTag>
