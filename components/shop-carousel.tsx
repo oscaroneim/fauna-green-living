@@ -21,10 +21,12 @@ export async function ShopCarousel({
   const carouselProducts = [...products];
 
   return (
-    <div className="mx-none mb-4 border-b px-2 pb-2 no-scrollbar md:px-0">
-      <p className="relative  text-[34px] text-black max-md:text-center md:pl-[24px]">{title}</p>
-      <p className="relative  text-[16px] text-black max-md:text-center md:pl-[24px]">{subtitle}</p>
-      <div className="w-full max-md:flex max-md:overflow-x-auto">
+    <div className="mx-none mb-4 border-b px-2 pb-2 md:px-0">
+      <p className="relative text-[34px] text-black max-md:text-center md:pl-[24px]">{title}</p>
+      <p className="relative mb-4 text-[16px] text-black max-md:text-center md:pl-[24px]">
+        {subtitle}
+      </p>
+      <div className="w-full no-scrollbar max-md:flex max-md:overflow-x-auto">
         <ul className="flex gap-2 pl-[24px] md:flex-wrap">
           {carouselProducts.map((product, i) => (
             <li
