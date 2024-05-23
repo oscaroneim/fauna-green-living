@@ -1,4 +1,4 @@
-import { HeroCarousel } from 'components/heroCarousel/hero-carousel';
+//import { HeroCarousel } from 'components/heroCarousel/hero-carousel';
 import { Carousel } from 'components/product-carousel';
 import { Reviews } from 'components/reviews';
 import HeroVideo from '../components/Herovideo/page';
