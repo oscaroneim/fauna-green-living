@@ -44,7 +44,7 @@ export default function FilterItemDropdown({ list }: { list: ListItem[] }) {
         }}
         className="flex text-sm"
       >
-        <div>{active}</div>
+        <div className="mb-2">{active}</div>
         <ChevronDownIcon className="mt-1 h-3" />
       </div>
       {openSelect && (
