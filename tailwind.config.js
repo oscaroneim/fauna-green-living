@@ -5,12 +5,20 @@ module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      // backgroundImages property is used to define custom background images that can be used with utility classes.
       backgroundImage: {
         'frequently-asked-trees': "url('/trees.png')"
+      },
+      backgroundImage: {
+        'bamboo-image': "url('/bamboo-2.jpeg')"
+      },
+      backgroundImage: {
+        ocean: "url('/blue-ocean-2.png')"
       },
       boxShadow: {
         top: '0 -4px 10px -1px rgba(196, 212, 200, 1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06)'
       },
+      // colors are customs colors used across the website
       colors: {
         customLightGreen: '#C4D4C8',
         customGreen: '#82A38A',
@@ -48,6 +56,17 @@ module.exports = {
     hoverOnlyWhenSupported: true
   },
   plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.no-scrollbar::-webkit-scrollbar': {
+          display: 'none'
+        },
+        '.no-scrollbar': {
+          '-ms-overflow-style': 'none' /* Internet Explorer 10+ */,
+          'scrollbar-width': 'none' /* Firefox */
+        }
+      });
+    },
     require('@tailwindcss/container-queries'),
     require('@tailwindcss/typography'),
     plugin(({ matchUtilities, theme }) => {

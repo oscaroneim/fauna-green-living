@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-const PLASTIC_STATS = { sqmPlastic: 24_356, singlePlastic: 10_322, cpFree: 100 };
-const INITIAL_STATS = { sqmPlastic: 0, singlePlastic: 0, cpFree: 0 };
+const PLASTIC_STATS = { homesHelped: 2000, singlePlastic: 100, clingFilmPrevented: 200 };
+const INITIAL_STATS = { homesHelped: 0, singlePlastic: 0, clingFilmPrevented: 0 };
 const getNextStat = (prevValue: number, property: keyof typeof INITIAL_STATS) => {
   const increment = Math.round(PLASTIC_STATS[property] / 20);
   return prevValue + increment;
@@ -16,14 +16,14 @@ export default function PlasticWasteStats() {
   const { ref, inView } = useInView();
 
   useEffect(() => {
-    if (!inView || stats.cpFree > 0) return;
+    if (!inView || stats.clingFilmPrevented > 0) return;
     const countUp = setInterval(() => {
       setStats((prev) => {
-        if (prev.cpFree < 100) {
+        if (prev.clingFilmPrevented < 200) {
           const newStats = {
-            sqmPlastic: getNextStat(prev.sqmPlastic, 'sqmPlastic'),
+            homesHelped: getNextStat(prev.homesHelped, 'homesHelped'),
             singlePlastic: getNextStat(prev.singlePlastic, 'singlePlastic'),
-            cpFree: getNextStat(prev.cpFree, 'cpFree')
+            clingFilmPrevented: getNextStat(prev.clingFilmPrevented, 'clingFilmPrevented')
           };
           return newStats;
         }
@@ -38,32 +38,33 @@ export default function PlasticWasteStats() {
   }, [inView]);
 
   return (
-    <div className="space-y-8 rounded-lg bg-customGreen p-6 text-center text-black">
-      <h2 className="text-4xl font-medium text-white">Turning the Tide.</h2>
-      <div className="flex gap-x-8 gap-y-8 text-xl max-md:flex-col">
-        <div className="flex-1 rounded-lg bg-white p-10 py-10">
+    <div className="space-y-8 rounded-lg bg-ocean bg-cover p-6 text-center text-white">
+      <h2 className="text-5xl font-medium text-white">Turning the Tide</h2>
+
+      <div className="flex gap-x-8 gap-y-16 text-xl max-md:flex-col">
+        <div className=" flex-1 rounded-lg">
           <h3 className="md:basis-1/3">
             <p ref={ref} className="text-4xl">
-              {stats.sqmPlastic}
-              <hr className="mx-auto my-4 h-px w-16 border-0 bg-gray-200 dark:bg-gray-700" />
+              {stats.homesHelped}+
             </p>{' '}
-            sqm plastic reduced from landfill and ocean
+            <hr className="mx-auto my-4 h-px w-20 border-0 bg-gray-200 dark:bg-gray-700" />
+            homes we have helped ditch cling film
           </h3>
         </div>
 
-        <div className="flex-1 rounded-lg bg-white p-10 py-12">
+        <div className="flex-1 rounded-lg">
           <h3 className="md:basis-1/3">
-            <p className="text-4xl">{stats.singlePlastic}</p>
+            <p className="text-4xl">{stats.singlePlastic}%</p>
             <hr className="mx-auto my-4 h-px w-20 border-0 bg-gray-200 dark:bg-gray-700" />
-            single use plastic reduced{' '}
+            single use plastic free{' '}
           </h3>
         </div>
 
-        <div className="flex-1 rounded-lg bg-white p-10 py-12">
+        <div className=" flex-1 rounded-lg">
           <h3 className="md:basis-1/3">
-            <p className="text-4xl">{stats.cpFree}%</p>
+            <p className="text-4xl">{stats.clingFilmPrevented} Meters</p>
             <hr className="mx-auto my-4 h-px w-20 border-0 bg-gray-200 dark:bg-gray-700" />
-            cotton, plastic free and home compostable
+            cling film prevented from going into the ocean or landfill
           </h3>
         </div>
       </div>

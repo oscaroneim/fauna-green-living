@@ -18,9 +18,9 @@ export const metadata = {
 export default async function HomePage() {
   return (
     <>
-      <div className="mt-0 flex justify-center pb-[30px]">
+      <div className="mb-[30px] mt-0 flex justify-center rounded-lg">
         <Image
-          className="w-full, h-[335px] object-cover"
+          className="w-full, h-[335px] rounded-lg object-cover"
           src={Blogimg}
           alt="Picture of person walking"
         />
