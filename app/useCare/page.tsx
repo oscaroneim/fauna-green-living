@@ -18,7 +18,9 @@ export default async function useCarePage() {
         <div className="flip-card first m-[0.75rem] h-[250px] w-[400px] bg-transparent">
           <div className="flip-card-inner relative flex h-[100%] w-[100%] text-left">
             <div className="flip-card-front">
-              <p className="title m-0 text-left text-[2em] font-black">Beeswax Wrap (USE)</p>
+              <p className="title m-0 text-left text-[2em] font-black drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                Beeswax Wrap (USE)
+              </p>
             </div>
             <div className="flip-card-back">
               <p className="title m-0 text-left text-[2em] font-black">Beeswax Wrap (USE)</p>
@@ -39,7 +41,9 @@ export default async function useCarePage() {
         <div className="flip-card second m-[0.75rem] h-[250px] w-[400px] bg-transparent">
           <div className="flip-card-inner relative flex h-[100%] w-[100%] text-left">
             <div className="flip-card-front">
-              <p className="title m-0 text-left text-[2em] font-black">Beeswax Wrap (CARE)</p>
+              <p className="title m-0 text-left text-[2em] font-black drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                Beeswax Wrap (CARE)
+              </p>
             </div>
             <div className="flip-card-back">
               <p className="title m-0 text-left text-[2em] font-black">Beeswax Wrap (CARE)</p>
@@ -58,50 +62,62 @@ export default async function useCarePage() {
             </div>
           </div>
         </div>
-        <div className="flip-card third m-[0.75rem] h-[250px] w-[400px] bg-transparent">
-          <div className="flip-card-inner relative flex h-[100%] w-[100%] text-left">
-            <div className="flip-card-front">
-              <p className="title m-0 text-left text-[2em] font-black">Re-useable Kitchen Roll</p>
-            </div>
-            <div className="flip-card-back">
-              <p className="title m-0 text-left text-[2em] font-black">Re-useable Kitchen Roll</p>
-              <p>
-                Use like any other kitchen roll to wipe up spills.
-                <br />
-                To prevent stains, rinse before laundering.
-                <br />
-                Wash with like colours, can tumble dry.
-              </p>
-            </div>
-          </div>
-        </div>
         <div className="flip-card fourth m-[0.75rem] h-[250px] w-[400px] bg-transparent">
           <div className="flip-card-inner relative flex h-[100%] w-[100%] text-left">
             <div className="flip-card-front">
-              <p className="title m-0 text-left text-[2em] font-black">Sandwich and Snack Bags</p>
+              <p className="title m-0 text-left text-[2em] font-black drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                Sandwich and Snack Bags
+              </p>
             </div>
             <div className="flip-card-back">
-              <p className="title m-0 text-left text-[2em] font-black">Sandwich and Snack Bags</p>
-              <p>
-                Use to store dry or damp snacks and sandwiches.
-                <br />
-                Hand wash with warm water and dish soap or wash on 30 degrees with like colours.
-              </p>
+              <div className="mb-10">
+                <p className="title m-0 text-left text-[2em] font-black">Sandwich and Snack Bags</p>
+                <p>
+                  Use to store dry or damp snacks and sandwiches.
+                  <br />
+                  Hand wash with warm water and dish soap or wash on 30 degrees with like colours.
+                </p>
+              </div>
             </div>
           </div>
         </div>
         <div className="flip-card fifth m-[0.75rem] h-[250px] w-[400px] bg-transparent">
           <div className="flip-card-inner relative flex h-[100%] w-[100%] text-left">
             <div className="flip-card-front">
-              <p className="title m-0 text-left text-[2em] font-black">Cloth Napkins</p>
+              <p className="title m-0 text-left text-[2em] font-black drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                Cloth Napkins
+              </p>
             </div>
             <div className="flip-card-back">
-              <p className="title m-0 text-left text-[2em] font-black">Cloth Napkins</p>
-              <p>
-                Pre-treat stains by rinsing with cold water after they occur and before washing.
-                <br />
-                Wash with like colours, can tumble dry.
+              <div className="mb-10">
+                <p className="title m-0 text-left text-[2em] font-black">Cloth Napkins</p>
+                <p>
+                  Pre-treat stains by rinsing with cold water after they occur and before washing.
+                  <br />
+                  Wash with like colours, can tumble dry.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flip-card third m-[0.75rem] h-[250px] w-[400px] bg-transparent">
+          <div className="flip-card-inner relative flex h-[100%] w-[100%] text-left">
+            <div className="flip-card-front">
+              <p className="title m-0 text-left text-[2em] font-black drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+                Re-useable Kitchen Roll
               </p>
+            </div>
+            <div className="flip-card-back">
+              <div className="mb-10">
+                <p className="title m-0 text-left text-[2em] font-black">Re-useable Kitchen Roll</p>
+                <p>
+                  Use like any other kitchen roll to wipe up spills.
+                  <br />
+                  To prevent stains, rinse before laundering.
+                  <br />
+                  Wash with like colours, can tumble dry.
+                </p>
+              </div>
             </div>
           </div>
         </div>
