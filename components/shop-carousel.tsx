@@ -24,11 +24,11 @@ export async function ShopCarousel({
     <div className="mx-none mb-4 border-b px-2 pb-2 md:px-0">
       <p className="relative  text-[34px] text-black max-md:text-center md:pl-[24px]">{title}</p>
       <p className="relative  text-[16px] text-black max-md:text-center md:pl-[24px]">{subtitle}</p>
-      <ul className="flex flex-wrap gap-2 pl-[24px] max-[500px]:justify-center">
+      <ul className="flex flex-wrap gap-6 max-[500px]:justify-center md:gap-2 md:pl-[24px]">
         {carouselProducts.map((product, i) => (
           <li
             key={`${product.handle}${i}`}
-            className="aspect-square h-full w-[210px] animate-fadeIn transition-opacity"
+            className="aspect-square h-full w-[280px] animate-fadeIn transition-opacity md:w-[210px]"
           >
             <Link href={`/product/${product.handle}`} className="relative h-full w-full">
               <GridTileImage
