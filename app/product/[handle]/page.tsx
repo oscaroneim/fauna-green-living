@@ -119,11 +119,11 @@ export default async function ProductPage({ params }: { params: { handle: string
             )}
           </div>
 
-          <div className="basis-full lg:basis-3/6">
+          <div className="basis-full sm:mt-4 lg:basis-3/6">
             <ProductDescription product={product} />
           </div>
         </div>
-        <div className="h-full">
+        <div className="flex h-auto sm:overflow-y-hidden">
           <RelatedProducts id={product.id} />
         </div>
       </div>
@@ -137,7 +137,7 @@ async function RelatedProducts({ id }: { id: string }) {
   if (!relatedProducts.length) return null;
 
   return (
-    <div className="py-8">
+    <div className="h-full w-full py-8">
       <h2 className="mb-4 text-2xl font-bold">Related Products</h2>
       <ul className="flex w-full gap-4 overflow-x-auto pt-1 no-scrollbar">
         {relatedProducts.map((product) => (
@@ -153,12 +153,14 @@ async function RelatedProducts({ id }: { id: string }) {
                 sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
                 className="object-cover object-center"
               />
-              <p className="text-[20px] font-medium">{product.title}</p>
-              <Price
-                className="text-[16px] font-normal text-black"
-                amount={product.priceRange.maxVariantPrice.amount}
-                currencyCode={'GBP'}
-              />
+              <div className="h-8 sm:h-24">
+                <p className="text-lg font-medium">{product.title}</p>
+                <Price
+                  className="text-base font-normal text-black"
+                  amount={product.priceRange.maxVariantPrice.amount}
+                  currencyCode={'GBP'}
+                />
+              </div>
             </Link>
           </li>
         ))}

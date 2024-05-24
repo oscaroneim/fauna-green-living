@@ -18,48 +18,56 @@ export const metadata = {
 export default async function HomePage() {
   return (
     <>
-      <div className="mb-[30px] mt-0 flex justify-center rounded-lg">
+      <div className="relative mb-[30px] mt-0 flex w-full justify-center rounded-lg">
         <Image
-          className="w-full, h-[335px] rounded-lg object-cover"
+          className="h-[210px] w-full object-cover md:h-[335px]"
           src={Blogimg}
           alt="Picture of person walking"
+          style={{ objectFit: 'cover' }}
         />
+        <h1
+          className="absolute bottom-[50%] h-auto w-auto text-center text-[32px] text-white sm:bottom-[30%] sm:text-[48px] md:text-[64px] lg:text-[48px]"
+          style={{ lineHeight: '1.2' }}
+        >
+          Stay in the know
+        </h1>
       </div>
-      <h1 className="flex justify-center border-b text-[48px] text-[#043028]">Stay in the know!</h1>
-      <div className="flex flex-col justify-center rounded-lg bg-[#88A18C] pb-[20px]">
-        <div className="flex justify-center py-8">
-          <Image
-            className="flex h-full w-[270px] justify-center"
-            src={Instagrambanner}
-            alt="Instagram logo"
-          ></Image>
+      <div className="m-2 md:m-0">
+        <div className="mb-4 mt-8 flex flex-col justify-center rounded-lg bg-[#88A18C] pb-[20px] md:mb-8">
+          <div className="flex justify-center py-8">
+            <Image
+              className="flex h-full w-[270px] justify-center"
+              src={Instagrambanner}
+              alt="Instagram logo"
+            ></Image>
+          </div>
+          <div className="flex justify-center">
+            <Instagram />
+          </div>
         </div>
-        <div className="flex justify-center">
-          <Instagram />
+        <div className="mb-4 flex flex-col justify-center rounded-lg bg-[#C4D4C8] pb-[20px] md:mb-8">
+          <div className="flex justify-center py-8">
+            <Image
+              className="flex h-full w-[270px] justify-center"
+              src={Linkedinbanner}
+              alt="Instagram logo"
+            ></Image>
+          </div>
+          <div className="flex justify-center">
+            <Linkedin />
+          </div>
         </div>
-      </div>
-      <div className="flex flex-col justify-center rounded-lg bg-[#C4D4C8] pb-[20px]">
-        <div className="flex justify-center py-8">
-          <Image
-            className="flex h-full w-[270px] justify-center"
-            src={Linkedinbanner}
-            alt="Instagram logo"
-          ></Image>
-        </div>
-        <div className="flex justify-center">
-          <Linkedin />
-        </div>
-      </div>
-      <div className="flex flex-col justify-center rounded-lg bg-[#88A18C] pb-[20px]">
-        <div className="flex justify-center py-8">
-          <Image
-            className="flex h-full w-[270px] justify-center"
-            src={Tiktokbanner}
-            alt="Instagram logo"
-          ></Image>
-        </div>
-        <div className="flex justify-center">
-          <Tiktok />
+        <div className="mb-4 flex flex-col justify-center rounded-lg bg-[#88A18C] pb-[20px] md:mb-8">
+          <div className="flex justify-center py-8">
+            <Image
+              className="flex h-full w-[270px] justify-center"
+              src={Tiktokbanner}
+              alt="Instagram logo"
+            ></Image>
+          </div>
+          <div className="flex justify-center">
+            <Tiktok />
+          </div>
         </div>
       </div>
     </>

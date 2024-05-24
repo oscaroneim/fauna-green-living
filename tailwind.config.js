@@ -7,12 +7,10 @@ module.exports = {
     extend: {
       // backgroundImages property is used to define custom background images that can be used with utility classes.
       backgroundImage: {
-        'frequently-asked-trees': "url('/trees.png')"
-      },
-      backgroundImage: {
-        'bamboo-image': "url('/bamboo-2.jpeg')"
-      },
-      backgroundImage: {
+        'frequently-asked-trees': "url('/trees.png')",
+
+        'bamboo-image': "url('/bamboo-2.jpeg')",
+
         ocean: "url('/blue-ocean-2.png')"
       },
       boxShadow: {
