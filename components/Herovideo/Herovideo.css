@@ -59,19 +59,19 @@
 }
 
 .titlehead {
-  font-size: xx-large;
+  font-size: 36px;
   color: white;
   text-align: center;
   padding-bottom: 0px;
   padding-top: 10px;
 }
 .caption {
-  font-size: large;
+  font-size: 20px;
   color: white;
 }
 
 .caption-text {
-  font-size: small;
+  font-size: 14px;
   color: white;
 }
 

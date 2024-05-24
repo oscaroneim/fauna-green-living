@@ -8,10 +8,10 @@ export const metadata = {
 export default async function useCarePage() {
   return (
     <>
-      <h1 className="page-title m-0 pl-4 text-left text-[3.25em] font-extrabold text-customDarkGreen">
+      <h1 className="page-title m-0 pl-4 text-left text-5xl font-extrabold text-customDarkGreen">
         Use & Care <br /> Instructions
       </h1>
-      <p className="page-text m-0 pl-4 text-left text-[1.5em] font-normal text-customGrey">
+      <p className="page-text m-0 pl-4 text-left text-xl font-normal text-customGrey">
         The best care for your item so you can use them over and over. And over, again.
       </p>
       <div className="cards flex flex-wrap justify-around p-4">

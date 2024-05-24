@@ -39,19 +39,19 @@ export default async function SearchPage({
       ) : (
         <>
           <ShopCarousel
-            title={'Best Sellers'}
+            title={'Featured'}
             subtitle={'Frequently bought'}
-            collectionName={'hidden-homepage-carousel'}
+            collectionName={'featured'}
           />
           <ShopCarousel
             title={'Kitchen'}
             subtitle={'Essentials for your kitchen'}
-            collectionName={'hidden-kitchen'}
+            collectionName={'kitchen'}
           />
           <ShopCarousel
             title={'Bathroom'}
             subtitle={'Elevate your bathroom'}
-            collectionName={'hidden-bathroom'}
+            collectionName={'bathroom'}
           />
         </>
       )}
