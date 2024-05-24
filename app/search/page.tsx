@@ -1,6 +1,5 @@
 import Grid from 'components/grid';
 import ProductGridItems from 'components/layout/product-grid-items';
-import { ShopCarousel } from 'components/shop-carousel';
 import { defaultSort, sorting } from 'lib/constants';
 import { getProducts } from 'lib/shopify';
 
@@ -23,38 +22,18 @@ export default async function SearchPage({
   return (
     <>
       {searchValue ? (
-        <>
-          <p className="mb-4">
-            {products.length === 0
-              ? 'There are no products that match '
-              : `Showing ${products.length} ${resultsText} for `}
-            <span className="font-bold">&quot;{searchValue}&quot;</span>
-          </p>
-          {products.length > 0 && (
-            <Grid className="flex">
-              <ProductGridItems products={products} />
-            </Grid>
-          )}
-        </>
-      ) : (
-        <>
-          <ShopCarousel
-            title={'Featured'}
-            subtitle={'Frequently bought'}
-            collectionName={'featured'}
-          />
-          <ShopCarousel
-            title={'Kitchen'}
-            subtitle={'Essentials for your kitchen'}
-            collectionName={'kitchen'}
-          />
-          <ShopCarousel
-            title={'Bathroom'}
-            subtitle={'Elevate your bathroom'}
-            collectionName={'bathroom'}
-          />
-        </>
-      )}
+        <p className="mb-4">
+          {products.length === 0
+            ? 'There are no products that match '
+            : `Showing ${products.length} ${resultsText} for `}
+          <span className="font-bold">&quot;{searchValue}&quot;</span>
+        </p>
+      ) : null}
+      {products.length > 0 ? (
+        <Grid className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <ProductGridItems products={products} />
+        </Grid>
+      ) : null}
     </>
   );
 }
