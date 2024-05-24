@@ -8,34 +8,38 @@ const SignupForm: FC = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [isPending, startTransition] = useAsyncTransition();
+
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
-  const validateEmail = (email: string) =>
-    email
-      .toLowerCase()
-      .match(
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      );
+
+  const validateEmail = (email: string) => {
+    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return re.test(email.toLowerCase());
+  };
+
   const updateMessage = (message: string) => {
     setMessage(message);
     setTimeout(() => {
-      setMessage(''); // Clear error message after a delay
-    }, 2000);
+      setMessage(''); // Clear message after a delay
+    }, 3000);
   };
+
   const handleSubmit = () => {
     startTransition(async () => {
       try {
-        if (!email || !validateEmail) {
+        if (!email || !validateEmail(email)) {
           updateMessage('Please enter a valid email');
           return;
         }
+
         await emailjs.send(
           process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
           process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID_NEWSLETTER!,
           { email },
           process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
         );
+
         updateMessage('Signed up for newsletter!');
         setEmail(''); // Clear the input field after submission
       } catch (e) {
@@ -44,8 +48,9 @@ const SignupForm: FC = () => {
       }
     });
   };
+
   return (
-    <div>
+    <div className="w-full">
       <input
         type="text"
         id="emailAddress"
@@ -56,15 +61,15 @@ const SignupForm: FC = () => {
       />
       <br />
       <button
-        type="button"
-        className="text-cabin inline-block w-full max-w-md cursor-pointer rounded-lg bg-[#82A38A] px-4 py-3 text-center text-lg font-semibold text-white transition duration-200 ease-in-out hover:bg-[#57755E]"
-        disabled={isPending} // Disable the button while loading
         onClick={handleSubmit}
+        type="button"
+        className=" flex w-full max-w-md items-center justify-center rounded-lg bg-[#82A38A] px-4 py-3 text-center text-lg font-semibold text-white transition duration-200 ease-in-out hover:bg-[#57755E]"
+        disabled={isPending} // Disable the button while loading
       >
         {isPending ? <Spinner /> : 'Sign Up'}
       </button>
       {message && (
-        <p className="mt-4 text-center text-lg font-semibold text-customDarkGreen">{message}</p>
+        <p className="mt-4 text-center text-lg font-semibold text-customGreen">{message}</p>
       )}
     </div>
   );
