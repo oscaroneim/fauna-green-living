@@ -137,7 +137,7 @@ async function RelatedProducts({ id }: { id: string }) {
   if (!relatedProducts.length) return null;
 
   return (
-    <div className="py-8">
+    <div className="h-full py-8">
       <h2 className="mb-4 text-2xl font-bold">Related Products</h2>
       <ul className="flex w-full gap-4 overflow-x-auto pt-1 no-scrollbar">
         {relatedProducts.map((product) => (
@@ -153,12 +153,14 @@ async function RelatedProducts({ id }: { id: string }) {
                 sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
                 className="object-cover object-center"
               />
-              <p className="text-lg font-medium">{product.title}</p>
-              <Price
-                className="text-base font-normal text-black"
-                amount={product.priceRange.maxVariantPrice.amount}
-                currencyCode={'GBP'}
-              />
+              <div className="h-8 sm:h-24">
+                <p className="text-lg font-medium">{product.title}</p>
+                <Price
+                  className="text-base font-normal text-black"
+                  amount={product.priceRange.maxVariantPrice.amount}
+                  currencyCode={'GBP'}
+                />
+              </div>
             </Link>
           </li>
         ))}
