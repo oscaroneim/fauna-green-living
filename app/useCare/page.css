@@ -1,50 +1,4 @@
-.page-title {
-  font-size: 3em;
-  font-weight: 750;
-  text-align: left;
-  color: #043028;
-  margin: 0;
-  padding-left: 1rem;
-}
-
-.page-text {
-  font-size: 1.5em;
-  font-weight: 375;
-  text-align: left;
-  color: #828282;
-  margin: 0;
-  padding-left: 1rem;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 1rem;
-}
-
-.flip-card {
-  background-color: transparent;
-  width: 400px;
-  height: 250px;
-  perspective: 1000px;
-  margin: 0.75rem;
-  font-family: sans-serif;
-}
-
-.title {
-  font-size: 2em;
-  font-weight: 900;
-  text-align: left;
-  margin: 0;
-}
-
 .flip-card-inner {
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  text-align: left;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -71,7 +25,7 @@
 
 .cards .flip-card.first .flip-card-front,
 .cards .flip-card.first .first {
-  background-image: url('/LogoImages/useCareImages/Image1.png');
+  background-image: url('/LogoImages/useCareImages/USE.jpg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -79,7 +33,7 @@
 
 .cards .flip-card.second .flip-card-front,
 .cards .flip-card.second .second {
-  background-image: url('/LogoImages/useCareImages/Image2.png');
+  background-image: url('/LogoImages/useCareImages/CARE.webp');
   background-size: cover;
   background-position: center;
   color: white;
@@ -87,7 +41,7 @@
 
 .cards .flip-card.third .flip-card-front,
 .cards .flip-card.third .third {
-  background-image: url('/LogoImages/useCareImages/Image3.png');
+  background-image: url('/LogoImages/useCareImages/CLOTH.webp');
   background-size: cover;
   background-position: center;
   color: white;
@@ -95,7 +49,7 @@
 
 .cards .flip-card.fourth .flip-card-front,
 .cards .flip-card.fourth .fourth {
-  background-image: url('/LogoImages/useCareImages/Image4.png');
+  background-image: url('/LogoImages/useCareImages/SAND.jpeg');
   background-size: cover;
   background-position: center;
   color: white;
@@ -103,7 +57,7 @@
 
 .cards .flip-card.fifth .flip-card-front,
 .cards .flip-card.fifth .fifth {
-  background-image: url('/LogoImages/useCareImages/Image5.png');
+  background-image: url('/LogoImages/useCareImages/NAPKIN.webp');
   background-size: cover;
   background-position: center;
   color: white;

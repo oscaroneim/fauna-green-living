@@ -1,6 +1,5 @@
 'use client';
 
-import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 // import { useMediaQuery } from '@react-hook/media-query'; Currently causing a hydration error
 import { GridTileImage } from 'components/grid/tile';
 import { createUrl } from 'lib/utils';
@@ -32,7 +31,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
     <>
       {/*<----------------------------This section controls the main image (Product page) ----------------------------------------> */}
 
-      <div className="relative h-96 w-full rounded-xl sm:h-[330px] sm:w-[318px] md:h-[625px] md:w-[613px]">
+      <div className="relative mx-auto h-96 w-full rounded-xl sm:h-[330px] sm:w-[318px] md:h-[625px] md:w-[613px]">
         {images[imageIndex] && (
           <Image
             className="rounded-xl object-contain"
@@ -46,7 +45,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
 
         {/*<----------------------------This section controls the image navigation arrows----------------------------------------> */}
 
-        {images.length > 1 ? (
+        {/* {images.length > 1 ? (
           <div className="absolute bottom-6 hidden w-full justify-center sm:flex">
             <div className="mx-auto flex h-8 items-center rounded-full bg-customDarkGreen text-neutral-500 backdrop-blur">
               <Link
@@ -68,7 +67,7 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
               </Link>
             </div>
           </div>
-        ) : null}
+        ) : null} */}
       </div>
 
       {/*<----------------------------This section controls the thumbnail images ----------------------------------------> */}

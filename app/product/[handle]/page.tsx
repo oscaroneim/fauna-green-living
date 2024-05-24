@@ -80,8 +80,8 @@ export default async function ProductPage({ params }: { params: { handle: string
           __html: JSON.stringify(productJsonLd)
         }}
       />
-      <div className="mx-auto max-w-screen-2xl px-4">
-        <div className="flex flex-col bg-white p-2 md:p-4 lg:flex-row lg:content-center lg:gap-24 ">
+      <div className="mx-auto h-auto max-w-screen-2xl px-4">
+        <div className="flex flex-col bg-white p-2 md:p-4 lg:flex-row lg:content-center lg:gap-12 ">
           <div className="h-full w-full basis-full sm:mb-2 sm:mt-2 lg:basis-2/6">
             {/*This section controls the thumbnail images below the main image */}
             <Suspense
@@ -100,12 +100,12 @@ export default async function ProductPage({ params }: { params: { handle: string
             {isWrapProduct && (
               <div className="relative h-auto w-full space-y-6">
                 <h2 className="hidden text-2xl font-bold sm:block">How to use our wraps</h2>
-                <div className="block h-auto w-auto overflow-hidden rounded-xl object-contain">
+                <div className="block h-auto w-auto overflow-hidden rounded-lg object-contain">
                   {' '}
                   <iframe
                     width="100%"
                     height="315"
-                    src={`https://www.youtube.com/embed/sTPWknd7oOQ?modestBranding=1&si=Y0Djt8r8oko7nc8F`}
+                    src="https://www.youtube.com/embed/FTVPbk8i9YU?si=2J_xYeqTXhIRzZaA&amp;controls=0"
                     title="YouTube video player"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -119,11 +119,13 @@ export default async function ProductPage({ params }: { params: { handle: string
             )}
           </div>
 
-          <div className="basis-full lg:basis-3/6">
+          <div className="basis-full sm:mt-4 lg:basis-3/6">
             <ProductDescription product={product} />
           </div>
         </div>
-        <RelatedProducts id={product.id} />
+        <div className="flex h-auto sm:overflow-y-hidden">
+          <RelatedProducts id={product.id} />
+        </div>
       </div>
     </>
   );
@@ -137,7 +139,7 @@ async function RelatedProducts({ id }: { id: string }) {
   return (
     <div className="py-8">
       <h2 className="mb-4 text-2xl font-bold">Related Products</h2>
-      <ul className="flex w-full gap-4 overflow-x-auto overflow-y-hidden pt-1">
+      <ul className="flex w-full gap-4 overflow-x-auto pt-1 no-scrollbar">
         {relatedProducts.map((product) => (
           <li
             key={product.handle}
@@ -151,9 +153,9 @@ async function RelatedProducts({ id }: { id: string }) {
                 sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
                 className="object-cover object-center"
               />
-              <p className="text-[20px] font-medium">{product.title}</p>
+              <p className="text-lg font-medium">{product.title}</p>
               <Price
-                className="text-[16px] font-normal text-black"
+                className="text-base font-normal text-black"
                 amount={product.priceRange.maxVariantPrice.amount}
                 currencyCode={'GBP'}
               />
