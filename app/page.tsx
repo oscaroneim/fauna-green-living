@@ -1,5 +1,5 @@
 //import { HeroCarousel } from 'components/heroCarousel/hero-carousel';
-import Mainslider from '@/components/Mainslider/Mainslider';
+import Mainslider from '@/components/mainslider/mainslider';
 import { Carousel } from 'components/product-carousel';
 import { Reviews } from 'components/reviews';
 import HeroVideo from '../components/Herovideo/page';
