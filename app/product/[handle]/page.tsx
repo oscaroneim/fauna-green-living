@@ -6,6 +6,7 @@ import { HIDDEN_PRODUCT_TAG } from 'lib/constants';
 import { getProduct, getProductRecommendations } from 'lib/shopify';
 import { Image } from 'lib/shopify/types';
 import type { Metadata } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
@@ -74,6 +75,17 @@ export default async function ProductPage({ params }: { params: { handle: string
 
   return (
     <>
+      <Head>
+        <title>{product.title} - Eco-Friendly & Sustainable Products</title>
+        <meta
+          name="description"
+          content={`Buy ${product.title}, an eco-friendly and sustainable product. Perfect for zero waste and plastic-free living.`}
+        />
+        <meta
+          name="keywords"
+          content="Eco-friendly, Sustainable, Zero waste, Plastic free, Natural materials, Ethical products, Environmentally conscious, Green living"
+        />
+      </Head>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

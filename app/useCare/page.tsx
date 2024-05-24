@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import './page.css';
 
 export const metadata = {
@@ -8,6 +9,17 @@ export const metadata = {
 export default async function useCarePage() {
   return (
     <>
+      <Head>
+        <title>Use & Care Instructions - Sustainable Products</title>
+        <meta
+          name="description"
+          content="Find use and care instructions for our eco-friendly and sustainable products. Learn how to maintain your zero waste items."
+        />
+        <meta
+          name="keywords"
+          content="Eco-friendly, Sustainable, Zero waste, Care instructions, Use instructions, Green living, Mindful living, Reduce, reuse, recycle, Eco-conscious, Natural materials"
+        />
+      </Head>
       <h1 className="page-title m-0 pl-4 text-left text-5xl font-extrabold text-customDarkGreen">
         Use & Care <br /> Instructions
       </h1>
