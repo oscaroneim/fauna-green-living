@@ -5,7 +5,7 @@ import Price from './price';
 
 export async function Carousel() {
   // Collections that start with `hidden-*` are hidden from the search page.
-  const products = await getCollectionProducts({ collection: 'hidden-homepage-carousel' });
+  const products = await getCollectionProducts({ collection: 'featured' });
 
   if (!products?.length) return null;
 
