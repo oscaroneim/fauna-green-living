@@ -21,11 +21,11 @@ export default async function Footer() {
         <div className=" p-4 md:w-2/5 md:px-16">
           <div className=" flex flex-col items-center  text-center md:text-left">
             <div className=" flex h-full justify-center pb-4 md:w-4/5">
-              <Link className="flex items-center gap-2 " href="/">
+              <Link className="mr-16 flex  gap-2 " href="/">
                 <LogoSquare />
               </Link>
             </div>
-            <h3 className="font-cabin text-3xl text-customDarkGreen">
+            <h3 className="font-cabin text-center text-3xl text-customDarkGreen">
               Join us in fighting against single use plastic
             </h3>
             <br />
