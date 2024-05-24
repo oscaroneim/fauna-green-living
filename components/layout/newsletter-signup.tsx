@@ -2,7 +2,7 @@
 import emailjs from '@emailjs/browser';
 import useAsyncTransition from 'lib/hooks/use-async-transition';
 import { useState, type ChangeEvent, type FC } from 'react';
-import Spinner from '../spinner'; // Adjust the import path based on your project structure
+import Spinner from '../spinner';
 
 const SignupForm: FC = () => {
   const [email, setEmail] = useState('');
