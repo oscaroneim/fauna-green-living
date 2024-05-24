@@ -2,6 +2,7 @@ import Grid from 'components/grid';
 import ProductGridItems from 'components/layout/product-grid-items';
 import { defaultSort, sorting } from 'lib/constants';
 import { getProducts } from 'lib/shopify';
+import Head from 'next/head';
 
 export const metadata = {
   title: 'Search',
@@ -21,6 +22,17 @@ export default async function SearchPage({
 
   return (
     <>
+      <Head>
+        <title>Shop Eco-Friendly & Zero Waste Products</title>
+        <meta
+          name="description"
+          content="Explore our shop for eco-friendly and zero waste products. From beeswax wraps to reusable cleaning cloths, find sustainable home goods here."
+        />
+        <meta
+          name="keywords"
+          content="Beeswax wraps, Zero waste food storage, Plastic free food storage, Sustainable food storage, Eco-friendly food wraps, Reusable food wraps, Beeswax food covers, Organic beeswax wraps, Natural food wrap alternatives, Reusable paper towels, Sustainable kitchen roll, Eco-friendly paper towels, Washable paper towels, Cloth kitchen towels, Reusable cleaning cloths, Zero waste kitchen products, Reusable makeup remover pads, Eco-friendly makeup wipes, Washable makeup remover wipes, Sustainable facial wipes, Cloth makeup remover pads, Natural fiber makeup wipes, Zero waste beauty products, Sustainable living products, Zero waste alternatives, Eco-conscious household items, Green living essentials, Environmentally friendly products, Sustainable home goods, Ethically sourced materials, Plastic free, Single use plastic free, No more single use plastic"
+        />
+      </Head>
       {searchValue ? (
         <p className="mb-4">
           {products.length === 0

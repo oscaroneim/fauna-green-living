@@ -16,16 +16,16 @@ export function Gallery({ images }: { images: { src: string; altText: string }[]
   const nextSearchParams = new URLSearchParams(searchParams.toString());
   const nextImageIndex = imageIndex + 1 < images.length ? imageIndex + 1 : 0;
   nextSearchParams.set('image', nextImageIndex.toString());
-  const nextUrl = createUrl(pathname, nextSearchParams);
+  // const nextUrl = createUrl(pathname, nextSearchParams);
 
   const previousSearchParams = new URLSearchParams(searchParams.toString());
   const previousImageIndex = imageIndex === 0 ? images.length - 1 : imageIndex - 1;
   previousSearchParams.set('image', previousImageIndex.toString());
-  const previousUrl = createUrl(pathname, previousSearchParams);
-  // const isLargeScreen = useMediaQuery('(min-width: 768px)'); Currently causing a hydration error
+  // const previousUrl = createUrl(pathname, previousSearchParams);
+  // // const isLargeScreen = useMediaQuery('(min-width: 768px)'); Currently causing a hydration error
 
-  const buttonClassName =
-    'h-full px-6 transition-all ease-in-out hover:scale-110 hover:text-black flex items-center justify-end';
+  // const buttonClassName =
+  //   'h-full px-6 transition-all ease-in-out hover:scale-110 hover:text-black flex items-center justify-end';
 
   return (
     <>

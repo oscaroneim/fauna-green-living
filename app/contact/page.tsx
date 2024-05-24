@@ -1,11 +1,24 @@
 import FAQSection from 'components/contact/components/FAQSection';
 import ContactForm from 'components/contact/contact-form';
+import Head from 'next/head';
 import Image from 'next/image';
 import forest from 'public/contact-form.jpeg';
 
 export default async function ContactPage() {
   return (
     <>
+      <Head>
+        <title>Contact Us - Sustainable Living Products</title>
+        <meta
+          name="description"
+          content="Get in touch with us for inquiries about our eco-friendly and sustainable living products. We're here to help you embrace a zero waste lifestyle."
+        />
+        <meta
+          name="keywords"
+          content="Contact, Eco-friendly, Sustainable living, Zero waste, Green living, Ethical products, Environmentally conscious, Customer service"
+        />
+      </Head>
+
       <div className="mx-2">
         <div className="flex gap-x-10 rounded-lg bg-customLightGreen p-4 pt-4 md:h-[900px] lg:h-[700px] xl:h-[800px] xl:gap-x-32 xl:px-12 xl:pb-12 xl:pt-12 2xl:h-[950px]">
           <div className=" flex w-full flex-col gap-y-6">
