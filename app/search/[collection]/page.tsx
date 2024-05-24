@@ -44,7 +44,7 @@ export default async function CategoryPage({
         {' '}
         {collection.title}{' '}
       </p>
-      <p className="relative  pb-2 text-[16px] text-black max-md:text-center md:pl-[24px]">
+      <p className="relative pb-2 text-[16px] text-black max-md:text-center md:pl-[24px]">
         {' '}
         {collection.description}
       </p>
