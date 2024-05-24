@@ -153,9 +153,9 @@ async function RelatedProducts({ id }: { id: string }) {
                 sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
                 className="object-cover object-center"
               />
-              <p className="text-[20px] font-medium">{product.title}</p>
+              <p className="text-lg font-medium">{product.title}</p>
               <Price
-                className="text-[16px] font-normal text-black"
+                className="text-base font-normal text-black"
                 amount={product.priceRange.maxVariantPrice.amount}
                 currencyCode={'GBP'}
               />

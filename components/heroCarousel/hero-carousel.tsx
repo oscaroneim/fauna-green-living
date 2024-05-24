@@ -15,17 +15,17 @@ export async function HeroCarousel() {
         >
           <div className="carousel__snapper">
             <div className=" hero-text absolute flex h-[100%] w-[100%] flex-col items-center justify-center md:flex-col md:items-start md:justify-center md:p-11">
-              <h2 className="hero-big-text m-4 text-center text-2xl font-bold md:m-0 md:text-left md:text-4xl md:font-bold">
+              <h2 className="hero-big-text m-4 text-center text-xl font-bold md:m-0 md:text-left md:text-5xl md:font-bold">
                 Plastic Free
                 <br />
                 Zero Waste
                 <br />
                 Locally Sourced
               </h2>
-              <button className="shop_now_button order-1 cursor-pointer rounded-lg border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:order-2 md:h-[62px] md:w-[310px] md:text-base">
+              <button className="shop_now_button order-1 cursor-pointer rounded-lg border-none bg-customDarkGreen px-4 py-2 text-sm font-bold text-white md:order-2 md:h-[62px] md:w-[310px] md:text-base">
                 <Link href="/search">Shop Now</Link>
               </button>
-              <p className="hero-small-text order-2 mb-4 mt-4 text-center text-sm font-light underline md:order-1">
+              <p className="hero-small-text order-2 mb-4 mt-4 text-center text-base font-light underline md:order-1">
                 <Link href="/about">Find out more</Link>
               </p>
             </div>
@@ -40,7 +40,7 @@ export async function HeroCarousel() {
         >
           <div className="carousel__snapper">
             <div className="hero-text absolute flex h-[100%] w-[100%] flex-col items-center justify-center md:flex-col md:items-start md:justify-center md:p-11">
-              <h2 className="hero-big-text m-4 text-center text-2xl font-bold md:m-0 md:text-left md:text-4xl md:font-bold">
+              <h2 className="hero-big-text m-4 text-center text-2xl font-bold md:m-0 md:text-left md:text-5xl md:font-bold">
                 Plastic Free
                 <br />
                 Zero Waste
@@ -75,7 +75,7 @@ export async function HeroCarousel() {
               <button className="shop_now_button order-1 cursor-pointer rounded-lg border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:order-2 md:h-[62px] md:w-[310px] md:text-base">
                 Shop Now
               </button>
-              <p className="hero-small-text order-2 mb-4 mt-4 text-center text-sm font-light underline md:order-1">
+              <p className="hero-small-text order-2 mb-4 mt-4 text-center text-base font-light underline md:order-1">
                 Find out more
               </p>
             </div>

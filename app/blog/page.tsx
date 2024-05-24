@@ -25,7 +25,7 @@ export default async function HomePage() {
           alt="Picture of person walking"
         />
       </div>
-      <h1 className="flex justify-center border-b text-[48px] text-[#043028]">Stay in the know!</h1>
+      <h1 className="flex justify-center border-b text-5xl text-[#043028]">Stay in the know!</h1>
       <div className="flex flex-col justify-center rounded-lg bg-[#88A18C] pb-[20px]">
         <div className="flex justify-center py-8">
           <Image

@@ -44,7 +44,7 @@ export default function PlasticWasteStats() {
       <div className="flex gap-x-8 gap-y-16 text-xl max-md:flex-col">
         <div className=" flex-1 rounded-lg">
           <h3 className="md:basis-1/3">
-            <p ref={ref} className="text-4xl">
+            <p ref={ref} className="text-3xl">
               {stats.homesHelped}+
             </p>{' '}
             <hr className="mx-auto my-4 h-px w-20 border-0 bg-gray-200 dark:bg-gray-700" />
@@ -54,7 +54,7 @@ export default function PlasticWasteStats() {
 
         <div className="flex-1 rounded-lg">
           <h3 className="md:basis-1/3">
-            <p className="text-4xl">{stats.singlePlastic}%</p>
+            <p className="text-3xl">{stats.singlePlastic}%</p>
             <hr className="mx-auto my-4 h-px w-20 border-0 bg-gray-200 dark:bg-gray-700" />
             single use plastic free{' '}
           </h3>
@@ -62,7 +62,7 @@ export default function PlasticWasteStats() {
 
         <div className=" flex-1 rounded-lg">
           <h3 className="md:basis-1/3">
-            <p className="text-4xl">{stats.clingFilmPrevented} Meters</p>
+            <p className="text-3xl">{stats.clingFilmPrevented} Meters</p>
             <hr className="mx-auto my-4 h-px w-20 border-0 bg-gray-200 dark:bg-gray-700" />
             cling film prevented from going into the ocean or landfill
           </h3>
