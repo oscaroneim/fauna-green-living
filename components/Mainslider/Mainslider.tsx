@@ -15,9 +15,9 @@ export default function Mainslider() {
   const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
   const trial: string[] = [
-    '/HeroImages/field2.png',
-    '/HeroImages/desktop-hero2.png',
     '/HeroImages/oranges.jpeg',
+    '/HeroImages/desktop-hero2.png',
+    '/HeroImages/field2.png',
     '/HeroImages/desktop-hero_edited.jpg'
   ];
 
