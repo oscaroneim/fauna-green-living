@@ -17,12 +17,14 @@ export default function ProductGridItems({ products }: { products: Product[] }) 
               sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
               className="object-cover object-center"
             />
-            <p className="text-lg">{product.title}</p>
-            <Price
-              className="text-base font-normal text-[#454545]"
-              amount={product.priceRange.maxVariantPrice.amount}
-              currencyCode={'GBP'}
-            />
+            <div>
+              <p className="text-lg">{product.title}</p>
+              <Price
+                className="text-base font-normal text-[#454545]"
+                amount={product.priceRange.maxVariantPrice.amount}
+                currencyCode={'GBP'}
+              />
+            </div>
           </Link>
         </Grid.Item>
       ))}
