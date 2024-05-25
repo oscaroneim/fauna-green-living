@@ -14,9 +14,7 @@ export default async function SearchLayout({ children }: { children: React.React
         <div className="order-first w-full flex-none md:max-w-[125px]">
           <Collections />
         </div>
-        <div className="order-last h-[290px] w-full flex-grow md:order-none md:w-4/5">
-          {children}
-        </div>
+        <div className="order-last w-full md:order-none md:w-4/5">{children}</div>
         <div className="order-none flex-none md:order-last md:w-[125px] ">
           <FilterList list={sorting} title="Sort by" />
         </div>
