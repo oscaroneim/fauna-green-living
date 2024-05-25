@@ -14,7 +14,7 @@ export default function ProductGridItems({ products }: { products: Product[] }) 
               alt={product.title}
               src={product.featuredImage?.url}
               fill
-              sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+              sizes=""
               className="object-cover object-center"
             />
             <p className="text-lg">{product.title}</p>
