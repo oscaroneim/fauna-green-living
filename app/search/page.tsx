@@ -41,13 +41,11 @@ export default async function SearchPage({
           <span className="font-bold">&quot;{searchValue}&quot;</span>
         </p>
       ) : null}
-      <div>
-        {products.length > 0 ? (
-          <Grid className="h-full flex-grow grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            <ProductGridItems products={products} />
-          </Grid>
-        ) : null}
-      </div>
+      {products.length > 0 ? (
+        <Grid className="h-full flex-grow grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <ProductGridItems products={products} />
+        </Grid>
+      ) : null}
     </>
   );
 }
