@@ -2,7 +2,7 @@ import clsx from 'clsx';
 
 function Grid(props: React.ComponentProps<'ul'>) {
   return (
-    <div className="w-full max-md:flex max-md:overflow-x-auto">
+    <div className="h-full w-full max-md:flex max-md:overflow-x-auto">
       <ul {...props} className={clsx('flex gap-2 md:flex-wrap md:pl-[24px]', props.className)}>
         {props.children}
       </ul>
@@ -12,9 +12,11 @@ function Grid(props: React.ComponentProps<'ul'>) {
 
 function GridItem(props: React.ComponentProps<'li'>) {
   return (
-    <li {...props} className={clsx('aspect-square h-[290px] transition-opacity', props.className)}>
-      {props.children}
-    </li>
+    <div className="h-[290px]">
+      <li {...props} className={clsx('aspect-square transition-opacity', props.className)}>
+        {props.children}
+      </li>
+    </div>
   );
 }
 
