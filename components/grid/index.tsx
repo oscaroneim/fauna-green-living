@@ -3,7 +3,10 @@ import clsx from 'clsx';
 function Grid(props: React.ComponentProps<'ul'>) {
   return (
     <div className="w-full max-md:flex max-md:overflow-x-auto">
-      <ul {...props} className={clsx('flex gap-2 md:flex-wrap md:pl-[24px]', props.className)}>
+      <ul
+        {...props}
+        className={clsx('flex h-full gap-2 md:flex-wrap md:pl-[24px]', props.className)}
+      >
         {props.children}
       </ul>
     </div>
