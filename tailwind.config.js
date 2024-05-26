@@ -11,7 +11,7 @@ module.exports = {
 
         'bamboo-image': "url('/bamboo-2.jpeg')",
 
-        ocean: "url('/blue-ocean-2.png')"
+        ocean: "url('/blue-ocean-3.jpg')"
       },
       boxShadow: {
         top: '0 -4px 10px -1px rgba(196, 212, 200, 1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06)'
