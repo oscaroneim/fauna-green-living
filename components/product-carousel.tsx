@@ -14,8 +14,8 @@ export async function Carousel() {
 
   return (
     <div className="mx-none h-[410px] bg-[#677B6A] px-2 md:px-0">
-      <p className="relative pb-4 pt-2 text-5xl text-white lg:text-center">Featured Products</p>
-      <div className=" h-full w-full overflow-x-auto pt-1">
+      <p className="relative pb-4 pt-2 text-center text-5xl text-white">Featured Products</p>
+      <div className=" h-full w-full overflow-x-auto pt-1 no-scrollbar">
         <ul className="flex gap-[32px] md:justify-between md:px-6">
           {carouselProducts.slice(0, 5).map((product, i) => (
             <li
