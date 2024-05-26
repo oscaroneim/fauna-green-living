@@ -149,32 +149,34 @@ async function RelatedProducts({ id }: { id: string }) {
   if (!relatedProducts.length) return null;
 
   return (
-    <div className="h-[400px] w-full py-8">
+    <div className="h-full w-full py-8">
       <h2 className="mb-4 text-2xl font-bold">Related Products</h2>
-      <ul className="flex w-full gap-4 overflow-x-auto pt-1 no-scrollbar">
+      <ul className="flex h-full w-full gap-4 overflow-x-auto pt-1 no-scrollbar">
         {relatedProducts.map((product) => (
-          <li
-            key={product.handle}
-            className="aspect-square w-full flex-none min-[475px]:w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5"
-          >
-            <Link className="relative h-full w-full" href={`/product/${product.handle}`}>
-              <GridTileImage
-                alt={product.title}
-                src={product.featuredImage?.url}
-                fill
-                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
-                className="object-cover object-center"
-              />
-              <div className="h-8 sm:h-24">
-                <p className="text-lg font-medium">{product.title}</p>
-                <Price
-                  className="text-base font-normal text-black"
-                  amount={product.priceRange.maxVariantPrice.amount}
-                  currencyCode={'GBP'}
+          <div className="h-[290px]">
+            <li
+              key={product.handle}
+              className="aspect-square h-[210px] w-[210px] animate-fadeIn transition-opacity"
+            >
+              <Link className="relative h-full w-full" href={`/product/${product.handle}`}>
+                <GridTileImage
+                  alt={product.title}
+                  src={product.featuredImage?.url}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+                  className="object-cover object-center"
                 />
-              </div>
-            </Link>
-          </li>
+                <div className="h-8 sm:h-24">
+                  <p className="text-lg font-medium">{product.title}</p>
+                  <Price
+                    className="text-base font-normal text-black"
+                    amount={product.priceRange.maxVariantPrice.amount}
+                    currencyCode={'GBP'}
+                  />
+                </div>
+              </Link>
+            </li>
+          </div>
         ))}
       </ul>
     </div>
