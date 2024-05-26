@@ -4,7 +4,7 @@ import { Linkedin } from 'components/linkedin';
 import { Tiktok } from 'components/tiktok';
 import Head from 'next/head';
 import Image from 'next/image';
-import Blogimg from '../../public/LogoImages/blogimg.jpg';
+import Blogimg from '../../public/LogoImages/blogimg1.jpeg';
 import Instagrambanner from '../../public/Socialmedia/instagramblog.png';
 import Linkedinbanner from '../../public/Socialmedia/linkedinblog.png';
 import Tiktokbanner from '../../public/Socialmedia/tiktokblog.png';
@@ -38,7 +38,7 @@ export default async function HomePage() {
           style={{ objectFit: 'cover' }}
         />
         <h1
-          className="absolute bottom-[50%] h-auto w-auto text-center text-[32px] text-white sm:bottom-[30%] sm:text-[48px] md:text-[64px] lg:text-[48px]"
+          className="absolute bottom-[40%] h-auto w-auto text-center text-[32px] text-white sm:text-[48px] md:bottom-[50%] md:text-[64px] lg:text-[48px]"
           style={{ lineHeight: '1.2' }}
         >
           Stay in the know
