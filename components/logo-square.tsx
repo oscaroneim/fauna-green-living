@@ -5,8 +5,8 @@ export default function LogoSquare({ size }: { size?: 'm' | undefined }) {
   return (
     <div
       className={clsx('flex flex-none items-center justify-center bg-white', {
-        'h-[60px] w-[140px] rounded-xl xl:h-[120px] xl:w-[280px]': !size,
-        'h-[50px] w-[160px] rounded-lg': size === 'm'
+        'h-[80px] w-[160px] rounded-xl xl:h-[120px] xl:w-[280px]': !size,
+        'h-[80px] w-[160px] rounded-lg': size === 'm'
       })}
     >
       <LogoIcon
