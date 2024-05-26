@@ -37,7 +37,13 @@ export default async function Wholesale() {
           </div>
           <div className="relative md:order-2 md:w-1/2">
             <div className="flex h-80 w-full items-center justify-center rounded-b-lg md:h-full md:w-auto md:rounded-br-lg md:rounded-tr-lg">
-              <Image src={wholesale} alt="Bulk order Image" layout="fill" objectFit="cover" />
+              <Image
+                className="rounded-r-lg"
+                src={wholesale}
+                alt="Bulk order Image"
+                layout="fill"
+                objectFit="cover"
+              />
             </div>
           </div>
         </div>
