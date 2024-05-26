@@ -13,9 +13,9 @@ export async function Carousel() {
   const carouselProducts = [...products, ...products, ...products];
 
   return (
-    <div className="mx-none h-[410px] bg-[#677B6A] px-2 md:px-0">
+    <div className="mx-none h-[430px] bg-[#677B6A] px-2 md:px-0">
       <p className="relative pb-4 pt-2 text-center text-5xl text-white">Featured Products</p>
-      <div className=" h-full w-full overflow-x-auto pt-1 no-scrollbar">
+      <div className=" flex h-full w-full gap-4 overflow-x-auto overflow-y-hidden pt-1 no-scrollbar">
         <ul className="flex gap-[32px] md:justify-between md:px-6">
           {carouselProducts.slice(0, 5).map((product, i) => (
             <div className="h-[290px]">
