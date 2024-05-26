@@ -2,19 +2,19 @@ import './Herovideo.css';
 
 const HeroVideo = () => {
   return (
-    <div className="flex items-center justify-center ">
-      <div className="container">
+    <div className="flex items-center justify-center">
+      <div className="container flex lg:gap-4">
         <div className="videodiv">
-          <video controls autoPlay muted style={{ width: '100%', height: 'auto' }}>
+          <video className="rounded-lg" controls autoPlay muted>
             <source src="videos/Fauna.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
 
-        <div className="hello-all">
+        <div className="hello-all rounded-lg">
           <h2 className="titlehead text-5xl">HOW IT WORKS</h2>
           <div className="videodiv-mobile">
-            <video controls autoPlay muted style={{ width: '100%', height: 'auto' }}>
+            <video controls autoPlay muted>
               <source src="videos/Fauna.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
