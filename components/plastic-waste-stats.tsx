@@ -60,7 +60,7 @@ export default function PlasticWasteStats() {
 
         <div className=" flex-1 rounded-lg">
           <h3 className="pb-1 md:basis-1/3">
-            <p className="text-3xl">{stats.clingFilmPrevented} Meters</p>
+            <p className="text-3xl">{stats.clingFilmPrevented} m&#x2BD0; </p>
             cling film prevented from going into the ocean or landfill
           </h3>
         </div>
