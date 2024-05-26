@@ -18,26 +18,28 @@ export async function Carousel() {
       <div className=" h-full w-full overflow-x-auto pt-1 no-scrollbar">
         <ul className="flex gap-[32px] md:justify-between md:px-6">
           {carouselProducts.slice(0, 5).map((product, i) => (
-            <li
-              key={`${product.handle}${i}`}
-              className="relative aspect-square h-[232px] text-white"
-            >
-              <Link href={`/product/${product.handle}`} className="relative h-full w-full">
-                <GridTileImage
-                  alt={product.title}
-                  src={product.featuredImage?.url}
-                  fill
-                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
-                  className="object-cover object-center"
-                />
-                <p className="text-lg font-medium">{product.title}</p>
-                <Price
-                  className="text-base font-normal text-[#D6D6D6]"
-                  amount={product.priceRange.maxVariantPrice.amount}
-                  currencyCode={'GBP'}
-                />
-              </Link>
-            </li>
+            <div className="h-[290px]">
+              <li
+                key={`${product.handle}${i}`}
+                className="relative aspect-square h-[232px] text-white"
+              >
+                <Link href={`/product/${product.handle}`} className="relative h-full w-full">
+                  <GridTileImage
+                    alt={product.title}
+                    src={product.featuredImage?.url}
+                    fill
+                    sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+                    className="object-cover object-center"
+                  />
+                  <p className="text-lg font-medium">{product.title}</p>
+                  <Price
+                    className="text-base font-normal text-[#D6D6D6]"
+                    amount={product.priceRange.maxVariantPrice.amount}
+                    currencyCode={'GBP'}
+                  />
+                </Link>
+              </li>
+            </div>
           ))}
         </ul>
       </div>
