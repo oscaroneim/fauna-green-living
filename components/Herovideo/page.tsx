@@ -3,7 +3,7 @@ import './Herovideo.css';
 const HeroVideo = () => {
   return (
     <div className="flex items-center justify-center">
-      <div className="container flex lg:gap-4">
+      <div className="container flex justify-center lg:gap-4">
         <div className="videodiv">
           <video className="rounded-lg" controls autoPlay muted>
             <source src="videos/Fauna.mp4" type="video/mp4" />
