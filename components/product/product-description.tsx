@@ -6,13 +6,6 @@ import { Suspense } from 'react';
 import { VariantSelector } from './variant-selector';
 
 export async function ProductDescription({ product }: { product: Product }) {
-  // const cartId = cookies().get('cartId')?.value;
-  // let cart;
-
-  // if (cartId) {
-  //   cart = await getCart(cartId);
-  // }
-
   return (
     <>
       <div className="mb-6 flex flex-col border-b pb-6">
@@ -32,7 +25,7 @@ export async function ProductDescription({ product }: { product: Product }) {
       </Suspense>
 
       {product.descriptionHtml ? (
-        <Prose className="mb-6 text-lg leading-tight" html={product.descriptionHtml} />
+        <Prose className="text-md mb-6 leading-tight" html={product.descriptionHtml} />
       ) : null}
     </>
   );
