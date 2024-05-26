@@ -74,7 +74,7 @@ export default async function About() {
             alt="Picture of Kim"
           />
           <br></br>
-          <h1 className="text-bold text-4xl">Hi, i'm Kim!</h1>
+          <h1 className="text-bold text-4xl">Hi, I'm Kim!</h1>
           <small>Founder of Fauna green Living</small>
         </div>
       </div>
