@@ -39,7 +39,7 @@ export default async function ContactPage() {
           Frequently asked questions
         </div>
         <br></br>
-        <div className="rounded-lg bg-customDarkGreen px-2 py-8 text-white">
+        <div className="rounded-lg bg-white px-2 py-8 text-white">
           <FAQSection />
         </div>
       </div>
