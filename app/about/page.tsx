@@ -75,7 +75,7 @@ export default async function About() {
           />
           <br></br>
           <h1 className="text-bold text-4xl">Hi, I'm Kim!</h1>
-          <small>Founder of Fauna green Living</small>
+          <small>Founder of Fauna Green Living</small>
         </div>
       </div>
 
