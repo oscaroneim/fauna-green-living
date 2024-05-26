@@ -151,7 +151,7 @@ async function RelatedProducts({ id }: { id: string }) {
   return (
     <div className="h-full w-full py-8">
       <h2 className="mb-4 text-2xl font-bold">Related Products</h2>
-      <ul className="flex h-full w-full gap-4 overflow-x-auto pt-1 no-scrollbar">
+      <ul className="flex h-full w-full gap-4 overflow-x-auto overflow-y-hidden pt-1 no-scrollbar">
         {relatedProducts.map((product) => (
           <div className="h-[290px]">
             <li
