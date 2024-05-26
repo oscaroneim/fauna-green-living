@@ -1,12 +1,24 @@
+import Head from 'next/head';
 import Image from 'next/image';
-import kim from 'public/Kim headshot.jpg';
 import bamboo from 'public/bamboo-2.jpeg';
+import kim from 'public/Kim headshot.jpg';
 import PlasticWasteStats from '../../components/plastic-waste-stats';
 import dear from '../../public/LogoImages/dear.png';
 
 export default async function About() {
   return (
     <>
+      <Head>
+        <title>About Us - Eco-Conscious & Sustainable Living</title>
+        <meta
+          name="description"
+          content="Learn more about our mission to provide eco-friendly and sustainable living products. Join us in embracing a zero waste lifestyle."
+        />
+        <meta
+          name="keywords"
+          content="Eco-conscious, Sustainable living, Environmentally friendly, Ethical products, Green living, Mindful living, Reduce, reuse, recycle, Eco-minded, Nature-inspired"
+        />
+      </Head>
       <div className="flex w-full gap-6 max-md:flex-col md:h-[520px] ">
         <div className="space-y-4  rounded-lg bg-customGreen p-10 text-center text-white md:hidden">
           <h2 className="text-5xl font-bold ">OUR MISSION</h2>
@@ -62,8 +74,8 @@ export default async function About() {
             alt="Picture of Kim"
           />
           <br></br>
-          <h1 className="text-bold text-4xl">Hi, i'm Kim!</h1>
-          <small>Founder of Fauna green Living</small>
+          <h1 className="text-bold text-4xl">Hi, I'm Kim!</h1>
+          <small>Founder of Fauna Green Living</small>
         </div>
       </div>
 

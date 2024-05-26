@@ -8,13 +8,16 @@ export default function ProductGridItems({ products }: { products: Product[] }) 
   return (
     <>
       {products.map((product) => (
-        <Grid.Item key={product.handle} className="aspect-square h-full w-[210px] animate-fadeIn">
+        <Grid.Item
+          key={product.handle}
+          className="aspect-square h-[210px] w-[210px] animate-fadeIn"
+        >
           <Link href={`/product/${product.handle}`} className="relative h-full w-full">
             <GridTileImage
               alt={product.title}
               src={product.featuredImage?.url}
               fill
-              sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+              sizes=""
               className="object-cover object-center"
             />
             <p className="text-lg">{product.title}</p>

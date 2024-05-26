@@ -2,8 +2,9 @@ import { Instagram } from 'components/instagram';
 
 import { Linkedin } from 'components/linkedin';
 import { Tiktok } from 'components/tiktok';
+import Head from 'next/head';
 import Image from 'next/image';
-import Blogimg from '../../public/LogoImages/blogimg.jpg';
+import Blogimg from '../../public/LogoImages/blogimg1.jpeg';
 import Instagrambanner from '../../public/Socialmedia/instagramblog.png';
 import Linkedinbanner from '../../public/Socialmedia/linkedinblog.png';
 import Tiktokbanner from '../../public/Socialmedia/tiktokblog.png';
@@ -18,6 +19,17 @@ export const metadata = {
 export default async function HomePage() {
   return (
     <>
+      <Head>
+        <title>Blog - Tips for Sustainable & Eco-Friendly Living</title>
+        <meta
+          name="description"
+          content="Read our blog for tips and insights on sustainable and eco-friendly living. Embrace a zero waste lifestyle with our helpful articles."
+        />
+        <meta
+          name="keywords"
+          content="Blog, Sustainable living, Eco-friendly tips, Zero waste, Green living, Environmentally conscious, Ethical products, Mindful living, Reduce, reuse, recycle, Eco-minded"
+        />
+      </Head>
       <div className="relative mb-[30px] mt-0 flex w-full justify-center rounded-lg">
         <Image
           className="h-[210px] w-full object-cover md:h-[335px]"
@@ -26,7 +38,7 @@ export default async function HomePage() {
           style={{ objectFit: 'cover' }}
         />
         <h1
-          className="absolute bottom-[50%] h-auto w-auto text-center text-[32px] text-white sm:bottom-[30%] sm:text-[48px] md:text-[64px] lg:text-[48px]"
+          className="absolute bottom-[40%] h-auto w-auto text-center text-[32px] text-white sm:text-[48px] md:bottom-[50%] md:text-[64px] lg:text-[48px]"
           style={{ lineHeight: '1.2' }}
         >
           Stay in the know

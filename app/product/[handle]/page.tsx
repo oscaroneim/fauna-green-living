@@ -6,6 +6,7 @@ import { HIDDEN_PRODUCT_TAG } from 'lib/constants';
 import { getProduct, getProductRecommendations } from 'lib/shopify';
 import { Image } from 'lib/shopify/types';
 import type { Metadata } from 'next';
+import Head from 'next/head';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
@@ -74,6 +75,17 @@ export default async function ProductPage({ params }: { params: { handle: string
 
   return (
     <>
+      <Head>
+        <title>{product.title} - Eco-Friendly & Sustainable Products</title>
+        <meta
+          name="description"
+          content={`Buy ${product.title}, an eco-friendly and sustainable product. Perfect for zero waste and plastic-free living.`}
+        />
+        <meta
+          name="keywords"
+          content="Eco-friendly, Sustainable, Zero waste, Plastic free, Natural materials, Ethical products, Environmentally conscious, Green living"
+        />
+      </Head>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -139,30 +151,32 @@ async function RelatedProducts({ id }: { id: string }) {
   return (
     <div className="h-full w-full py-8">
       <h2 className="mb-4 text-2xl font-bold">Related Products</h2>
-      <ul className="flex w-full gap-4 overflow-x-auto pt-1 no-scrollbar">
+      <ul className="flex h-full w-full gap-4 overflow-x-auto overflow-y-hidden pt-1 no-scrollbar">
         {relatedProducts.map((product) => (
-          <li
-            key={product.handle}
-            className="aspect-square w-full flex-none min-[475px]:w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5"
-          >
-            <Link className="relative h-full w-full" href={`/product/${product.handle}`}>
-              <GridTileImage
-                alt={product.title}
-                src={product.featuredImage?.url}
-                fill
-                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
-                className="object-cover object-center"
-              />
-              <div className="h-8 sm:h-24">
-                <p className="text-lg font-medium">{product.title}</p>
-                <Price
-                  className="text-base font-normal text-black"
-                  amount={product.priceRange.maxVariantPrice.amount}
-                  currencyCode={'GBP'}
+          <div className="h-[290px]">
+            <li
+              key={product.handle}
+              className="aspect-square h-[210px] w-[210px] animate-fadeIn transition-opacity"
+            >
+              <Link className="relative h-full w-full" href={`/product/${product.handle}`}>
+                <GridTileImage
+                  alt={product.title}
+                  src={product.featuredImage?.url}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+                  className="object-cover object-center"
                 />
-              </div>
-            </Link>
-          </li>
+                <div className="h-8 sm:h-24">
+                  <p className="text-lg font-medium">{product.title}</p>
+                  <Price
+                    className="text-base font-normal text-black"
+                    amount={product.priceRange.maxVariantPrice.amount}
+                    currencyCode={'GBP'}
+                  />
+                </div>
+              </Link>
+            </li>
+          </div>
         ))}
       </ul>
     </div>

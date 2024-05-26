@@ -1,7 +1,4 @@
 'use client';
-import React from 'react';
-import Link from 'next/link';
-import Autoplay from 'embla-carousel-autoplay';
 import { Card, CardContent } from '@/app/ui/card';
 import {
   Carousel,
@@ -10,15 +7,18 @@ import {
   CarouselNext,
   CarouselPrevious
 } from '@/app/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+import Link from 'next/link';
+import React from 'react';
 
 export default function Mainslider() {
   const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
   const trial: string[] = [
-    '/HeroImages/desktop-hero_edited.jpg',
-    '/HeroImages/oranges.png',
+    '/HeroImages/oranges.jpeg',
+    '/HeroImages/desktop-hero2.png',
     '/HeroImages/field2.png',
-    '/HeroImages/desktop-hero2.png'
+    '/HeroImages/desktop-hero_edited.jpg'
   ];
 
   return (
