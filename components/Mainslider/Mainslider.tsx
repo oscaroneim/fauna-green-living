@@ -21,11 +21,11 @@ export default function Mainslider() {
     },
     {
       image: '/HeroImages/desktop-hero2.png',
-      text: ['test1', 'test1', 'test1']
+      text: ['Reusable', 'Compostable', 'Ethically Made']
     },
     {
       image: '/HeroImages/field2.png',
-      text: ['test2', 'test2', 'tests2']
+      text: ['Beeswax Wrap', 'Summer Collection', 'Limited Edition']
     },
     {
       image: '/HeroImages/desktop-hero_edited.jpg',
