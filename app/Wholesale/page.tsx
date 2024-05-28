@@ -10,7 +10,7 @@ export default async function Wholesale() {
         <div className="flex flex-col md:flex-row ">
           <div className="md:order-1 md:w-1/2">
             <div className="h-full rounded-t-lg bg-[#82a38a] p-9 md:rounded-bl-lg md:rounded-tl-lg md:rounded-tr-none">
-              <h2 className="pb-5 text-5xl font-bold text-[#043028]">Custom & Wholesale Orders</h2>
+              <h2 className="pb-7 text-5xl font-bold text-[#043028]">Custom & Wholesale Orders</h2>
               <h3 className="pb-3 text-xl text-[#043028]">
                 Want your logo front and center every time your customer opens their cupboard?
               </h3>
@@ -28,7 +28,7 @@ export default async function Wholesale() {
                 Get in touch so we can work out the perfect wrap for you.
               </p>
               <br></br>
-              <div className="flex justify-center">
+              <div className="justify-left flex">
                 <button className="rounded-lg bg-[#043028] px-6 py-4 text-white hover:bg-[#043028]">
                   <Link href="/contact">Enquire Now</Link>
                 </button>
