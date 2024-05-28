@@ -14,11 +14,31 @@ import React from 'react';
 export default function Mainslider() {
   const plugin = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: true }));
 
-  const trial: string[] = [
+  const trial2: string[] = [
     '/HeroImages/oranges.jpeg',
     '/HeroImages/desktop-hero2.png',
     '/HeroImages/field2.png',
     '/HeroImages/desktop-hero_edited.jpg'
+  ];
+
+  const trial = [
+    {
+      image: '/HeroImages/oranges.jpeg',
+      text: ['Plastic Free', 'Zero Waste', 'Locally Sourced']
+    },
+    {
+      image: '/HeroImages/desktop-hero2.png',
+      text: ['test1', 'test1', 'test1']
+    },
+    {
+      image: '/HeroImages/field2.png',
+      text: ['test2', 'test2', 'tests2']
+    },
+    {
+      image: '/HeroImages/desktop-hero_edited.jpg',
+      text: ['Reusable', 'Compostable', 'Ethically Made']
+    }
+    // Add more objects for additional slides
   ];
 
   return (
@@ -33,15 +53,20 @@ export default function Mainslider() {
             <CarouselItem key={index} className="h-[30rem] sm:h-[30rem] md:h-[40rem] lg:h-[40rem]">
               <Card className="h-full w-full">
                 <CardContent className="relative flex h-full w-full items-center justify-center p-0">
-                  <img src={element} alt="SliderImages" className="h-full w-full object-cover" />
+                  <img
+                    src={element.image}
+                    alt="SliderImages"
+                    className="h-full w-full object-cover"
+                  />
                   <div className="md:align-left left-34 absolute z-10 -mt-20 flex bg-transparent bg-opacity-0  text-white md:left-16 md:mt-10">
                     <div className="shadow-xs rounded-lg bg-transparent bg-opacity-0 p-2">
                       <h2 className="hero-big-text align-center m-4 text-center text-xl md:m-0 md:text-left md:text-3xl ">
-                        Plastic Free
-                        <br />
-                        Zero Waste
-                        <br />
-                        Locally Sourced
+                        {element.text.map((line, lineIndex) => (
+                          <React.Fragment key={lineIndex}>
+                            {line}
+                            <br />
+                          </React.Fragment>
+                        ))}
                       </h2>
                       <p className="hero-small-text order-2 mb-4 mt-4 text-center text-sm font-light underline md:order-1 md:text-left">
                         <Link href="/about">Find out more</Link>
