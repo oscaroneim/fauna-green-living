@@ -4,53 +4,60 @@ import { getMenu } from 'lib/shopify';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Suspense } from 'react';
-import SignupForm from './newsletter-signup';
 
 const { COMPANY_NAME, SITE_NAME } = process.env;
 
 export default async function Footer() {
   const currentYear = new Date().getFullYear();
   // const copyrightDate = 2023 + (currentYear > 2023 ? `-${currentYear}` : '');
-  const skeleton = 'w-full h-6 animate-pulse rounded-lg bg-neutral-200 ';
+  const skeleton = 'w-full h-6 animate-pulse rounded bg-neutral-200 ';
   const menu = await getMenu('next-js-frontend-footer-menu');
   // const copyrightName = COMPANY_NAME || SITE_NAME || '';
 
   return (
     <footer className="sticky top-[100vh] w-full text-sm text-neutral-500 shadow-top">
-      <div className="mx-auto flex w-full flex-col justify-between gap-6 border-neutral-200 py-12 text-sm md:flex-row">
-        <div className=" p-4 md:w-2/5 md:px-16">
-          <div className=" flex flex-col items-center  text-center md:text-left">
-            <div className=" flex h-full justify-center pb-4 md:w-4/5">
-              <Link className="mr-16 flex  gap-2 " href="/">
-                <LogoSquare />
-              </Link>
+      <div className="mx-auto flex w-full flex-col justify-between gap-6 border-neutral-200 py-4 text-sm md:flex-row">
+        <div className="flex-col items-center p-4 md:w-2/5 md:pl-12">
+          <div className="flex flex-col ">
+            <div className="text-center md:text-left">
+              <div className="flex h-full justify-center pb-4 md:w-4/5">
+                <Link className="flex items-center gap-2 text-black" href="/">
+                  <LogoSquare size="m" />
+                </Link>
+              </div>
+              <h3 className="font-cabin text-3xl text-customDarkGreen">
+                Join us in fighting against single use plastic
+              </h3>
+              <br />
+              <p className="font-cabin mb-4 text-customDarkGreen ">
+                Join our email list and get 10% off your first order. Then, get special access to
+                news and deals exclusive to our subscribers
+              </p>
+              <input
+                className="peer-rounded-[1px] mb-4 w-full max-w-md rounded-md border border-transparent border-t-transparent bg-[#D9D9D9] px-3 py-2.5 font-sans text-sm font-normal text-[#043028] outline outline-0 transition-all placeholder-shown:border-transparent focus:border-[#D9D9D9] focus:border-transparent focus:border-t-transparent focus:outline-0 disabled:border-0"
+                placeholder="Enter your email here*"
+              />
+              <br />
+              <button className="text-cabin inline-block w-full max-w-md cursor-pointer rounded-md bg-[#82a38a] px-4 py-3 text-center text-lg font-semibold text-white transition duration-200 ease-in-out hover:bg-[#57755e]">
+                Sign Up
+              </button>
             </div>
-            <h3 className="font-cabin text-center text-3xl text-customDarkGreen">
-              Join us in fighting against single use plastic
-            </h3>
-            <br />
-            <p className="font-cabin mb-4 text-customDarkGreen ">
-              Join our email list and get 10% off your first order. Then, get special access to news
-              and deals exclusive to our subscribers
-            </p>
-            <SignupForm />
           </div>
-
-          <div className=" pt-5 text-center md:text-left ">
-            <ul className="flex justify-center space-x-3 pl-2">
+          <div className="pt-5 text-center md:text-left">
+            <ul className="flex justify-center space-x-3 pl-2 md:justify-start">
               <li>
                 <a href="https://www.instagram.com/faunagreenliving/">
                   <Image
                     src="/Socialmedia/instagram.png"
                     alt="Instagram Icon"
-                    width={40}
-                    height={40}
+                    width={20}
+                    height={20}
                   />
                 </a>
               </li>
               <li>
                 <a href="https://www.tiktok.com/@faunagreenliving">
-                  <Image src="/Socialmedia/tiktok.png" alt="Tiktok Icon" width={40} height={40} />
+                  <Image src="/Socialmedia/tiktok.png" alt="Tiktok Icon" width={20} height={20} />
                 </a>
               </li>
               <li>
@@ -58,8 +65,8 @@ export default async function Footer() {
                   <Image
                     src="/Socialmedia/facebook.png"
                     alt="Facebook Icon"
-                    width={40}
-                    height={40}
+                    width={20}
+                    height={20}
                   />
                 </a>
               </li>
@@ -68,8 +75,8 @@ export default async function Footer() {
                   <Image
                     src="/Socialmedia/linkedin.png"
                     alt="LinkedIn Icon"
-                    width={40}
-                    height={40}
+                    width={20}
+                    height={20}
                   />
                 </a>
               </li>
