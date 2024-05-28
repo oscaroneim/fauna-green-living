@@ -58,7 +58,7 @@ export async function Reviews() {
         <div className="relative left-[5px] top-[0px] z-[2px] h-[95%] w-[420px] overflow-hidden rounded-[10px] border border-customGreen bg-white bg-opacity-[95%] pt-[10px] shadow-sm outline-[2px] outline-white backdrop-blur-[24px]">
           <div className="flex justify-between pr-2">
             <p className="pb-2 pl-3 text-left font-bold">Louise Chambers</p>
-            <p className="flex h-10 w-12">{renderStars(5)}</p>
+            <p className="flex h-10 w-12">{renderStars(4)}</p>
           </div>
           <p className="pl-3 text-left">
             “Apart from the obvious environmental benefit these are great for my mum who has really
@@ -66,7 +66,11 @@ export async function Reviews() {
           </p>
         </div>
       </div>
-      <div className="relative flex h-[180px] w-[450px]  flex-col items-center justify-center rounded-lg">
+    </div>
+  );
+}
+
+/**<div className="relative flex h-[180px] w-[450px]  flex-col items-center justify-center rounded-lg">
         <div className="relative left-[5px] top-[0px] z-[2px] h-[95%] w-[420px] overflow-hidden rounded-[10px] border border-customGreen bg-white bg-opacity-[95%] pt-[10px] shadow-sm outline-[2px] outline-white backdrop-blur-[24px]">
           <div className="flex justify-between pr-2">
             <p className="pb-2 pl-3 text-left font-bold">Malissa Denney</p>
@@ -77,7 +81,4 @@ export async function Reviews() {
             really well!”
           </p>
         </div>
-      </div>
-    </div>
-  );
-}
+      </div> */
