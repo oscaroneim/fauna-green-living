@@ -11,36 +11,40 @@ export default async function Navbar() {
   const menu = await getMenu('next-js-frontend-header-menu');
   return (
     <>
-      <nav className="relative flex items-center justify-between p-0 lg:px-6">
-        <div className="block flex-none lg:hidden">
+      <nav className="relative flex items-center justify-between p-0 custom:px-6">
+        {/* Mobile menu burger */}
+        <div className="block flex-none custom:hidden">
           <Suspense fallback={null}>
             <MobileMenu menu={menu} />
           </Suspense>
         </div>
+        {/* Logo section */}
         <div className="flex w-full items-center">
-          <div className=" flex w-full justify-between pl-0 lg:w-1/5 ">
+          <div className="flex w-full justify-between pl-0 custom:w-1/5">
             <Link
               href="/"
-              className="mr-2 flex w-full items-center justify-center lg:mr-6 lg:w-auto"
+              className="mr-2 flex w-full items-center justify-center custom:mr-6 custom:w-auto"
             >
               <LogoSquare />
             </Link>
           </div>
-          <div className="flex flex-row-reverse items-center lg:w-full">
+          <div className="flex flex-row-reverse items-center custom:w-full">
             <div className="m-2 flex justify-end">
+              {/* Cart */}
               <Suspense fallback={<OpenCart />}>
                 <Cart />
               </Suspense>
             </div>
-            <div className="lg:2/3 hidden justify-end lg:flex">
+            <div className="custom:2/3 hidden justify-end custom:flex">
+              {/* Search box */}
               <Suspense fallback={<SearchSkeleton />}>
                 <Search />
               </Suspense>
             </div>
-
-            <div className="lg:pr-6">
+            {/* Desktop menu */}
+            <div className="custom:pr-6">
               {menu.length ? (
-                <ul className="max-[1200px]:text-md hidden gap-6 pr-6 lg:flex lg:items-center xl:text-lg">
+                <ul className="max-[1200px]:text-md hidden gap-6 pr-6 custom:flex custom:items-center xl:text-lg">
                   {menu.map((item) => (
                     <li key={item.title}>
                       <Link
