@@ -138,7 +138,7 @@ export default function Mainslider() {
                     <div className="shadow-xs justify-center bg-transparent bg-opacity-0">
                       {/*-----------------------------Styling for Eco friendly slide starts here------------------------------- */}
                       {index === 1 && (
-                        <div className={`flex flex-col gap-1 md:mt-[150px] md:gap-5`}>
+                        <div className={`flex flex-col gap-1 md:mt-[150px] md:gap-5 lg:ml-6`}>
                           <h2 className="m-4 text-center text-2xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:m-0  md:text-left  md:text-4xl lg:text-5xl">
                             Plastic Free <br /> Zero Waste <br /> Locally Sourced
                           </h2>
@@ -168,10 +168,10 @@ export default function Mainslider() {
                             {element.title}
                           </h2>
                           <div
-                            className={`flex flex-col items-start ${index === 3 && isMobile ? 'w-full' : ''} ${isIpad && index === 3 ? 'w-full' : ''}`}
+                            className={`flex flex-col items-start ${index === 0 && isMobile ? 'items-center' : ''} ${index === 3 && isMobile ? 'w-full' : ''} ${isIpad && index === 3 ? 'w-full' : ''}`}
                           >
                             <button
-                              className={` order-1 cursor-pointer rounded-md border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:order-2 md:h-[62px] md:w-[310px] md:text-base ${index === 3 && isMobile ? 'mt-1' : ''} ${index === 0 && isMobile ? 'ml-[8px]' : ''}`}
+                              className={` order-1 cursor-pointer rounded-md border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:order-2 md:h-[62px] md:w-[310px] md:text-base ${index === 3 && isMobile ? 'mt-1' : ''}`}
                             >
                               <Link href={element.buttonLink}>{element.buttonText}</Link>
                             </button>
