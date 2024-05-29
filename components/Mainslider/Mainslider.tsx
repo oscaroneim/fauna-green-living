@@ -42,7 +42,7 @@ export default function Mainslider() {
       image: '/HeroImages/WHOLESALE.jpeg',
       title: 'Custom & Wholesale Orders',
       buttonText: 'Get in touch',
-      buttonLink: '/wholesale'
+      buttonLink: '/Wholesale'
     }
   ];
 
@@ -69,7 +69,7 @@ export default function Mainslider() {
       image: '/HeroImages/WHOLESALE.jpeg',
       title: 'Custom & Wholesale Orders',
       buttonText: 'Get in touch',
-      buttonLink: '/wholesale'
+      buttonLink: '/Wholesale'
     }
   ];
 
@@ -96,7 +96,7 @@ export default function Mainslider() {
       image: '/HeroImages/WHOLESALE.jpeg',
       title: 'Custom & Wholesale Orders',
       buttonText: 'Get in touch',
-      buttonLink: '/wholesale'
+      buttonLink: '/Wholesale'
     }
   ];
 
@@ -121,7 +121,10 @@ export default function Mainslider() {
       >
         <CarouselContent>
           {carouselItems.map((element, index) => (
-            <CarouselItem key={index} className="h-[30rem] sm:h-[30rem] md:h-[40rem] lg:h-[40rem]">
+            <CarouselItem
+              key={element.image}
+              className="h-[30rem] animate-fadeIn sm:h-[30rem] md:h-[40rem] lg:h-[40rem]"
+            >
               <Card className="h-full w-full overflow-hidden">
                 <CardContent className="relative flex h-full w-full p-0">
                   <img
