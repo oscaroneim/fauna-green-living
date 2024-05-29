@@ -149,7 +149,7 @@ export default function Mainslider() {
                       {/*-----------------------------Styling for Summer Collection slide starts here------------------------------- */}
                       {index === 2 && (
                         <div className="mt-[300px] flex flex-col items-center gap-4 md:mt-[160px] md:items-start lg:ml-28">
-                          <h2 className="w-[70%] text-center text-3xl text-customDarkGreen drop-shadow-[0_1.2px_1.2px_rgba(255,255,255)] md:text-left md:text-5xl lg:text-6xl">
+                          <h2 className="w-[70%] text-center text-3xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:text-left md:text-5xl md:text-customDarkGreen md:drop-shadow-[0_1.2px_1.2px_rgba(255,255,255)] lg:text-6xl">
                             {element.title}
                           </h2>
                           <button className="shop_now_button cursor-pointer rounded-md border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:mt-2 md:h-[62px] md:w-[280px] md:text-base">
@@ -159,18 +159,22 @@ export default function Mainslider() {
                       )}
                       {index !== 1 && index !== 2 && (
                         <div
-                          className={`flex flex-col items-center justify-center gap-4 ${isMobile && index === 0 ? 'ml-[90px] mt-[270px]' : ''}  `}
+                          className={`flex flex-col items-center ${index === 0 && isMobile ? 'ml-[20px] mt-[250px] ' : ''} ${index === 3 && isMobile ? 'mt-[128px] items-start' : ''}`}
                         >
                           <h2
-                            className={`w-[80%] text-center text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:text-left md:text-5xl ${isMobile && index === 0 ? 'm-[65px]' : ''}`}
+                            className={` text-left text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:w-[80%] md:text-left md:text-5xl ${index === 3 && isMobile ? 'w-[80%]' : ''} ${index === 0 && isMobile ? 'm-[65px] h-[20px] w-auto text-center' : ''}`}
                           >
                             {element.title}
                           </h2>
-                          <button
-                            className={`order-1 mx-auto ml-8 cursor-pointer rounded-md border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:order-2 md:h-[62px] md:w-[310px] md:text-base ${(isMobile && index === 0) || index === 3 ? 'ml-[60px] mt-4' : ''}`}
+                          <div
+                            className={`flex flex-col items-start ${index === 3 && isMobile ? 'ml-[70px] w-full' : ''}`}
                           >
-                            <Link href={element.buttonLink}>{element.buttonText}</Link>
-                          </button>
+                            <button
+                              className={` order-1 cursor-pointer rounded-md border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:order-2 md:h-[62px] md:w-[310px] md:text-base ${index === 3 && isMobile ? 'mt-1' : ''} ${index === 0 && isMobile ? 'ml-[8px]' : ''}`}
+                            >
+                              <Link href={element.buttonLink}>{element.buttonText}</Link>
+                            </button>
+                          </div>
                         </div>
                       )}
                     </div>
@@ -186,55 +190,3 @@ export default function Mainslider() {
     </div>
   );
 }
-
-//   return (
-//     <div className="carouselDiv overflow-hidden">
-//       <Carousel
-//         plugins={[plugin.current]}
-//         onMouseEnter={plugin.current.stop}
-//         onMouseLeave={plugin.current.reset}
-//       >
-//         <CarouselContent>
-//           {carouselItems.map((element, index) => (
-//             <CarouselItem key={index} className="h-[30rem] sm:h-[30rem] md:h-[40rem] lg:h-[40rem]">
-//               <Card className="h-full w-full overflow-hidden">
-//                 <CardContent className="relative flex h-full w-full p-0">
-//                   <img
-//                     src={element.image}
-//                     alt="SliderImages"
-//                     className="h-full w-full object-cover"
-//                   />
-//                   <div className="absolute inset-0 flex items-end justify-start p-24">
-//                     {/* Container for Title and Button */}
-//                     <div className="text-white">
-//                       {/* Title */}
-//                       <div className="mb-4 text-left">
-//                         <h2 className="text-2xl drop-shadow-md md:text-3xl lg:text-5xl">
-//                           {index === 1 ? (
-//                             <>
-//                               Plastic Free <br /> Zero Waste <br /> Locally Sourced
-//                             </>
-//                           ) : (
-//                             element.title
-//                           )}
-//                         </h2>
-//                       </div>
-//                       {/* Button */}
-//                       <div className="">
-//                         <button className="shop_now_button rounded-md border-none bg-customDarkGreen px-4 py-2 text-base font-bold text-white md:h-[62px] md:w-[280px]">
-//                           <Link href={element.buttonLink}>{element.buttonText}</Link>
-//                         </button>
-//                       </div>
-//                     </div>
-//                   </div>
-//                 </CardContent>
-//               </Card>
-//             </CarouselItem>
-//           ))}
-//         </CarouselContent>
-//         <CarouselPrevious />
-//         <CarouselNext />
-//       </Carousel>
-//     </div>
-//   );
-// }
