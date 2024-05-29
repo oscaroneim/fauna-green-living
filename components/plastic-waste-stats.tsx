@@ -39,7 +39,7 @@ export default function PlasticWasteStats() {
 
   return (
     <div className="space-y-8 rounded-lg bg-ocean bg-cover p-6 text-center text-white">
-      <h2 className="text-5xl font-medium text-white">Turning the Tide</h2>
+      <h2 className="text-3xl font-medium text-white md:text-4xl">Turning the Tide</h2>
 
       <div className="flex gap-x-8 gap-y-12  text-xl max-md:flex-col md:gap-y-16">
         <div className=" flex-1 rounded-lg">

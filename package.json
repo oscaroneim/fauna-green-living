@@ -41,6 +41,7 @@
     "react-google-forms-hooks": "^1.2.4",
     "react-intersection-observer": "^9.10.2",
     "react-player": "^2.16.0",
+    "react-responsive": "^10.0.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "zod": "^3.23.8"
