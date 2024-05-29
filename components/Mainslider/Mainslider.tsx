@@ -42,7 +42,7 @@ export default function Mainslider() {
       image: '/HeroImages/WHOLESALE.jpeg',
       title: 'Custom & Wholesale Orders',
       buttonText: 'Get in touch',
-      buttonLink: '/Wholesale'
+      buttonLink: '/wholesale'
     }
   ];
 
@@ -69,7 +69,7 @@ export default function Mainslider() {
       image: '/HeroImages/WHOLESALE.jpeg',
       title: 'Custom & Wholesale Orders',
       buttonText: 'Get in touch',
-      buttonLink: '/Wholesale'
+      buttonLink: '/wholesale'
     }
   ];
 
@@ -96,7 +96,7 @@ export default function Mainslider() {
       image: '/HeroImages/WHOLESALE.jpeg',
       title: 'Custom & Wholesale Orders',
       buttonText: 'Get in touch',
-      buttonLink: '/Wholesale'
+      buttonLink: '/wholesale'
     }
   ];
 
