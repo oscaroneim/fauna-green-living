@@ -60,7 +60,7 @@ export default function Mainslider() {
       buttonLink: '/about'
     },
     {
-      image: '/HeroImages/MOBILEfinal.jpg',
+      image: '/HeroImages/MOBILEFINAL.jpg',
       title: 'Summer Collection Available Now',
       buttonText: 'Shop Now',
       buttonLink: '/search/summer-collection'
