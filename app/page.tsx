@@ -28,6 +28,7 @@ export default async function HomePage() {
       </Head>
       <Mainslider />
       <PlasticWasteStats />
+      {/* div around both carousel and reviews component for styling purposes */}
       <div className="relative h-[635px] w-full rounded-lg bg-[#677B6A] px-2 no-scrollbar md:px-0">
         <Carousel />
         <Reviews />
