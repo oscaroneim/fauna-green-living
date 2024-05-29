@@ -14,7 +14,7 @@ import React, { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 export default function Mainslider() {
-  const plugin = React.useRef(Autoplay({ delay: 6000, stopOnInteraction: true }));
+  const plugin = React.useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
   const isIpad = useMediaQuery({ query: '(min-width: 768px) and (max-width: 1024px)' });
   const isLargeScreen = useMediaQuery({ query: '(min-width: 1025px)' });
