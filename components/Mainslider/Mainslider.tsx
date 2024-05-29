@@ -16,7 +16,7 @@ import { useMediaQuery } from 'react-responsive';
 export default function Mainslider() {
   const plugin = React.useRef(Autoplay({ delay: 6000, stopOnInteraction: true }));
   const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
-  const isIpad = useMediaQuery({ query: '(min-width:768px) and (max-width: 1024px)' });
+  const isIpad = useMediaQuery({ query: '(min-width: 768px) and (max-width: 1024px)' });
   const isLargeScreen = useMediaQuery({ query: '(min-width: 1025px)' });
 
   const trial = [
@@ -99,10 +99,12 @@ export default function Mainslider() {
       buttonLink: '/Wholesale'
     }
   ];
-
   const [carouselItems, setCarouselItems] = useState(trial);
+  const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
+    setHydrated(true);
+
     if (isMobile) {
       setCarouselItems(trialMobile);
     } else if (isIpad) {
@@ -111,6 +113,10 @@ export default function Mainslider() {
       setCarouselItems(trial);
     }
   }, [isMobile, isIpad]);
+
+  if (!hydrated) {
+    return null;
+  }
 
   return (
     <div className="carouselDiv overflow-hidden">
@@ -122,7 +128,7 @@ export default function Mainslider() {
         <CarouselContent>
           {carouselItems.map((element, index) => (
             <CarouselItem
-              key={element.image}
+              key={index}
               className="h-[30rem] animate-fadeIn sm:h-[30rem] md:h-[40rem] lg:h-[40rem]"
             >
               <Card className="h-full w-full overflow-hidden">
