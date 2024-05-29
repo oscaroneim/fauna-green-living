@@ -160,7 +160,7 @@ export default function Mainslider() {
                       )}
                       {index !== 1 && index !== 2 && (
                         <div
-                          className={`flex flex-col gap-2 md:gap-5 ${index === 0 && isMobile ? 'items-center' : ''} ${index === 0 && isLargeScreen ? '-mt-48 ml-10' : ''} ${index === 3 && isLargeScreen ? 'ml-8' : ''} ${index === 3 ? ' -mt-40 items-start pl-8 md:-mt-48 lg:mt-0' : ''} `}
+                          className={`flex flex-col gap-2 md:gap-5 ${index === 0 && isMobile ? 'items-center' : ''} ${index === 0 && (isIpad || isLargeScreen) ? '-mt-48 ml-10' : ''} ${index === 3 && isLargeScreen ? 'ml-8' : ''} ${index === 3 ? ' -mt-40 items-start pl-8 md:-mt-48 lg:mt-0' : ''} `}
                         >
                           <h2
                             className={` text-left text-3xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:text-5xl ${index === 0 && isMobile ? 'm-[65px] h-[20px] w-auto text-center' : ''} ${index === 3 ? 'w-[80%]' : ''}`}
