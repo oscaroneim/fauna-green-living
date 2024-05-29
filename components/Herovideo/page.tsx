@@ -11,7 +11,7 @@ const HeroVideo = () => {
           </video>
         </div>
 
-        <div className="hello-all rounded-lg">
+        <div className="hello-all rounded-md">
           <h2 className="titlehead text-5xl">HOW IT WORKS</h2>
           <div className="videodiv-mobile">
             <video controls autoPlay muted>

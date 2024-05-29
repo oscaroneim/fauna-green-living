@@ -70,7 +70,7 @@ const FAQSection: React.FC = () => {
         <div key={index} className="mb-4">
           {/* Clickable div to toggle the FAQ answer visibility */}
           <div
-            className="flex transform cursor-pointer items-center justify-between rounded-lg bg-customGreen px-4 py-2 transition duration-300 ease-in-out hover:bg-customLightGreen"
+            className="flex transform cursor-pointer items-center justify-between rounded-md bg-customGreen px-4 py-2 transition duration-300 ease-in-out hover:bg-customLightGreen"
             onClick={() => toggleFAQ(index)}
           >
             <h3 className="font-medium">{faq.question}</h3>
