@@ -1,3 +1,4 @@
+// This page displays when a collection other than all is selected
 import { getCollection, getCollectionProducts } from 'lib/shopify';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -40,17 +41,21 @@ export default async function CategoryPage({
 
   return (
     <section>
+      {/* displays collection title */}
       <p className="relative  text-[34px] text-black max-md:text-center md:pl-[24px]">
         {' '}
         {collection.title}{' '}
       </p>
+      {/* displays collection description */}
       <p className="relative pb-2 text-[16px] text-black max-md:text-center md:pl-[24px]">
         {' '}
         {collection.description}
       </p>
+      {/* if collection is found then display all the products within the collection */}
       {products.length === 0 ? (
         <p className="py-3 text-lg">{`No products found in this collection`}</p>
       ) : (
+        // styling for how the products are displayed
         <Grid className="flex">
           <ProductGridItems products={products} />
         </Grid>

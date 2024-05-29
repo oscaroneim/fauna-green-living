@@ -1,3 +1,4 @@
+// Retrieves price and styling
 import clsx from 'clsx';
 
 const Price = ({

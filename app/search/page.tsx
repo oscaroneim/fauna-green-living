@@ -1,3 +1,4 @@
+// Main page when clicked on shop, all collection page
 import Grid from 'components/grid';
 import ProductGridItems from 'components/layout/product-grid-items';
 import { defaultSort, sorting } from 'lib/constants';
@@ -33,6 +34,7 @@ export default async function SearchPage({
           content="Beeswax wraps, Zero waste food storage, Plastic free food storage, Sustainable food storage, Eco-friendly food wraps, Reusable food wraps, Beeswax food covers, Organic beeswax wraps, Natural food wrap alternatives, Reusable paper towels, Sustainable kitchen roll, Eco-friendly paper towels, Washable paper towels, Cloth kitchen towels, Reusable cleaning cloths, Zero waste kitchen products, Reusable makeup remover pads, Eco-friendly makeup wipes, Washable makeup remover wipes, Sustainable facial wipes, Cloth makeup remover pads, Natural fiber makeup wipes, Zero waste beauty products, Sustainable living products, Zero waste alternatives, Eco-conscious household items, Green living essentials, Environmentally friendly products, Sustainable home goods, Ethically sourced materials, Plastic free, Single use plastic free, No more single use plastic"
         />
       </Head>
+      {/* if serach matches porducts then display, if not display not found */}
       {searchValue ? (
         <p className="mb-4">
           {products.length === 0
@@ -41,6 +43,7 @@ export default async function SearchPage({
           <span className="font-bold">&quot;{searchValue}&quot;</span>
         </p>
       ) : null}
+      {/* if there is no search then display the default all page */}
       {products.length > 0 ? (
         <Grid className="h-full flex-grow grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           <ProductGridItems products={products} />

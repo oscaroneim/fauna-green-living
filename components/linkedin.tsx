@@ -2,6 +2,7 @@
 
 export async function Linkedin() {
   return (
+    // makes the widget slightly less than the entire background
     <div className="w-[97%]">
       <div className="sk-ww-linkedin-profile-post" data-embed-id="25411606"></div>
       <script

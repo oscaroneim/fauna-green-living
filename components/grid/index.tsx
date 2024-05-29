@@ -1,3 +1,4 @@
+// Grid layout of the collection page
 import clsx from 'clsx';
 
 function Grid(props: React.ComponentProps<'ul'>) {

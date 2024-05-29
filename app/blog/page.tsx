@@ -1,3 +1,4 @@
+// Social media page
 import { Instagram } from 'components/instagram';
 
 import { Linkedin } from 'components/linkedin';
