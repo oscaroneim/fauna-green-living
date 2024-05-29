@@ -87,7 +87,7 @@ export default function Mainslider() {
       buttonLink: '/about'
     },
     {
-      image: '/HeroImages/FINALSUMMER.jpg', // Unique image for iPad
+      image: '/HeroImages/IPADFINAL3.jpg', // Unique image for iPad
       title: 'Summer Collection Available Now',
       buttonText: 'Shop Now',
       buttonLink: '/search/summer-collection'
@@ -152,7 +152,7 @@ export default function Mainslider() {
                       )}
                       {/*-----------------------------Styling for Summer Collection slide starts here------------------------------- */}
                       {index === 2 && (
-                        <div className="mt-[300px] flex flex-col items-center gap-5 md:mt-[50px] md:items-start lg:ml-40">
+                        <div className="mt-[300px] flex flex-col items-center gap-5 md:ml-[30px] md:mt-0 md:items-start lg:ml-40">
                           <h2 className="w-[70%] text-center text-3xl text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] md:text-left md:text-5xl md:text-customDarkGreen md:drop-shadow-[0_1.2px_1.2px_rgba(255,255,255)] lg:text-6xl">
                             {element.title}
                           </h2>
