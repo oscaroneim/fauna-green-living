@@ -1,3 +1,5 @@
+// Tiktok social media widget from Sociablekit
+
 export async function Tiktok() {
   return (
     <div className="w-[97%]">

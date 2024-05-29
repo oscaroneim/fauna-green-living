@@ -1,3 +1,5 @@
+// Instagram social media widget from Sociablekit
+
 export async function Instagram() {
   return (
     <div className="w-[97%]">

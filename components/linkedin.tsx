@@ -1,3 +1,5 @@
+// Linkedin social media widget from Sociablekit
+
 export async function Linkedin() {
   return (
     <div className="w-[97%]">
