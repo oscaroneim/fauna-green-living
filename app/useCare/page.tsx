@@ -35,7 +35,9 @@ export default async function useCarePage() {
               </p>
             </div>
             <div className="flip-card-back">
-              <p className="title m-0 text-left text-[2em] font-black">Beeswax Wrap (USE)</p>
+              <p className="title m-0 text-left text-xl font-black sm:pb-3 sm:text-[2em]">
+                Beeswax Wrap (USE)
+              </p>
               <p>
                 Use the heat of your hands to mould the wrap, stick it together and seal.
                 <br />
@@ -58,8 +60,10 @@ export default async function useCarePage() {
               </p>
             </div>
             <div className="flip-card-back">
-              <p className="title m-0 text-left text-[2em] font-black">Beeswax Wrap (CARE)</p>
-              <p>
+              <p className="title m-0 text-left text-xl font-black sm:pb-3 sm:text-[2em]">
+                Beeswax Wrap (CARE)
+              </p>
+              <p className="text-sm sm:text-base">
                 Wash with cool water and a sponge or cloth, using a light touch. Use mild dish soap
                 if necessary.
                 <br />
@@ -83,7 +87,9 @@ export default async function useCarePage() {
             </div>
             <div className="flip-card-back">
               <div className="mb-10">
-                <p className="title m-0 text-left text-[2em] font-black">Sandwich and Snack Bags</p>
+                <p className="title m-0 text-left text-2xl font-black sm:pb-3 sm:text-[2em]">
+                  Sandwich and Snack Bags
+                </p>
                 <p>
                   Use to store dry or damp snacks and sandwiches.
                   <br />
@@ -102,7 +108,9 @@ export default async function useCarePage() {
             </div>
             <div className="flip-card-back">
               <div className="mb-10">
-                <p className="title m-0 text-left text-[2em] font-black">Cloth Napkins</p>
+                <p className="title m-0 text-left text-2xl font-black sm:pb-3 sm:text-[2em]">
+                  Cloth Napkins
+                </p>
                 <p>
                   Pre-treat stains by rinsing with cold water after they occur and before washing.
                   <br />
@@ -121,7 +129,9 @@ export default async function useCarePage() {
             </div>
             <div className="flip-card-back">
               <div className="mb-10">
-                <p className="title m-0 text-left text-[2em] font-black">Re-useable Kitchen Roll</p>
+                <p className="title m-0 text-left text-2xl font-black sm:pb-3 sm:text-[2em]">
+                  Re-useable Kitchen Roll
+                </p>
                 <p>
                   Use like any other kitchen roll to wipe up spills.
                   <br />

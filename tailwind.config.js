@@ -5,6 +5,10 @@ module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      // custom break point
+      screens: {
+        custom: '1134px'
+      },
       // backgroundImages property is used to define custom background images that can be used with utility classes.
       backgroundImage: {
         'frequently-asked-trees': "url('/trees.png')",

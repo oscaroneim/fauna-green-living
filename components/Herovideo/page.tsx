@@ -6,7 +6,7 @@ const HeroVideo = () => {
       <div className="container flex justify-center lg:gap-4">
         <div className="videodiv">
           <video className="rounded-lg " controls autoPlay muted>
-            <source src="videos/sample.mp4" type="video/mp4" />
+            <source src="videos/Sandwitch-wrap.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -15,7 +15,7 @@ const HeroVideo = () => {
           <h2 className="titlehead text-5xl">HOW IT WORKS</h2>
           <div className="videodiv-mobile">
             <video controls autoPlay muted>
-              <source src="videos/Fauna.mp4" type="video/mp4" />
+              <source src="videos/Sandwitch-wrap.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
