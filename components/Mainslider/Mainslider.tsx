@@ -19,6 +19,15 @@ export default function Mainslider() {
   const isIpad = useMediaQuery({ query: '(min-width: 768px) and (max-width: 1024px)' });
   const isLargeScreen = useMediaQuery({ query: '(min-width: 1025px)' });
 
+  /*
+- YOU CAN CHANGE THE IMAGES, BUTTON TEXT, LINKS AND TITLES BY EDITING THE 3 ARRAYS BELOW.
+- THE FIRST ARRAY IS FOR DESKTOP SCREENS, THE SECOND ARRAY IS FOR MOBILE AND THE THIRD ARRAY IS FOR IPAD
+- THE IMAGES SHOULD BE PLACED IN THE PUBLIC FOLDER AND THE PATH SHOULD BE STARTED WITH /HeroImages/...
+- THE BUTTON LINKS SHOULD BE THE PATH TO THE PAGE YOU WANT TO LINK TO
+- THE BUTTON TEXT IS THE TEXT THAT WILL BE DISPLAYED ON THE BUTTON
+- THE TITLE IS THE TEXT THAT WILL BE DISPLAYED ON THE SLIDE
+*/
+
   const trial = [
     {
       image: '/HeroImages/oranges.jpeg',
@@ -103,6 +112,7 @@ export default function Mainslider() {
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
+    //prevent rendering until the component is ready otherwise a hydration issue will occur and render medium screen layout on Mobile screens
     setHydrated(true);
 
     if (isMobile) {
@@ -139,11 +149,11 @@ export default function Mainslider() {
                     className={`h-full w-full object-cover ${index === 1 ? 'scale-x-[-1] transform' : ''}`}
                   />
 
+                  {/*-----------------------------------------Title and button continer starts here------------------------------------------*/}
+
                   <div
                     className={`absolute flex h-full w-full items-center justify-center text-white md:inset-0 ${index === 0 ? 'md:mt-[160px]' : ''} md:justify-start md:p-12 ${index === 4 ? 'md:mt-[25px]' : ''}`}
                   >
-                    {/*-----------------------------------------Title and button continer starts here------------------------------------------*/}
-
                     <div className="shadow-xs justify-center bg-transparent bg-opacity-0">
                       {/*-----------------------------Styling for Eco friendly slide starts here------------------------------- */}
                       {index === 1 && (
@@ -167,6 +177,8 @@ export default function Mainslider() {
                           </button>
                         </div>
                       )}
+                      {/*-----------------------------Styling for all other slides starts here------------------------------- */}
+
                       {index !== 1 && index !== 2 && (
                         <div
                           className={`flex flex-col gap-2 md:gap-5 ${index === 0 && (isIpad || isLargeScreen) ? '-mt-48 ml-10' : ''} ${index === 3 && isLargeScreen ? 'ml-8' : ''} ${index === 3 ? ' -mt-40 items-start pl-8 md:-mt-48 lg:mt-0' : ''} `}
