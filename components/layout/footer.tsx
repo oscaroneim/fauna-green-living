@@ -4,6 +4,7 @@ import { getMenu } from 'lib/shopify';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Suspense } from 'react';
+import SignupForm from './newsletter-signup';
 
 const { COMPANY_NAME, SITE_NAME } = process.env;
 
@@ -33,14 +34,8 @@ export default async function Footer() {
                 Join our email list and get 10% off your first order. Then, get special access to
                 news and deals exclusive to our subscribers
               </p>
-              <input
-                className="peer-rounded-[1px] mb-4 w-full max-w-md rounded-md border border-transparent border-t-transparent bg-[#D9D9D9] px-3 py-2.5 font-sans text-sm font-normal text-[#043028] outline outline-0 transition-all placeholder-shown:border-transparent focus:border-[#D9D9D9] focus:border-transparent focus:border-t-transparent focus:outline-0 disabled:border-0"
-                placeholder="Enter your email here*"
-              />
-              <br />
-              <button className="text-cabin inline-block w-full max-w-md cursor-pointer rounded-md bg-[#82a38a] px-4 py-3 text-center text-lg font-semibold text-white transition duration-200 ease-in-out hover:bg-[#57755e]">
-                Sign Up
-              </button>
+
+              <SignupForm></SignupForm>
             </div>
           </div>
           <div className="pt-5 text-center md:text-left">
