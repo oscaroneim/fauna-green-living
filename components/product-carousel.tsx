@@ -17,7 +17,7 @@ export async function Carousel() {
   return (
     // div around tghe title and products
     <div className="mx-none h-[430px] rounded-md bg-[#677B6A] px-2 pt-[24px] md:px-0">
-      <p className="relative  pb-4 pt-2 text-center text-5xl text-white">Featured Products</p>
+      <p className="relative  pb-4 pt-2 text-center text-4xl text-white">Featured Products</p>
       {/* div around just the product */}
       <div className=" flex h-full w-full gap-4 overflow-x-auto overflow-y-hidden pt-1 no-scrollbar min-[1325px]:justify-center">
         {/* creates list of the first 5 produxts in specified collection above */}
