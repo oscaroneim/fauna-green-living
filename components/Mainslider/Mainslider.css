@@ -1,25 +1,9 @@
-.imagespan {
+/* .imagespan {
   width: 130%;
   height: 50%;
-}
+} */
 
 .carouselDiv {
   width: 100%;
   overflow: hidden;
 }
-
-/* .carouselItemContainer {
-  position: relative;
-  width: 100%;
-  padding-top: 48%; 
-  overflow: hidden;
-}
-
-.carouselItemContainer img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */

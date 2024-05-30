@@ -11,6 +11,12 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 
+//PAGE SUMMARY
+//THIS PAGE IS FOR THE PRODUCT PAGE. IT WILL DISPLAY THE PRODUCT IMAGE, DESCRIPTION, PRICE AND ADD TO CART BUTTON.
+//IT WILL ALSO DISPLAY THE RELATED PRODUCTS AT THE BOTTOM OF THE PAGE.
+//THE PRODUCT PAGE WILL ALSO DISPLAY THE SEO TAGS FOR THE PRODUCT.
+//YOU WILL FIND AN EMBEDDED YOUTUBE VIDEO ON THE PAGE IF THE PRODUCT TITLE INCLUDES THE WORD WRAP.
+
 export async function generateMetadata({
   params
 }: {
@@ -75,6 +81,7 @@ export default async function ProductPage({ params }: { params: { handle: string
 
   return (
     <>
+      {/*-----------------------------SEO tags------------------------------*/}
       <Head>
         <title>{product.title} - Eco-Friendly & Sustainable Products</title>
         <meta
@@ -108,10 +115,11 @@ export default async function ProductPage({ params }: { params: { handle: string
                 }))}
               />
             </Suspense>
-            {/*This needs to be swapped out with Kim's video/ video only renders if isWrapProduct is true*/}
             {isWrapProduct && (
               <div className="relative h-auto w-full space-y-6">
                 <h2 className="hidden text-2xl font-bold sm:block">How to use our wraps</h2>
+
+                {/*----------------------------Embedded youtube video below--------------------------*/}
                 <div className="block h-auto w-auto overflow-hidden rounded-lg object-contain">
                   {' '}
                   <iframe
