@@ -15,7 +15,9 @@ import { Suspense } from 'react';
 //THIS PAGE IS FOR THE PRODUCT PAGE. IT WILL DISPLAY THE PRODUCT IMAGE, DESCRIPTION, PRICE AND ADD TO CART BUTTON.
 //IT WILL ALSO DISPLAY THE RELATED PRODUCTS AT THE BOTTOM OF THE PAGE.
 //THE PRODUCT PAGE WILL ALSO DISPLAY THE SEO TAGS FOR THE PRODUCT.
-//YOU WILL FIND AN EMBEDDED YOUTUBE VIDEO ON THE PAGE IF THE PRODUCT TITLE INCLUDES THE WORD WRAP.
+//YOU WILL FIND AN EMBEDDED VIDEO ON THE PAGE IF THE PRODUCT TITLE INCLUDES THE WORD WRAP.
+//YOU CAN CHANGE THIS VIDEO TO ANY OTHER VIDEO BY CHANGING THE VIDEO URL IN THE EMBEDDED VIDEO SECTION.
+//YOU CAN ADD THE VIDEO TO THE PUBLIC/VIDEOS FOLDER
 
 export async function generateMetadata({
   params
@@ -119,7 +121,7 @@ export default async function ProductPage({ params }: { params: { handle: string
               <div className="relative h-auto w-full space-y-6 ">
                 <h2 className="hidden text-2xl font-bold md:block">How to use our wraps</h2>
 
-                {/*----------------------------Embedded youtube video below--------------------------*/}
+                {/*----------------------------Embedded video below/ source public/videos--------------------------*/}
                 <div className="relative pb-5 sm:flex md:h-full md:w-full md:gap-4">
                   <div className="relativeh-full w-full lg:h-[400px] lg:w-[630px]">
                     <video className="h-auto w-auto rounded-lg" controls autoPlay muted>
