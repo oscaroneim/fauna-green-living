@@ -56,7 +56,7 @@ export default async function CategoryPage({
         <p className="py-3 text-lg">{`No products found in this collection`}</p>
       ) : (
         // styling for how the products are displayed
-        <Grid className="flex">
+        <Grid className="flex overflow-x-auto">
           <ProductGridItems products={products} />
         </Grid>
       )}

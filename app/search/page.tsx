@@ -45,7 +45,7 @@ export default async function SearchPage({
       ) : null}
       {/* if there is no search then display the default all page */}
       {products.length > 0 ? (
-        <Grid className="h-full flex-grow grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        <Grid className="h-full flex-grow grid-cols-1 overflow-x-auto sm:grid-cols-2 lg:grid-cols-3">
           <ProductGridItems products={products} />
         </Grid>
       ) : null}
