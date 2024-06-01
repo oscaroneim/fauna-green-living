@@ -9,7 +9,6 @@ import {
   CarouselPrevious
 } from '@/app/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
-import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
@@ -144,15 +143,9 @@ export default function Mainslider() {
             >
               <Card className="h-full w-full overflow-hidden">
                 <CardContent className="relative flex h-full w-full p-0">
-                  <Image
+                  <img
                     src={element.image}
                     alt="SliderImages"
-                    layout="responsive"
-                    quality={100}
-                    width={1920}
-                    height={1080}
-                    style={{ aspectRatio: '16/9' }}
-                    priority
                     className={`h-full w-full object-cover ${index === 1 ? 'scale-x-[-1] transform' : ''}`}
                   />
 
