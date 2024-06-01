@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       // custom break point
       screens: {
-        custom: '1134px'
+        custom: '1134px',
+        landScape: { min: '812px', max: '820px' }
       },
       // backgroundImages property is used to define custom background images that can be used with utility classes.
       backgroundImage: {
