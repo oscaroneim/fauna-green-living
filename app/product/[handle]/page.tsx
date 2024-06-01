@@ -171,7 +171,7 @@ async function RelatedProducts({ id }: { id: string }) {
       <h2 className="mb-4 text-2xl font-bold">Related Products</h2>
       <ul className="flex h-full w-full gap-4 overflow-x-auto overflow-y-hidden pt-1 no-scrollbar">
         {relatedProducts.map((product) => (
-          <div className="h-[290px]" key={product.handle}>
+          <div className="h-[290px]">
             <li
               key={product.handle}
               className="aspect-square h-[210px] w-[210px] animate-fadeIn transition-opacity"
