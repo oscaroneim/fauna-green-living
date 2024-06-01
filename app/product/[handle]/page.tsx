@@ -118,10 +118,10 @@ export default async function ProductPage({ params }: { params: { handle: string
               />
             </Suspense>
             {isWrapProduct && (
-              <div className="relative h-auto w-full space-y-6 ">
-                <h2 className="hidden text-2xl font-bold md:block">How to use our wraps</h2>
+              <div className="relative hidden h-auto w-full space-y-6 lg:block ">
+                <h2 className="text-2xl font-bold md:block">How to use our wraps</h2>
 
-                {/*----------------------------Embedded video below/ source public/videos--------------------------*/}
+                {/*----------------------------Embedded video below. source: public/videos--------------------------*/}
                 <div className="relative pb-5 sm:flex md:h-full md:w-full md:gap-4">
                   <div className="relativeh-full w-full lg:h-[400px] lg:w-[630px]">
                     <video className="h-auto w-auto rounded-lg" controls autoPlay muted>
@@ -137,6 +137,21 @@ export default async function ProductPage({ params }: { params: { handle: string
           <div className="basis-full sm:mt-4 lg:basis-3/6">
             <ProductDescription product={product} />
           </div>
+          {isWrapProduct && (
+            <div className="landScape:visible relative h-auto w-full space-y-6 lg:hidden">
+              <h2 className="text-2xl font-bold md:block">How to use our wraps</h2>
+
+              {/*----------------------------Embedded video below. source: public/videos--------------------------*/}
+              <div className="relative pb-5 sm:flex md:h-full md:w-full md:gap-4">
+                <div className="relativeh-full w-full lg:h-[400px] lg:w-[630px]">
+                  <video className="h-auto w-auto rounded-lg" controls autoPlay muted>
+                    <source src="../videos/Sandwitch-wrap.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
         <div className="flex h-auto sm:overflow-y-hidden">
           <RelatedProducts id={product.id} />
@@ -156,7 +171,7 @@ async function RelatedProducts({ id }: { id: string }) {
       <h2 className="mb-4 text-2xl font-bold">Related Products</h2>
       <ul className="flex h-full w-full gap-4 overflow-x-auto overflow-y-hidden pt-1 no-scrollbar">
         {relatedProducts.map((product) => (
-          <div className="h-[290px]">
+          <div className="h-[290px]" key={product.handle}>
             <li
               key={product.handle}
               className="aspect-square h-[210px] w-[210px] animate-fadeIn transition-opacity"
