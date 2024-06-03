@@ -44,25 +44,27 @@ export async function Reviews() {
       <div className="relative flex h-[180px] w-[450px]  flex-col items-center justify-center rounded-lg">
         <div className="relative left-[5px] top-[0px] z-[2px] h-[95%] w-[420px] overflow-hidden rounded-[10px] border border-customGreen bg-white bg-opacity-[95%] pt-[10px] shadow-sm outline-[2px] outline-white backdrop-blur-[24px]">
           <div className="flex justify-between pr-2">
-            <p className="pb-2 pl-3 text-left font-bold">Jenni Griffiths</p>
+            <p className="pb-2 pl-3 text-left font-bold">Jen</p>
             <p className="flex h-10 w-12">{renderStars(5)}</p>
           </div>
           <p className="pl-3 text-left">
-            “I really liked the range of fabric choices for these beeswax wraps. They look great and
-            do the job, and were delivered within the time scale promised. Would definitely
-            recommend and buy from this seller again.”
+            “The beeswax wraps are amazing. I have used them on bread and cheese and it keeps it so
+            fresh for so much longer. I also feel like I'm doing my part in reducing the use of
+            cling film and plastics which are destroying the world. Great product I would highly
+            recommend.”
           </p>
         </div>
       </div>
       <div className="relative flex h-[180px] w-[450px]  flex-col items-center justify-center rounded-lg">
         <div className="relative left-[5px] top-[0px] z-[2px] h-[95%] w-[420px] overflow-hidden rounded-[10px] border border-customGreen bg-white bg-opacity-[95%] pt-[10px] shadow-sm outline-[2px] outline-white backdrop-blur-[24px]">
           <div className="flex justify-between pr-2">
-            <p className="pb-2 pl-3 text-left font-bold">Louise Chambers</p>
+            <p className="pb-2 pl-3 text-left font-bold">Kim R</p>
             <p className="flex h-10 w-12">{renderStars(4)}</p>
           </div>
           <p className="pl-3 text-left">
-            “Apart from the obvious environmental benefit these are great for my mum who has really
-            bad arthritis in her hands and struggles to use cling film”
+            “Fauna Green Living&#x2019;s Beeswax wraps are a great alternative to clingfilm, we use
+            ours constantly. They&#x2019;re brilliant quality, love the patterns and they last a
+            really long time”
           </p>
         </div>
       </div>
