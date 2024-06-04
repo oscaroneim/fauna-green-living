@@ -35,10 +35,10 @@ export default async function ContactPage() {
         </div>
         <br></br>
 
-        <div className="rounded-md bg-frequently-asked-trees bg-cover bg-center bg-no-repeat px-4 py-6 text-center text-4xl font-bold text-white ">
+        <div className="rounded-md bg-frequently-asked-trees bg-cover bg-center bg-no-repeat px-4 py-10 text-center text-4xl font-bold text-white ">
           Frequently asked questions
         </div>
-        <br></br>
+
         <div className="rounded-md bg-white px-2 py-8 text-white">
           <FAQSection />
         </div>

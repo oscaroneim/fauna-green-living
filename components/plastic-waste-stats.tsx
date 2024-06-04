@@ -44,16 +44,15 @@ export default function PlasticWasteStats() {
       <div className="flex gap-x-8 gap-y-12  text-xl max-md:flex-col md:gap-y-16">
         <div className=" flex-1 rounded-lg">
           <h3 className="pb-1 md:basis-1/3">
-            <p ref={ref} className="text-3xl">
-              {stats.homesHelped}+
-            </p>{' '}
-            homes we have helped ditch cling film
+            <p className="text-3xl">{stats.homesHelped}+</p> homes we have helped ditch cling film
           </h3>
         </div>
 
         <div className="flex-1 rounded-lg">
           <h3 className="pb-1 md:basis-1/3">
-            <p className="text-3xl">{stats.singlePlastic}%</p>
+            <p ref={ref} className="text-3xl">
+              {stats.singlePlastic}%
+            </p>
             single use plastic free{' '}
           </h3>
         </div>
