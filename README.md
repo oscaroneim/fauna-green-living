@@ -1,8 +1,11 @@
-Introduction
+Fauna Green Living Official Git repo
+
+#Introduction
+
 Welcome to the Fauna Green Living repo, a modern and responsive e-commerce platform built with Next.js and hosted by Vercel, integrated with Shopify for seamless product management and checkout processes.
 This project aims to provide a fast, scalable, and user-friendly online shopping experience, leveraging the power of server-side rendering and static site generation provided by Next.js.
 
-Features
+#Features
 * Dynamic Product Pages: Automatically generated pages for each product.
 * Server-Side Rendering: For fast load times and improved SEO.
 * Shopping Cart: Integrated with Shopify's API for smooth checkout experiences.
@@ -12,7 +15,7 @@ Features
 * Secure: HTTPS and SSL by default with Vercel.
 
 
-Technologies Used
+#Technologies Used
 * Next.js: v14.2.2
     * A React framework for building server-rendered and statically-generated applications.
 * React: v18.3.1
@@ -45,30 +48,14 @@ Technologies Used
     * A superset of JavaScript that adds static types to the language.
 
 
-Getting Started
+#Getting Started
 Prerequisites
 * Node.js (v14 or newer)
 * NPM or Yarn
 * Shopify account and store
 * Vercel account
 
-
-Installation
-1. Clone the repository: git clone https://github.com/oscaroneim/fauna-green-living.git
-2. cd into project
-3. Install dependencies: npm install or yarn install  
-Configuration
-
-Environment Variables: Create a .env.local file in the root directory and add the following:
- NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN= your-shopify-store.myshopify. com
-
-
-NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN= your-shopify-access-token 
-Deployment:
-    * Deploy your Next.js app to Vercel.
-    * Ensure your Shopify store is configured and ready to use.
-
-Usage
+#Usage
 Adding Products
 * Log in to your Shopify admin panel.
 * Add products, update inventory, and manage product details.
@@ -76,3 +63,40 @@ Managing Orders
 * Monitor orders, process payments and manage customer interactions through Shopify.
 Customizing the Frontend
 * We’ve left comments on each page which you can use to edit the site as you please.
+## Set up
+
+• Clone down the files to begin
+
+• npm install
+
+• Once installed use ***npm t*** to run the tests.
+
+
+    #Installation
+
+1. Clone the repository:
+```
+git clone https://github.com/your-user-name/fauna-green-living.git
+```
+
+2. cd into project
+
+3. Install dependencies:
+```
+npm install or yarn install
+```
+
+Configuration
+
+Environment Variables: Create a .env.local file in the root directory and add the following:
+```
+NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN= your-shopify-store.myshopify. com
+```
+```
+NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN= your-shopify-access-token
+```
+
+#Deployment:
+
+    * Deploy your Next.js app to Vercel.
+    * Ensure your Shopify store is configured and ready to use.
