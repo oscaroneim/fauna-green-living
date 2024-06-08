@@ -72,7 +72,7 @@ Customizing the Frontend
 • Once installed use ***npm test*** to run the tests.
 
 
-    #Installation
+#Installation
 
 1. Clone the repository:
 ```
