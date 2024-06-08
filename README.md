@@ -16,7 +16,7 @@ This project aims to provide a fast, scalable, and user-friendly online shopping
 
 
 #Technologies Used
-* Next.js: v14.2.2
+* Next.js: v18
     * A React framework for building server-rendered and statically-generated applications.
 * React: v18.3.1
     * A JavaScript library for building user interfaces.
