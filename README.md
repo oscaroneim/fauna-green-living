@@ -50,7 +50,7 @@ This project aims to provide a fast, scalable, and user-friendly online shopping
 
 #Getting Started
 Prerequisites
-* Node.js (v14 or newer)
+* Node.js (v18 or newer)
 * NPM or Yarn
 * Shopify account and store
 * Vercel account
