@@ -1,76 +1,78 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fcommerce&project-name=commerce&repo-name=commerce&demo-title=Next.js%20Commerce&demo-url=https%3A%2F%2Fdemo.vercel.store&demo-image=https%3A%2F%2Fbigcommerce-demo-asset-ksvtgfvnd.vercel.app%2Fbigcommerce.png&env=COMPANY_NAME,SHOPIFY_REVALIDATION_SECRET,SHOPIFY_STORE_DOMAIN,SHOPIFY_STOREFRONT_ACCESS_TOKEN,SITE_NAME,TWITTER_CREATOR,TWITTER_SITE)
+Introduction
+Welcome to the Fauna Green Living repo, a modern and responsive e-commerce platform built with Next.js and hosted by Vercel, integrated with Shopify for seamless product management and checkout processes.
+This project aims to provide a fast, scalable, and user-friendly online shopping experience, leveraging the power of server-side rendering and static site generation provided by Next.js.
 
-# Next.js Commerce
+Features
+* Dynamic Product Pages: Automatically generated pages for each product.
+* Server-Side Rendering: For fast load times and improved SEO.
+* Shopping Cart: Integrated with Shopify's API for smooth checkout experiences.
+* Responsive Design: Fully responsive and mobile-friendly layout.
+* SEO Optimized: Enhanced search engine visibility.
+* Admin Interface: Manage products and orders through the Shopify admin panel.
+* Secure: HTTPS and SSL by default with Vercel.
 
-A Next.js 14 and App Router-ready ecommerce template featuring:
 
-- Next.js App Router
-- Optimized for SEO using Next.js's Metadata
-- React Server Components (RSCs) and Suspense
-- Server Actions for mutations
-- Edge Runtime
-- New fetching and caching paradigms
-- Dynamic OG images
-- Styling with Tailwind CSS
-- Checkout and payments with Shopify
-- Automatic light/dark mode based on system settings
+Technologies Used
+* Next.js: v14.2.2
+    * A React framework for building server-rendered and statically-generated applications.
+* React: v18.3.1
+    * A JavaScript library for building user interfaces.
+* Tailwind CSS: v3.4.3
+    * A utility-first CSS framework for quickly building custom designs.
+* Zod: v3.23.8
+    * A TypeScript-first schema declaration and validation library.
+* Embla Carousel: v8.1.3
+    * A carousel library for React.
+* Geist UI: v1.3.0
+    * A modern and minimalist React UI library.
+* Lucide React: v0.379.0
+    * A set of open-source icons for React.
+* Tailwind Merge: v2.3.0
+    * A utility-first CSS framework for merging Tailwind CSS classes.
+* Tailwind CSS Animate: v1.0.7
+    * A plugin for adding CSS animations to Tailwind CSS.
+* React Intersection Observer: v9.10.2
+    * A React component that notifies you when an element enters or exits the viewport.
+* Tailwind CSS Container Queries: v0.1.1
+    * A Tailwind CSS plugin for container queries.
+* Tailwind CSS Typography: v0.5.12
+    * A Tailwind CSS plugin for improved typography.
+* ESLint: v8.57.0
+    * A tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
+* Prettier: v3.2.5
+    * A code formatter that ensures code consistency.
+* TypeScript: v5.4.5
+    * A superset of JavaScript that adds static types to the language.
 
-<h3 id="v1-note"></h3>
 
-> Note: Looking for Next.js Commerce v1? View the [code](https://github.com/vercel/commerce/tree/v1), [demo](https://commerce-v1.vercel.store), and [release notes](https://github.com/vercel/commerce/releases/tag/v1).
+Getting Started
+Prerequisites
+* Node.js (v14 or newer)
+* NPM or Yarn
+* Shopify account and store
+* Vercel account
 
-## Providers
 
-Vercel will only be actively maintaining a Shopify version [as outlined in our vision and strategy for Next.js Commerce](https://github.com/vercel/commerce/pull/966).
+Installation
+1. Clone the repository: git clone https://github.com/oscaroneim/fauna-green-living.git
+2. cd into project
+3. Install dependencies: npm install or yarn install  
+Configuration
 
-Vercel is happy to partner and work with any commerce provider to help them get a similar template up and running and listed below. Alternative providers should be able to fork this repository and swap out the `lib/shopify` file with their own implementation while leaving the rest of the template mostly unchanged.
+Environment Variables: Create a .env.local file in the root directory and add the following:
+ NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN= your-shopify-store.myshopify. com
 
-- Shopify (this repository)
-- [BigCommerce](https://github.com/bigcommerce/nextjs-commerce) ([Demo](https://next-commerce-v2.vercel.app/))
-- [Medusa](https://github.com/medusajs/vercel-commerce) ([Demo](https://medusa-nextjs-commerce.vercel.app/))
-- [Saleor](https://github.com/saleor/nextjs-commerce) ([Demo](https://saleor-commerce.vercel.app/))
-- [Shopware](https://github.com/shopwareLabs/vercel-commerce) ([Demo](https://shopware-vercel-commerce-react.vercel.app/))
-- [Swell](https://github.com/swellstores/verswell-commerce) ([Demo](https://verswell-commerce.vercel.app/))
-- [Umbraco](https://github.com/umbraco/Umbraco.VercelCommerce.Demo) ([Demo](https://vercel-commerce-demo.umbraco.com/))
-- [Wix](https://github.com/wix/nextjs-commerce) ([Demo](https://wix-nextjs-commerce.vercel.app/))
 
-> Note: Providers, if you are looking to use similar products for your demo, you can [download these assets](https://drive.google.com/file/d/1q_bKerjrwZgHwCw0ovfUMW6He9VtepO_/view?usp=sharing).
+NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN= your-shopify-access-token 
+Deployment:
+    * Deploy your Next.js app to Vercel.
+    * Ensure your Shopify store is configured and ready to use.
 
-## Integrations
-
-Integrations enable upgraded or additional functionality for Next.js Commerce
-
-- [Orama](https://github.com/oramasearch/nextjs-commerce) ([Demo](https://vercel-commerce.oramasearch.com/))
-  - Upgrades search to include typeahead with dynamic re-rendering, vector-based similarity search, and JS-based configuration.
-  - Search runs entirely in the browser for smaller catalogs or on a CDN for larger.
-
-## Running locally
-
-You will need to use the environment variables [defined in `.env.example`](.env.example) to run Next.js Commerce. It's recommended you use [Vercel Environment Variables](https://vercel.com/docs/concepts/projects/environment-variables) for this, but a `.env` file is all that is necessary.
-
-> Note: You should not commit your `.env` file or it will expose secrets that will allow others to control your Shopify store.
-
-1. Install Vercel CLI: `npm i -g vercel`
-2. Link local instance with Vercel and GitHub accounts (creates `.vercel` directory): `vercel link`
-3. Download your environment variables: `vercel env pull`
-
-```bash
-pnpm install
-pnpm dev
-```
-
-Your app should now be running on [localhost:3000](http://localhost:3000/).
-
-<details>
-  <summary>Expand if you work at Vercel and want to run locally and / or contribute</summary>
-
-1. Run `vc link`.
-1. Select the `Vercel Solutions` scope.
-1. Connect to the existing `commerce-shopify` project.
-1. Run `vc env pull` to get environment variables.
-1. Run `pnpm dev` to ensure everything is working correctly.
-</details>
-
-## Vercel, Next.js Commerce, and Shopify Integration Guide
-
-You can use this comprehensive [integration guide](http://vercel.com/docs/integrations/shopify) with step-by-step instructions on how to configure Shopify as a headless CMS using Next.js Commerce as your headless Shopify storefront on Vercel.
+Usage
+Adding Products
+* Log in to your Shopify admin panel.
+* Add products, update inventory, and manage product details.
+Managing Orders
+* Monitor orders, process payments and manage customer interactions through Shopify.
+Customizing the Frontend
+* We’ve left comments on each page which you can use to edit the site as you please.
