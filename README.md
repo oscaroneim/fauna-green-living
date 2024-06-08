@@ -1,4 +1,4 @@
-Fauna Green Living Official Git repo
+## Fauna Green Living Official Git repo
 
 # Introduction
 
