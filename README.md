@@ -14,7 +14,15 @@ This project aims to provide a fast, scalable, and user-friendly online shopping
 * Admin Interface: Manage products and orders through the Shopify admin panel.
 * Secure: HTTPS and SSL by default with Vercel.
 
-
+## Usage
+Adding Products
+* Log in to your Shopify admin panel.
+* Add products, update inventory, and manage product details.
+Managing Orders
+* Monitor orders, process payments and manage customer interactions through Shopify.
+Customizing the Frontend
+* We’ve left comments on each page which you can use to edit the site as you please.
+  
 ## Technologies Used
 * Next.js: v18
     * A React framework for building server-rendered and statically-generated applications.
@@ -55,14 +63,6 @@ Prerequisites
 * Shopify account and store
 * Vercel account
 
-## Usage
-Adding Products
-* Log in to your Shopify admin panel.
-* Add products, update inventory, and manage product details.
-Managing Orders
-* Monitor orders, process payments and manage customer interactions through Shopify.
-Customizing the Frontend
-* We’ve left comments on each page which you can use to edit the site as you please.
 ## Set up
 
 • Clone down the files to begin
@@ -70,7 +70,6 @@ Customizing the Frontend
 • npm install
 
 • Once installed use ***npm test*** to run the tests.
-
 
 ## Installation
 
