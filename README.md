@@ -69,7 +69,7 @@ Customizing the Frontend
 
 • npm install
 
-• Once installed use ***npm t*** to run the tests.
+• Once installed use ***npm test*** to run the tests.
 
 
     #Installation
