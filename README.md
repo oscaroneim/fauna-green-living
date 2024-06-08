@@ -6,6 +6,7 @@ Welcome to the Fauna Green Living repo, a modern and responsive e-commerce platf
 This project aims to provide a fast, scalable, and user-friendly online shopping experience, leveraging the power of server-side rendering and static site generation provided by Next.js.
 
 ## Features
+
 * Dynamic Product Pages: Automatically generated pages for each product.
 * Server-Side Rendering: For fast load times and improved SEO.
 * Shopping Cart: Integrated with Shopify's API for smooth checkout experiences.
@@ -15,15 +16,18 @@ This project aims to provide a fast, scalable, and user-friendly online shopping
 * Secure: HTTPS and SSL by default with Vercel.
 
 ## Usage
+
 Adding Products
 * Log in to your Shopify admin panel.
 * Add products, update inventory, and manage product details.
 Managing Orders
 * Monitor orders, process payments and manage customer interactions through Shopify.
+
 Customizing the Frontend
 * We’ve left comments on each page which you can use to edit the site as you please.
   
 ## Technologies Used
+
 * Next.js: v18
     * A React framework for building server-rendered and statically-generated applications.
 * React: v18.3.1
@@ -57,6 +61,7 @@ Customizing the Frontend
 
 
 ## Getting Started
+
 Prerequisites
 * Node.js (v18 or newer)
 * NPM or Yarn
