@@ -5,8 +5,10 @@ import { Reviews } from 'components/reviews';
 import Head from 'next/head';
 import HeroVideo from '../components/Herovideo/page';
 import PlasticWasteStats from '../components/plastic-waste-stats';
+
 export const metadata = {
-  description: 'High-performance ecommerce store built with Next.js, Vercel, and Shopify.',
+  description:
+    'Fauna Green Living | An eco-friendly brand that sells eco-friendly and sustainable living products to help in the fight against plastic waste.',
   openGraph: {
     type: 'website'
   }

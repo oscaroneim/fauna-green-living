@@ -137,10 +137,7 @@ export default function Mainslider() {
       >
         <CarouselContent>
           {carouselItems.map((element, index) => (
-            <CarouselItem
-              key={index}
-              className="h-[30rem] animate-fadeIn sm:h-[30rem] md:h-[40rem] lg:h-[40rem]"
-            >
+            <CarouselItem key={index} className="h-[30rem] sm:h-[30rem] md:h-[40rem] lg:h-[40rem]">
               <Card className="h-full w-full overflow-hidden">
                 <CardContent className="relative flex h-full w-full p-0">
                   <img

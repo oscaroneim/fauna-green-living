@@ -1,5 +1,7 @@
 import { ReactNode } from 'react';
 
+//THIS PAGE CONTROLS THE MARGINS ACCROSS THE WHOLE WEBISTE
+
 type Props = { children: ReactNode; className?: string };
 
 export default async function MaxWidthWrapper({ children, className }: Props) {
