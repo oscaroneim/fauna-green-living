@@ -104,3 +104,10 @@ NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN= your-shopify-access-token
 
     * Deploy your Next.js app to Vercel.
     * Ensure your Shopify store is configured and ready to use.
+
+
+## Domain transfer:
+Currently you domain is still registered with Wix. You can simply renew your domain by keeping your wix account. If in the future you would rather have everything accessible in once place, you can initiate a domain transfer. This requires payment details being added to your vercel account. For instructions on how to do this please follow the link below.
+```
+    https://vercel.com/guides/transferring-domains-to-vercel
+```
