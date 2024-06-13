@@ -6,6 +6,7 @@ Welcome to the Fauna Green Living repo, a modern and responsive e-commerce platf
 This project aims to provide a fast, scalable, and user-friendly online shopping experience, leveraging the power of server-side rendering and static site generation provided by Next.js.
 
 ## Features
+
 * Dynamic Product Pages: Automatically generated pages for each product.
 * Server-Side Rendering: For fast load times and improved SEO.
 * Shopping Cart: Integrated with Shopify's API for smooth checkout experiences.
@@ -14,8 +15,19 @@ This project aims to provide a fast, scalable, and user-friendly online shopping
 * Admin Interface: Manage products and orders through the Shopify admin panel.
 * Secure: HTTPS and SSL by default with Vercel.
 
+## Usage
 
+Adding Products
+* Log in to your Shopify admin panel.
+* Add products, update inventory, and manage product details.
+Managing Orders
+* Monitor orders, process payments and manage customer interactions through Shopify.
+
+Customizing the Frontend
+* We’ve left comments on each page which you can use to edit the site as you please.
+  
 ## Technologies Used
+
 * Next.js: v18
     * A React framework for building server-rendered and statically-generated applications.
 * React: v18.3.1
@@ -49,20 +61,13 @@ This project aims to provide a fast, scalable, and user-friendly online shopping
 
 
 ## Getting Started
+
 Prerequisites
 * Node.js (v18 or newer)
 * NPM or Yarn
 * Shopify account and store
 * Vercel account
 
-## Usage
-Adding Products
-* Log in to your Shopify admin panel.
-* Add products, update inventory, and manage product details.
-Managing Orders
-* Monitor orders, process payments and manage customer interactions through Shopify.
-Customizing the Frontend
-* We’ve left comments on each page which you can use to edit the site as you please.
 ## Set up
 
 • Clone down the files to begin
@@ -70,7 +75,6 @@ Customizing the Frontend
 • npm install
 
 • Once installed use ***npm test*** to run the tests.
-
 
 ## Installation
 
@@ -100,3 +104,10 @@ NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN= your-shopify-access-token
 
     * Deploy your Next.js app to Vercel.
     * Ensure your Shopify store is configured and ready to use.
+
+
+## Domain transfer:
+Currently you domain is still registered with Wix. You can simply renew your domain by keeping your wix account. If in the future you would rather have everything accessible in once place, you can initiate a domain transfer. This requires payment details being added to your vercel account. For instructions on how to do this please follow the link below.
+```
+    https://vercel.com/guides/transferring-domains-to-vercel
+```
