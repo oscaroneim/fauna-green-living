@@ -9,7 +9,7 @@ export default function LogoIcon(props: React.ComponentProps<'svg'>) {
       {...props}
       className={clsx('h-full w-full', props.className)}
     >
-      <image xlinkHref="/LogoImages/BuckLogo.png" width="355" height="165" x="1" y="1" />
+      <image xlinkHref="/LogoImages/logo.png" width="355" height="165" x="1" y="1" />
     </svg>
   );
 }
