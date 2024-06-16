@@ -105,7 +105,7 @@ NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN= your-shopify-access-token
     * Deploy your Next.js app to Vercel.
     * Ensure your Shopify store is configured and ready to use.
 
-## :
+## Blog components:
 Blog page is made up of three components which are: Instagram, Tiktok and Linkedin. The script is from SociableKIT and to update simply follow their instructions to get new code snippets to put into their respective components:
 ```
 https://www.sociablekit.com/
